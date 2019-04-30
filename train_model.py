@@ -17,11 +17,12 @@ from keras.models import model_from_json
 from nltk.stem.lancaster import LancasterStemmer
 from nltk.stem.porter import PorterStemmer
 from multiprocessing.pool import ThreadPool
-#import spacy
+
+# import spacy
 
 pool = ThreadPool(processes=20)
 
-#nlp = spacy.load("en_core_web_md")
+# nlp = spacy.load("en_core_web_md")
 
 stemmer = PorterStemmer()
 words = {}
@@ -30,6 +31,7 @@ train_x_dict = {}
 train_y_dict = {}
 multiple_models = {}
 graph = tf.get_default_graph()
+
 
 def load_keras_model(model_name):
     global words
@@ -50,7 +52,7 @@ def load_keras_model(model_name):
         json_file = open(model_path, 'r')
         loaded_model_json = json_file.read()
         json_file.close()
-  
+
     my_file = Path("/opt/models/{model_name}/{name}".format(
         model_name=model_name, name=model_name))
     if my_file.is_file():
@@ -86,24 +88,16 @@ def train_keras(model_name):
     train_xinput = []
     train_youtput = []
     tf.reset_default_graph()
-    #f = open("/opt/training_data/data_{model_name}.csv".format(
-    #    model_name=model_name), 'rU')
 
-    #for line in f:
-    #    cells = line.split(",")
-    #    output_data.append((cells[0], cells[1]))
-
-    #f.close()
-
-    with open('/opt/data/{model}_data.json'.format(model=model_name)) as f:
+    with open('/opt/data/{model}_data.json'.format(model=model_name), encoding="utf-8") as f:
         data = json.load(f)
-        
+
     output_data = list((data.get('rasa_nlu_data').get('common_examples')))
     print(output_data)
     print("%s sentences in training data" % len(output_data))
 
     ignore_words = ['?']
-    print(ignore_words)    
+    print(ignore_words)
     for pattern in output_data:
         w = nltk.word_tokenize(pattern['text'])
         words_list.extend(w)
@@ -147,7 +141,7 @@ def train_keras(model_name):
         model_nn.add(Dense(len(train_youtput[0]), activation='softmax'))
 
         model_nn.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-        model_nn.fit(np.array(train_xinput), np.array(train_youtput), epochs=120, batch_size=8)
+        model_nn.fit(np.array(train_xinput), np.array(train_youtput), epochs=100, batch_size=8)
 
         model_path = '/opt/models/{model_dir}/{model_name}.h5'.format(
             model_dir=model_name,
@@ -163,6 +157,7 @@ def train_keras(model_name):
 
     load_keras_model(model_name)
     return {'message': 'success', 'model_name': model_name}
+
 
 def train_parallel(model_name):
     my_file = os.path.isdir(
@@ -194,7 +189,7 @@ def bow(sentence, words, show_details=False):
 
 def classifyKeras(sentence, model_name):
     with graph.as_default():
-        
+
         threshold = 0.70
 
         loaded_model = multiple_models.get(model_name)
@@ -217,20 +212,20 @@ def classifyKeras(sentence, model_name):
         return_probability = 0
         for r in result:
             return_list.append((classes.get(model_name)[r[0]], r[1]))
-        print(return_list) 
+        print(return_list)
         if (len(return_list) > 0):
             return_intent = return_list[0]
             intent = return_intent[0]
             return_probability = (return_intent[1])
             js = {
                 "intent": {
-                    "confidence": return_probability,
-                    "name": intent
+                    "confidence": str(return_probability),
+                    "name": intent,
                 },
-                "text":sentence,
-                "model":model_name
+                "text": sentence,
+                "model": model_name
             }
-        
+
             return (js)
         else:
             js = {
@@ -238,8 +233,8 @@ def classifyKeras(sentence, model_name):
                     "confidence": 0,
                     "name": None,
                 },
-                "text":sentence,
-                "model":model_name
+                "text": sentence,
+                "model": model_name
             }
 
         return (js)
@@ -249,7 +244,7 @@ def classify_parallel(sentence, model_name):
     async_train_result = pool.apply_async(classifyKeras, (sentence, model_name))
     return async_train_result.get()
 
-#def get_ner():
+# def get_ner():
 #    entities = []
 #    labels = {}
 #    query = request.args.get('q')
@@ -267,5 +262,3 @@ def classify_parallel(sentence, model_name):
 #    else:
 #        return ([{'tag': '', 'value': query}])
 #    return (entities)
-
-

@@ -15,11 +15,11 @@ import spacy
 
 es = Elasticsearch([{'host': '139.59.74.225', 'port': 9200}])
 
-import uvloop
+# import uvloop
 
 app = Sanic(__name__)
 
-models = {'2': 'spawn'}
+models = {'1': 'spawn_en', '2': 'spawn_hi'}
 loading_models = {}
 cache = {}
 for loaded_model in models.values():
@@ -41,20 +41,36 @@ def check_authorization(request):
 def authorized():
     def decorator(f):
         @wraps(f)
-        async def decorated_function(request,*args,**kwargs):
+        async def decorated_function(request, *args, **kwargs):
             isauthorized = check_authorization(request)
             if isauthorized:
-                response1 = await f(request,*args,**kwargs)
+                response1 = await f(request, *args, **kwargs)
                 return response1
             else:
                 message = {'message': 'You are not authorized user to access this url'}
                 return response.text(str(message))
+
         return decorated_function
+
     return decorator
 
 
+@app.route('/api/getFile', methods=["GET"])
+@authorized()
+async def classify(request):
+    file_name = request.args.get('fileName')
 
-@app.route("/get_ner",methods=['GET'])
+    if (file_name is not None):
+        res = es.get('spawnai', doc_type='spawnai_file', id=file_name)
+        bot_data_response = res['_source']
+        print(bot_data_response)
+        return response.json(bot_data_response)
+    else:
+        print('Error')
+        return response.json({'msg': 'Error processing request', 'status': 'false'})
+
+
+@app.route("/get_ner", methods=['GET'])
 @authorized()
 async def test(request):
     query = request.args.get('q')
@@ -72,19 +88,20 @@ async def test(request):
         return response.json({'msg': 'query cannot be empty', 'status': 'false'})
     return response.json({"answer": "42"})
 
+
 @app.route("/post_wiki", methods=['POST'])
 @authorized()
 async def test(request):
     body = request.json
     print(body)
-    body['timestamp']= strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
+    body['timestamp'] = strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
     title = body.get('title')
     intent = body.get('intent')
     print(title)
     resp = {}
     if body is not None and title is not None:
         es.index('spawnai', doc_type='doc', id=body.get('title'), body=body)
-        es.index('spawnai',doc_type='wiki', body = body)
+        es.index('spawnai', doc_type='wiki', body=body)
         return response.json({'msg': 'success', 'status': 'true'})
     elif intent is not None:
         es.index('spawnai', doc_type='intent', body=body)
@@ -98,10 +115,14 @@ async def test(request):
 async def train(request):
     try:
         model_name = request.args.get('model_name')
+        lang = request.args.get('lang')
         if (model_name is None):
             return (response.json(
                 {'message': 'Model name parameter is not defined / empty.', 'error': 'Model could not be trained',
                  'status': 'error'}))
+        if lang is None:
+            lang = 'en'
+        model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
 
         train_msg = train_model.train_parallel(model_name)
 
@@ -117,14 +138,19 @@ async def train(request):
 @app.route('/api/classify', methods=["GET"])
 @authorized()
 async def classify(request):
-    sentence = request.args.get('query')
+    sentence = request.args.get('q')
     model_name = request.args.get('model_name')
+    lang = request.args.get('lang')
     sentence = sentence.lower()
+    if lang is None:
+        lang = 'en'
+    model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
     if (sentence is not None):
         return_list = train_model.classifyKeras(sentence, model_name)
     else:
         return response.json({'message': 'query cannot be empty', 'status': 'error', 'model_name': model_name})
     return response.json(return_list)
+
 
 @app.route('/entity_extract', methods=['GET'])
 @authorized()
@@ -135,25 +161,46 @@ async def get_ner_test(request):
     query = request.args.get('q')
     if (cache.get(query) is not None):
         return response.json(cache.get(query))
+    model_name = request.args.get('model_name')
+    lang = request.args.get('lang')
+    if lang is None:
+        lang = 'en'
+
+    model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
+
+    ml_response = train_model.classifyKeras(query, model_name)
 
     if query is not None:
-        ml_response = train_model.classifyKeras(query,"spawn")
-        doc = nlp(query)
-        if len(doc.ents):
-            ent = doc.ents[0]
-            labels['tag'] = ent.label_
-            labels['value'] = ent.text
-            entities.append(labels)
-            labels = {}
-            print(ent.text, ent.label_)
+        if lang == 'en':
+            doc = nlp(query)
+            if len(doc.ents):
+                ent = doc.ents[0]
+                labels['tag'] = ent.label_
+                labels['value'] = ent.text
+                entities.append(labels)
+                labels = {}
+                print(ent.text, ent.label_)
 
-            ml_response['entities'] = entities
-            cache[query] = ml_response
+                ml_response['entities'] = entities
+                cache[query] = ml_response
+            else:
+                crf_ent = crf_entity.predict(query, lang, model_name)
+                print(crf_ent)
+                if (crf_ent.get('entities') is not None and len(list(crf_ent.get('entities').keys())) > 0 and len(
+                        list(crf_ent.get('entities').values())[0]) > 0):
+                    entities = [{'tag': list(crf_ent.get('entities').keys())[0],
+                                 'value': list(crf_ent.get('entities').values())[0]}]
+                ml_response['entities'] = entities
+                cache[query] = ml_response
+                print(ml_response)
+                return response.json(ml_response)
         else:
-            crf_ent = crf_entity.predict(query)
+            crf_ent = crf_entity.predict(query, lang, model_name)
             print(crf_ent)
-            if(crf_ent.get('entities') is not None and len(list(crf_ent.get('entities').keys())) > 0 and len(list(crf_ent.get('entities').values())[0]) > 0  ):
-                entities = [{'tag': list(crf_ent.get('entities').keys())[0], 'value': list(crf_ent.get('entities').values())[0]}]
+            if (crf_ent.get('entities') is not None and len(list(crf_ent.get('entities').keys())) > 0 and len(
+                    list(crf_ent.get('entities').values())[0]) > 0):
+                entities = [{'tag': list(crf_ent.get('entities').keys())[0],
+                             'value': list(crf_ent.get('entities').values())[0]}]
             ml_response['entities'] = entities
             cache[query] = ml_response
             print(ml_response)
@@ -166,17 +213,15 @@ async def get_ner_test(request):
     return response.json(ml_response)
 
 
-
-#asyncio.set_event_loop(uvloop.new_event_loop())
-#server = app.create_server(host="localhost", port=8000, return_asyncio_server=True)
-#loop = asyncio.get_event_loop()
-#task = asyncio.ensure_future(server)
-#signal(SIGINT, lambda s, f: loop.stop())
-#try:
+# asyncio.set_event_loop(uvloop.new_event_loop())
+# server = app.create_server(host="localhost", port=8000, return_asyncio_server=True)
+# loop = asyncio.get_event_loop()
+# task = asyncio.ensure_future(server)
+# signal(SIGINT, lambda s, f: loop.stop())
+# try:
 #    loop.run_forever()
-#except:
+# except:
 #    loop.stop()
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=8010)
-
+    app.run(host='0.0.0.0', port=8010)

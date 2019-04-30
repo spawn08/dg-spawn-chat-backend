@@ -5,17 +5,20 @@ from spacy.gold import GoldParse
 import os
 import joblib
 
-nlp = None
+nlp = None  # spacy.load("en_core_web_md")
 crf = None
 
 
-def train(filePath):
+def train(filePath, model_name, lang):
     try:
         global crf
         global nlp
+
+        model_path = "{model_name}_classifier_{lang}".format(model_name=model_name, lang=lang)
+
         if not filePath.lower().endswith('json'):
             return {'success': False, 'message': 'Training file should be in json format'}
-        with open(filePath) as file:
+        with open(filePath, encoding="utf-8") as file:
             ent_data = json.load(file)
         dataset = [jsonToCrf(q, nlp) for q in ent_data['entity_examples']]
         X_train = [sent2features(s) for s in dataset]
@@ -30,29 +33,37 @@ def train(filePath):
         crf.fit(X_train, y_train)
         if (not os.path.exists("/opt/models/crfModel/")):
             os.mkdir("/opt/models/crfModel/")
-        if (os.path.isfile("/opt/models/crfModel/classifier.pkl")):
-            os.remove("/opt/models/crfModel/classifier.pkl")
-        joblib.dump(crf, "/opt/models/crfModel/classifier.pkl")
+        if (os.path.isfile("/opt/models/crfModel/{model}.pkl".format(model=model_path))):
+            os.remove("/opt/models/crfModel/{model}.pkl".format(model=model_path))
+        joblib.dump(crf, "/opt/models/crfModel/{model}.pkl".format(model=model_path))
         return {'success': True, 'message': 'Model Trained Successfully'}
     except Exception as ex:
         return {'success': False, 'message': 'Error while Training the model - ' + str(ex)}
 
 
-def predict(utterance):
+def predict(utterance, lang, model_name):
     try:
         global crf
         global nlp
+        crf_cache = {}
         tagged = []
         finallist = []
+
+        model_path = "{model_name}_classifier.pkl".format(model_name=model_name)
+
         if len(utterance.split()) > 1:
             parsed = nlp(utterance)
             for i in range(len(parsed)):
                 tagged.append((str(parsed[i]), parsed[i].tag_))
             finallist.append(tagged)
             test = [sent2features(s) for s in finallist]
+            crf = crf_cache.get(model_path)
             if (os.path.isfile(
-                    "/opt/models/crfModel/classifier.pkl") and crf is None):
-                crf = joblib.load("/opt/models/crfModel/classifier.pkl")
+                    "/opt/models/crfModel/{model_path}".format(
+                        model_path=model_path)) and crf is None):
+                crf = joblib.load(
+                    "/opt/models/crfModel/{model_path}".format(model_path=model_path))
+                crf_cache[model_path] = crf
                 print("CRF MODEL LOADED")
                 predicted = crf.predict(test)
                 entityList = extractEntities(predicted[0], tagged)
@@ -164,3 +175,5 @@ def extractEntities(predicted, tagged):
 def set_nlp(nlp_load):
     global nlp
     nlp = nlp_load
+
+    # train("E:/dg-spawn-chat-backend/opt/crf_en_data.json","spawn","en")
