@@ -1,0 +1,580 @@
+{
+  "entity_examples": [
+    {
+      "text": "what is natural number",
+      "intent": "tag",
+      "entities": [
+        {
+          "start": 8,
+          "end": 22,
+          "value": "natural number",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "inference meaning",
+      "intent": "meaning",
+      "entities": [
+        {
+          "start": 0,
+          "end": 9,
+          "value": "inference",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "gratitude meaning",
+      "intent": "meaning",
+      "entities": [
+        {
+          "start": 0,
+          "end": 9,
+          "value": "gratitude",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "what is notre dam",
+      "intent": "tag",
+      "entities": [
+        {
+          "start": 8,
+          "end": 17,
+          "value": "notre dam",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "tell me about water",
+      "intent": "tag",
+      "entities": [
+        {
+          "start": 14,
+          "end": 19,
+          "value": "water",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "tell me about Avengers Infinity war movie",
+      "intent": "movie",
+      "entities": [
+        {
+          "start": 14,
+          "end": 35,
+          "value": "Avengers Infinity war",
+          "entity": "movie"
+        }
+      ]
+    },
+    {
+      "text": "sanju movie",
+      "intent": "movie",
+      "entities": [
+        {
+          "start": 0,
+          "end": 5,
+          "value": "sanju",
+          "entity": "movie"
+        }
+      ]
+    },
+    {
+      "text": "Student of the year movie",
+      "intent": "movie",
+      "entities": [
+        {
+          "start": 0,
+          "end": 19,
+          "value": "Student of the year",
+          "entity": "movie"
+        }
+      ]
+    },
+    {
+      "text": "movie shawshank redemption",
+      "intent": "movie",
+      "entities": [
+        {
+          "start": 6,
+          "end": 26,
+          "value": "shawshank redemption",
+          "entity": "movie"
+        }
+      ]
+    },
+    {
+      "text": "define mercy",
+      "intent": "meaning",
+      "entities": [
+        {
+          "start": 7,
+          "end": 12,
+          "value": "mercy",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "Pretty definition",
+      "intent": "meaning",
+      "entities": [
+        {
+          "start": 0,
+          "end": 6,
+          "value": "Pretty",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "define Stochastic gradient descent",
+      "intent": "meaning",
+      "entities": [
+        {
+          "start": 7,
+          "end": 34,
+          "value": "Stochastic gradient descent",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "define natural numbers",
+      "intent": "meaning",
+      "entities": [
+        {
+          "start": 7,
+          "end": 22,
+          "value": "natural numbers",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "fourier transform meaning",
+      "intent": "tag",
+      "entities": [
+        {
+          "start": 0,
+          "end": 17,
+          "value": "fourier transform",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "what is fourier transform",
+      "intent": "tag",
+      "entities": [
+        {
+          "start": 8,
+          "end": 25,
+          "value": "fourier transform",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "what is mathematics",
+      "intent": "tag",
+      "entities": [
+        {
+          "start": 8,
+          "end": 19,
+          "value": "mathematics",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "who is professor spawn",
+      "intent": "bot_identity",
+      "entities": [
+        {
+          "start": 7,
+          "end": 22,
+          "value": "professor spawn",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "Mathematics definition",
+      "intent": "meaning",
+      "entities": [
+        {
+          "start": 0,
+          "end": 11,
+          "value": "Mathematics",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "define neural network",
+      "intent": "meaning",
+      "entities": [
+        {
+          "start": 8,
+          "end": 22,
+          "value": "neural network",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "Aritificial Intelligence definition",
+      "intent": "meaning",
+      "entities": [
+        {
+          "start": 0,
+          "end": 24,
+          "value": "Aritificial Intelligence",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "artificial meaning",
+      "intent": "meaning",
+      "entities": [
+        {
+          "start": 0,
+          "end": 10,
+          "value": "artificial",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "define charcoal",
+      "intent": "",
+      "entities": [
+        {
+          "start": 7,
+          "end": 15,
+          "value": "charcoal",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "meaning of gladiator",
+      "intent": "",
+      "entities": [
+        {
+          "start": 11,
+          "end": 20,
+          "value": "gladiator",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "release date of 3 Idiots",
+      "intent": "",
+      "entities": [
+        {
+          "start": 16,
+          "end": 24,
+          "value": "3 Idiots",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "release date of dil chahta hai",
+      "intent": "",
+      "entities": [
+        {
+          "start": 16,
+          "end": 30,
+          "value": "dil chahta hai",
+          "entity": "movie"
+        }
+      ]
+    },
+    {
+      "text": "kahaani movie release",
+      "intent": "",
+      "entities": [
+        {
+          "start": 0,
+          "end": 7,
+          "value": "kahaani",
+          "entity": "movie"
+        }
+      ]
+    },
+    {
+      "text": "chak de india movie release",
+      "intent": "",
+      "entities": [
+        {
+          "start": 0,
+          "end": 13,
+          "value": "chak de india",
+          "entity": "movie"
+        }
+      ]
+    },
+    {
+      "text": "what is forza",
+      "intent": "",
+      "entities": [
+        {
+          "start": 8,
+          "end": 13,
+          "value": "forza",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "what is gradient",
+      "intent": "",
+      "entities": [
+        {
+          "start": 8,
+          "end": 16,
+          "value": "gradient",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "what is electric current",
+      "intent": "",
+      "entities": [
+        {
+          "start": 8,
+          "end": 24,
+          "value": "electric current",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "set an alarm at 6 pm",
+      "intent": "alarm_set",
+      "entities": [
+        {
+          "start": 16,
+          "end": 20,
+          "value": "6 pm",
+          "entity": "time"
+        }
+      ]
+    },
+    {
+      "text": "set an alarm at 6 pm",
+      "intent": "alarm_set",
+      "entities": [
+        {
+          "start": 16,
+          "end": 20,
+          "value": "6 pm",
+          "entity": "time"
+        }
+      ]
+    },
+    {
+      "text": "wake me up at 7am",
+      "intent": "alarm_set",
+      "entities": [
+        {
+          "start": 14,
+          "end": 17,
+          "value": "7am",
+          "entity": "time"
+        }
+      ]
+    },
+    {
+      "text": "please set an alarm at 1 pm",
+      "intent": "alarm_set",
+      "entities": [
+        {
+          "start": 23,
+          "end": 27,
+          "value": "1 pm",
+          "entity": "time"
+        }
+      ]
+    },
+    {
+      "text": "release date of dil dewaana",
+      "intent": "",
+      "entities": [
+        {
+          "start": 16,
+          "end": 27,
+          "value": "dil dewaana",
+          "entity": "movie"
+        }
+      ]
+    },
+    {
+      "text": "release date of raazi",
+      "intent": "",
+      "entities": [
+        {
+          "start": 16,
+          "end": 21,
+          "value": "raazi",
+          "entity": "movie"
+        }
+      ]
+    },
+    {
+      "text": "release date of panchaang",
+      "intent": "",
+      "entities": [
+        {
+          "start": 16,
+          "end": 25,
+          "value": "panchaang",
+          "entity": "movie"
+        }
+      ]
+    },
+    {
+      "text": "release date ghor",
+      "intent": "",
+      "entities": [
+        {
+          "start": 13,
+          "end": 17,
+          "value": "ghor",
+          "entity": "movie"
+        }
+      ]
+    },
+    {
+      "text": "release date matruchaya",
+      "intent": "",
+      "entities": [
+        {
+          "start": 13,
+          "end": 23,
+          "value": "matruchaya",
+          "entity": "movie"
+        }
+      ]
+    },
+    {
+      "text": "release date munna bhai m.b.b.s",
+      "intent": "",
+      "entities": [
+        {
+          "start": 13,
+          "end": 31,
+          "value": "munna bhai m.b.b.s",
+          "entity": "movie"
+        }
+      ]
+    },
+    {
+      "text": "define ambiguation",
+      "intent": "",
+      "entities": [
+        {
+          "start": 7,
+          "end": 18,
+          "value": "ambiguation",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "define neural network",
+      "intent": "",
+      "entities": [
+        {
+          "start": 7,
+          "end": 21,
+          "value": "neural network",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "define photosynthesis",
+      "intent": "",
+      "entities": [
+        {
+          "start": 7,
+          "end": 21,
+          "value": "photosynthesis",
+          "entity": "meaning"
+        }
+      ]
+    },
+    {
+      "text": "what is machine learning",
+      "intent": "",
+      "entities": [
+        {
+          "start": 8,
+          "end": 24,
+          "value": "machine learning",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "what is neural machine translation",
+      "intent": "",
+      "entities": [
+        {
+          "start": 8,
+          "end": 34,
+          "value": "neural machine translation",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "what is disambiguation",
+      "intent": "",
+      "entities": [
+        {
+          "start": 8,
+          "end": 22,
+          "value": "disambiguation",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "what is sequence to sequence",
+      "intent": "",
+      "entities": [
+        {
+          "start": 8,
+          "end": 28,
+          "value": "sequence to sequence",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "what is fuzzy neural algorithm",
+      "intent": "",
+      "entities": [
+        {
+          "start": 8,
+          "end": 30,
+          "value": "fuzzy neural algorithm",
+          "entity": "tag"
+        }
+      ]
+    }
+  ]
+}
