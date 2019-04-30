@@ -1,0 +1,87 @@
+Using TensorFlow backend.
+Loaded model from disk
+[2019-04-28 18:55:41 +0000] [14058] [INFO] Goin' Fast @ http://localhost:8000
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-04-28 18:56:26.643952: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-04-28 18:56:26.697703: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2199995000 Hz
+2019-04-28 18:56:26.698948: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x124c330 executing computations on platform Host. Devices:
+2019-04-28 18:56:26.698985: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+[('greet', 0.9425466)]
+CRF MODEL LOADED
+{'success': True, 'entities': {}}
+[2019-04-28 18:56:26 +0000] - (sanic.access)[INFO][127.0.0.1:52044]: GET http://spawn_wiki/entity_extract?q=how%20are%20you  200 104
+[2019-04-28 18:56:27 +0000] - (sanic.access)[INFO][127.0.0.1:52046]: GET http://spawn_wiki/entity_extract?q=how%20are%20you  200 104
+[2019-04-28 18:56:28 +0000] - (sanic.access)[INFO][127.0.0.1:52048]: GET http://spawn_wiki/entity_extract?q=how%20are%20you  200 104
+[2019-04-28 18:56:29 +0000] - (sanic.access)[INFO][127.0.0.1:52050]: GET http://spawn_wiki/entity_extract?q=how%20are%20you  200 104
+[2019-04-28 18:56:29 +0000] - (sanic.access)[INFO][127.0.0.1:52052]: GET http://spawn_wiki/entity_extract?q=how%20are%20you  200 104
+[2019-04-28 18:56:30 +0000] - (sanic.access)[INFO][127.0.0.1:52054]: GET http://spawn_wiki/entity_extract?q=how%20are%20you  200 104
+[2019-04-28 18:56:34 +0000] - (sanic.access)[INFO][127.0.0.1:52056]: GET http://spawn_wiki/entity_extract?q=how%20are%20you  200 104
+[2019-04-28 18:56:35 +0000] - (sanic.access)[INFO][127.0.0.1:52058]: GET http://spawn_wiki/entity_extract?q=how%20are%20you  200 104
+[('bot_skills', 0.8614201)]
+{'success': True, 'entities': {}}
+[2019-04-28 18:56:53 +0000] - (sanic.access)[INFO][127.0.0.1:52060]: GET http://spawn_wiki/entity_extract?q=what%20are%20you%20doing  200 116
+[('bot_skills', 0.80720294)]
+today DATE
+[2019-04-28 18:56:57 +0000] - (sanic.access)[INFO][127.0.0.1:52062]: GET http://spawn_wiki/entity_extract?q=what%20are%20you%20doing%20today  200 153
+[('bot_hi', 0.8118523)]
+{'success': True, 'entities': {}}
+[2019-04-28 18:57:08 +0000] - (sanic.access)[INFO][127.0.0.1:52064]: GET http://spawn_wiki/entity_extract?q=hey%20hi  200 100
+[]
+{'success': True, 'entities': {'tag': ['boti']}}
+[2019-04-28 18:57:19 +0000] - (sanic.access)[INFO][127.0.0.1:52066]: GET http://spawn_wiki/entity_extract?q=who%20is%20boti  200 120
+[2019-04-28 18:57:24 +0000] - (sanic.access)[INFO][127.0.0.1:52068]: GET http://spawn_wiki/entity_extract?q=who%20is%20boti  200 120
+[2019-04-28 18:57:24 +0000] - (sanic.access)[INFO][127.0.0.1:52070]: GET http://spawn_wiki/entity_extract?q=who%20is%20boti  200 120
+[2019-04-28 18:57:25 +0000] - (sanic.access)[INFO][127.0.0.1:52072]: GET http://spawn_wiki/entity_extract?q=who%20is%20boti  200 120
+[2019-04-28 18:57:26 +0000] - (sanic.access)[INFO][127.0.0.1:52074]: GET http://spawn_wiki/entity_extract?q=who%20is%20boti  200 120
+[2019-04-28 18:57:26 +0000] - (sanic.access)[INFO][127.0.0.1:52076]: GET http://spawn_wiki/entity_extract?q=who%20is%20boti  200 120
+[2019-04-28 18:57:27 +0000] - (sanic.access)[INFO][127.0.0.1:52078]: GET http://spawn_wiki/entity_extract?q=who%20is%20boti  200 120
+[]
+Mumbai GPE
+[2019-04-28 19:00:38 +0000] - (sanic.access)[INFO][127.0.0.1:52082]: GET http://spawn_wiki/entity_extract?q=tell%20me%20about%20Mumbai  200 129
+{'content_urls': {'mobile': {'page': 'https://en.m.wikipedia.org/wiki/Mumbai'}}, 'description': 'Megacity in Maharashtra, India', 'displaytitle': 'Mumbai', 'extract': "Mumbai is the capital city of the Indian state of Maharashtra. As of 2011 it is the most populous city in India with an estimated city proper population of 12.4\xa0million. The larger Mumbai Metropolitan Region is the second most populous metropolitan area in India, with a population of 21.3\xa0million as of 2016. Mumbai lies on the Konkan coast on the west coast of India and has a deep natural harbour. In 2008, Mumbai was named an alpha world city. It is also the wealthiest city in India, and has the highest number of millionaires and billionaires among all cities in India. Mumbai is home to three UNESCO World Heritage Sites: the Elephanta Caves, Chhatrapati Shivaji Maharaj Terminus, and the city's distinctive ensemble of Victorian and Art Deco buildings.", 'lang': 'en', 'thumbnail': {'height': '180', 'source': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mumbai_03-2016_10_skyline_of_Lotus_Colony.jpg/320px-Mumbai_03-2016_10_skyline_of_Lotus_Colony.jpg', 'width': '320'}, 'title': 'Mumbai', 'type': 'standard'}
+Mumbai
+[2019-04-28 19:00:40 +0000] [14058] [ERROR] Exception occurred while handling uri: 'http://spawn_wiki/post_wiki'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/sanic/app.py", line 917, in handle_request
+    response = await response
+  File "middle_server.py", line 47, in decorated_function
+    response1 = await f(request,*args,**kwargs)
+  File "middle_server.py", line 86, in test
+    es.index('spawnai', doc_type='doc', id=body.get('title'), body=body)
+NameError: name 'es' is not defined
+[2019-04-28 19:00:40 +0000] - (sanic.access)[INFO][127.0.0.1:52086]: POST http://spawn_wiki/post_wiki  500 144
+[]
+{'success': True, 'entities': {}}
+[2019-04-28 19:00:47 +0000] - (sanic.access)[INFO][127.0.0.1:52088]: GET http://spawn_wiki/entity_extract?q=what%20is  200 86
+[('bot_skills', 0.9922085)]
+{'success': True, 'entities': {}}
+[2019-04-28 19:00:54 +0000] - (sanic.access)[INFO][127.0.0.1:52092]: GET http://spawn_wiki/entity_extract?q=what%20can%20you%20do  200 113
+{'entities': [], 'intent': {'confidence': 0.9922084999999999, 'value': 'bot_skills'}, 'model': 'spawn', 'text': 'what can you do'}
+None
+[2019-04-28 19:00:54 +0000] [14058] [ERROR] Exception occurred while handling uri: 'http://spawn_wiki/post_wiki'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/sanic/app.py", line 917, in handle_request
+    response = await response
+  File "middle_server.py", line 47, in decorated_function
+    response1 = await f(request,*args,**kwargs)
+  File "middle_server.py", line 90, in test
+    es.index('spawnai', doc_type='intent', body=body)
+NameError: name 'es' is not defined
+[2019-04-28 19:00:54 +0000] - (sanic.access)[INFO][127.0.0.1:52094]: POST http://spawn_wiki/post_wiki  500 144
+[('bot_skills', 0.96441555)]
+{'success': True, 'entities': {'meaning': ['the skills']}}
+[2019-04-28 19:01:01 +0000] - (sanic.access)[INFO][127.0.0.1:52096]: GET http://spawn_wiki/entity_extract?q=what%20are%20the%20skills  200 158
+{'entities': [{'tag': 'meaning', 'value': ['the skills']}], 'intent': {'confidence': 0.96441555, 'value': 'bot_skills'}, 'model': 'spawn', 'text': 'what are the skills'}
+None
+[2019-04-28 19:01:01 +0000] [14058] [ERROR] Exception occurred while handling uri: 'http://spawn_wiki/post_wiki'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/sanic/app.py", line 917, in handle_request
+    response = await response
+  File "middle_server.py", line 47, in decorated_function
+    response1 = await f(request,*args,**kwargs)
+  File "middle_server.py", line 90, in test
+    es.index('spawnai', doc_type='intent', body=body)
+NameError: name 'es' is not defined
+[2019-04-28 19:01:01 +0000] - (sanic.access)[INFO][127.0.0.1:52098]: POST http://spawn_wiki/post_wiki  500 144
