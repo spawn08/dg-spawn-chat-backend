@@ -70,6 +70,7 @@ def predict(utterance, lang, model_name):
                 return {'success': True, 'entities': entityList}
             elif crf is not None:
                 predicted = crf.predict(test)
+                print('Predicted entity --> {e}'.format(e=predicted))
                 entityList = extractEntities(predicted[0], tagged)
                 return {'success': True, 'entities': entityList}
             else:

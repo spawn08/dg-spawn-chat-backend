@@ -96,7 +96,7 @@ def train_keras(model_name):
     print(output_data)
     print("%s sentences in training data" % len(output_data))
 
-    ignore_words = ['?']
+    ignore_words = ['?',',','!','do','who','what','is','a','an','the','how','he']
     print(ignore_words)
     for pattern in output_data:
         w = nltk.word_tokenize(pattern['text'])
@@ -141,7 +141,7 @@ def train_keras(model_name):
         model_nn.add(Dense(len(train_youtput[0]), activation='softmax'))
 
         model_nn.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-        model_nn.fit(np.array(train_xinput), np.array(train_youtput), epochs=100, batch_size=8)
+        model_nn.fit(np.array(train_xinput), np.array(train_youtput), epochs=120, batch_size=8)
 
         model_path = '/opt/models/{model_dir}/{model_name}.h5'.format(
             model_dir=model_name,

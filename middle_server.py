@@ -13,9 +13,9 @@ import train_model
 import crf_entity
 import spacy
 
-es = Elasticsearch([{'host': '139.59.74.225', 'port': 9200}])
+es = Elasticsearch([{'host': 'api.spawnai.com'}],scheme='https')
 
-# import uvloop
+import uvloop
 
 app = Sanic(__name__)
 
@@ -139,7 +139,7 @@ async def train(request):
 @authorized()
 async def classify(request):
     sentence = request.args.get('q')
-    model_name = request.args.get('model_name')
+    model_name = request.args.get('model')
     lang = request.args.get('lang')
     sentence = sentence.lower()
     if lang is None:
@@ -161,7 +161,7 @@ async def get_ner_test(request):
     query = request.args.get('q')
     if (cache.get(query) is not None):
         return response.json(cache.get(query))
-    model_name = request.args.get('model_name')
+    model_name = request.args.get('model')
     lang = request.args.get('lang')
     if lang is None:
         lang = 'en'
@@ -176,7 +176,7 @@ async def get_ner_test(request):
             if len(doc.ents):
                 ent = doc.ents[0]
                 labels['tag'] = ent.label_
-                labels['value'] = ent.text
+                labels['entity'] = ent.text
                 entities.append(labels)
                 labels = {}
                 print(ent.text, ent.label_)
@@ -213,15 +213,15 @@ async def get_ner_test(request):
     return response.json(ml_response)
 
 
-# asyncio.set_event_loop(uvloop.new_event_loop())
-# server = app.create_server(host="localhost", port=8000, return_asyncio_server=True)
-# loop = asyncio.get_event_loop()
-# task = asyncio.ensure_future(server)
-# signal(SIGINT, lambda s, f: loop.stop())
-# try:
-#    loop.run_forever()
-# except:
-#    loop.stop()
+#asyncio.set_event_loop(uvloop.new_event_loop())
+#server = app.create_server(host="0.0.0.0", port=8010, return_asyncio_server=True)
+#loop = asyncio.get_event_loop()
+#task = asyncio.ensure_future(server)
+#signal(SIGINT, lambda s, f: loop.stop())
+#try:
+#   loop.run_forever()
+#except:
+#   loop.stop()
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8010)
