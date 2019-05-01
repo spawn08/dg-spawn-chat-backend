@@ -82,3 +82,107 @@ CRF MODEL LOADED
 {'intent': {'confidence': 0, 'name': None}, 'text': 'what does meaning of symphony', 'model': 'spawn_en', 'entities': [{'tag': 'movie', 'value': ['symphony']}]}
 [2019-05-01 07:24:27 +0000] - (sanic.access)[INFO][142.93.214.249:43268]: GET http://spawn_ml/entity_extract?q=what%20does%20meaning%20of%20symphony&model=spawn&lang=en  200 147
 [2019-05-01 07:24:49 +0000] - (sanic.access)[INFO][142.93.214.249:43274]: GET http://spawn_ml/entity_extract?q=what%20is%20the%20meaning%20of%20aggression&model=spawn&lang=en  200 161
+Using TensorFlow backend.
+Loaded model from disk
+Loaded model from disk
+[2019-05-01 07:57:38 +0000] [22530] [INFO] Goin' Fast @ http://0.0.0.0:8010
+[2019-05-01 07:57:38 +0000] [22530] [INFO] Starting worker [22530]
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-05-01 07:58:17.762635: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-01 07:58:17.766819: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2199995000 Hz
+2019-05-01 07:58:17.767180: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x1344460 executing computations on platform Host. Devices:
+2019-05-01 07:58:17.767211: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+[('spawn_name', 0.95488954)]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['आपका नाम']}}
+{'intent': {'confidence': '0.95488954', 'name': 'spawn_name'}, 'text': 'आपका नाम क्या है', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['आपका नाम']}]}
+[2019-05-01 07:58:17 +0000] - (sanic.access)[INFO][142.93.214.249:43352]: GET http://spawn_ml/entity_extract?q=%E0%A4%86%E0%A4%AA%E0%A4%95%E0%A4%BE%20%E0%A4%A8%E0%A4%BE%E0%A4%AE%20%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%B9%E0%A5%88&model=spawn&lang=hi  200 251
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['आप', 'कर सकते']}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'आप क्या-क्या कर सकते हो', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['आप', 'कर सकते']}]}
+[2019-05-01 07:58:25 +0000] - (sanic.access)[INFO][142.93.214.249:43356]: GET http://spawn_ml/entity_extract?q=%E0%A4%86%E0%A4%AA%20%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE-%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%95%E0%A4%B0%20%E0%A4%B8%E0%A4%95%E0%A4%A4%E0%A5%87%20%E0%A4%B9%E0%A5%8B&model=spawn&lang=hi  200 273
+[('bot_skills', 0.9486027)]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['क्या कर']}}
+{'intent': {'confidence': '0.9486027', 'name': 'bot_skills'}, 'text': 'क्या कर सकते हो', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['क्या कर']}]}
+[2019-05-01 07:58:35 +0000] - (sanic.access)[INFO][142.93.214.249:43362]: GET http://spawn_ml/entity_extract?q=%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%95%E0%A4%B0%20%E0%A4%B8%E0%A4%95%E0%A4%A4%E0%A5%87%20%E0%A4%B9%E0%A5%8B&model=spawn&lang=hi  200 238
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['नरेंद्र मोदी']}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी के बारे में बताओ', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['नरेंद्र मोदी']}]}
+[2019-05-01 07:58:44 +0000] - (sanic.access)[INFO][142.93.214.249:43366]: GET http://spawn_ml/entity_extract?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AC%E0%A4%A4%E0%A4%BE%E0%A4%93&model=spawn&lang=hi  200 324
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['माउंट एवरेस्ट']}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'माउंट एवरेस्ट के बारे में बताओ', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['माउंट एवरेस्ट']}]}
+[2019-05-01 07:58:52 +0000] - (sanic.access)[INFO][142.93.214.249:43372]: GET http://spawn_ml/entity_extract?q=%E0%A4%AE%E0%A4%BE%E0%A4%89%E0%A4%82%E0%A4%9F%20%E0%A4%8F%E0%A4%B5%E0%A4%B0%E0%A5%87%E0%A4%B8%E0%A5%8D%E0%A4%9F%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AC%E0%A4%A4%E0%A4%BE%E0%A4%93&model=spawn&lang=hi  200 336
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['कंचन', 'गंगा']}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'कंचन गंगा के बारे में बताओ', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['कंचन', 'गंगा']}]}
+[2019-05-01 07:58:59 +0000] - (sanic.access)[INFO][142.93.214.249:43378]: GET http://spawn_ml/entity_extract?q=%E0%A4%95%E0%A4%82%E0%A4%9A%E0%A4%A8%20%E0%A4%97%E0%A4%82%E0%A4%97%E0%A4%BE%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AC%E0%A4%A4%E0%A4%BE%E0%A4%93&model=spawn&lang=hi  200 290
+[2019-05-01 07:59:21 +0000] - (sanic.access)[INFO][43.251.219.248:55198]: GET http://142.93.214.249:8010/entity_extract?model=spawn&lang=hi&q=%E0%A4%95%E0%A4%82%E0%A4%9A%E0%A4%A8%20%E0%A4%97%E0%A4%82%E0%A4%97%E0%A4%BE%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AC%E0%A4%A4%E0%A4%BE%E0%A4%93  200 290
+[]
+Narendra Modi PERSON
+[2019-05-01 08:01:23 +0000] - (sanic.access)[INFO][142.93.214.249:43386]: GET http://spawn_ml/entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en  200 143
+[]
+Narendra Modi PERSON
+[2019-05-01 08:01:54 +0000] - (sanic.access)[INFO][142.93.214.249:43392]: GET http://spawn_ml/entity_extract?q=can%20you%20tell%20me%20about%20Narendra%20Modi&model=spawn&lang=en  200 158
+[2019-05-01 08:05:44 +0000] - (sanic.access)[INFO][142.93.214.249:43404]: GET http://spawn_ml/entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en  200 143
+[2019-05-01 08:08:06 +0000] - (sanic.access)[INFO][142.93.214.249:43412]: GET http://spawn_ml/entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en  200 143
+[2019-05-01 08:10:53 +0000] - (sanic.access)[INFO][142.93.214.249:43418]: GET http://spawn_ml/entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en  200 143
+[2019-05-01 08:15:00 +0000] - (sanic.access)[INFO][142.93.214.249:43428]: GET http://spawn_ml/entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en  200 143
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['नरेंद्र मोदी']}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी कौन है', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['नरेंद्र मोदी']}]}
+[2019-05-01 08:20:00 +0000] - (sanic.access)[INFO][142.93.214.249:43438]: GET http://spawn_ml/entity_extract?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80%20%E0%A4%95%E0%A5%8C%E0%A4%A8%20%E0%A4%B9%E0%A5%88&model=spawn&lang=hi  200 274
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['कलर्स नेम']}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'कलर्स नेम कौन है', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['कलर्स नेम']}]}
+[2019-05-01 08:20:08 +0000] - (sanic.access)[INFO][142.93.214.249:43444]: GET http://spawn_ml/entity_extract?q=%E0%A4%95%E0%A4%B2%E0%A4%B0%E0%A5%8D%E0%A4%B8%20%E0%A4%A8%E0%A5%87%E0%A4%AE%20%E0%A4%95%E0%A5%8C%E0%A4%A8%20%E0%A4%B9%E0%A5%88&model=spawn&lang=hi  200 238
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['मुंबई को']}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'मुंबई को कहां पर है', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['मुंबई को']}]}
+[2019-05-01 08:20:15 +0000] - (sanic.access)[INFO][142.93.214.249:43448]: GET http://spawn_ml/entity_extract?q=%E0%A4%AE%E0%A5%81%E0%A4%82%E0%A4%AC%E0%A4%88%20%E0%A4%95%E0%A5%8B%20%E0%A4%95%E0%A4%B9%E0%A4%BE%E0%A4%82%20%E0%A4%AA%E0%A4%B0%20%E0%A4%B9%E0%A5%88&model=spawn&lang=hi  200 245
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['मुंबई']}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'मुंबई कहां पर है', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['मुंबई']}]}
+[2019-05-01 08:20:22 +0000] - (sanic.access)[INFO][142.93.214.249:43452]: GET http://spawn_ml/entity_extract?q=%E0%A4%AE%E0%A5%81%E0%A4%82%E0%A4%AC%E0%A4%88%20%E0%A4%95%E0%A4%B9%E0%A4%BE%E0%A4%82%20%E0%A4%AA%E0%A4%B0%20%E0%A4%B9%E0%A5%88&model=spawn&lang=hi  200 219
+[2019-05-01 08:22:19 +0000] - (sanic.access)[INFO][142.93.214.249:43460]: GET http://spawn_ml/entity_extract?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AC%E0%A4%A4%E0%A4%BE%E0%A4%93&model=spawn&lang=hi  200 324
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['भारतीय', 'पार्टी का']}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'भारतीय जनता पार्टी का बारे में बताओ', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['भारतीय', 'पार्टी का']}]}
+[2019-05-01 08:22:48 +0000] - (sanic.access)[INFO][142.93.214.249:43466]: GET http://spawn_ml/entity_extract?q=%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A5%80%E0%A4%AF%20%E0%A4%9C%E0%A4%A8%E0%A4%A4%E0%A4%BE%20%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%9F%E0%A5%80%20%E0%A4%95%E0%A4%BE%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AC%E0%A4%A4%E0%A4%BE%E0%A4%93&model=spawn&lang=hi  200 376
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['भारतीय']}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'भारतीय जनता पार्टी', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['भारतीय']}]}
+[2019-05-01 08:22:56 +0000] - (sanic.access)[INFO][142.93.214.249:43472]: GET http://spawn_ml/entity_extract?q=%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A5%80%E0%A4%AF%20%E0%A4%9C%E0%A4%A8%E0%A4%A4%E0%A4%BE%20%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%9F%E0%A5%80&model=spawn&lang=hi  200 242
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['अनुशासन का']}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'अनुशासन का मतलब', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['अनुशासन का']}]}
+[2019-05-01 08:23:19 +0000] - (sanic.access)[INFO][142.93.214.249:43478]: GET http://spawn_ml/entity_extract?q=%E0%A4%85%E0%A4%A8%E0%A5%81%E0%A4%B6%E0%A4%BE%E0%A4%B8%E0%A4%A8%20%E0%A4%95%E0%A4%BE%20%E0%A4%AE%E0%A4%A4%E0%A4%B2%E0%A4%AC&model=spawn&lang=hi  200 243
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'कांग्रेस पार्टी', 'model': 'spawn_hi', 'entities': []}
+[2019-05-01 08:25:16 +0000] - (sanic.access)[INFO][142.93.214.249:43482]: GET http://spawn_ml/entity_extract?q=%E0%A4%95%E0%A4%BE%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B8%20%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%9F%E0%A5%80&model=spawn&lang=hi  200 167
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['राहुल गांधी']}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'राहुल गांधी के बारे में बताओ', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['राहुल गांधी']}]}
+[2019-05-01 08:25:29 +0000] - (sanic.access)[INFO][142.93.214.249:43486]: GET http://spawn_ml/entity_extract?q=%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A5%81%E0%A4%B2%20%E0%A4%97%E0%A4%BE%E0%A4%82%E0%A4%A7%E0%A5%80%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AC%E0%A4%A4%E0%A4%BE%E0%A4%93&model=spawn&lang=hi  200 312
+[]
+CRF MODEL LOADED
+{'success': True, 'entities': {'tag': ['बराक']}}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'बराक ओबामा', 'model': 'spawn_hi', 'entities': [{'tag': 'tag', 'value': ['बराक']}]}
+[2019-05-01 08:26:06 +0000] - (sanic.access)[INFO][142.93.214.249:43492]: GET http://spawn_ml/entity_extract?q=%E0%A4%AC%E0%A4%B0%E0%A4%BE%E0%A4%95%20%E0%A4%93%E0%A4%AC%E0%A4%BE%E0%A4%AE%E0%A4%BE&model=spawn&lang=hi  200 187
