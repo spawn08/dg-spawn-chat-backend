@@ -155,61 +155,67 @@ async def classify(request):
 @app.route('/entity_extract', methods=['GET'])
 @authorized()
 async def get_ner_test(request):
-    global cache
-    entities = []
-    labels = {}
-    query = request.args.get('q')
-    if (cache.get(query) is not None):
-        return response.json(cache.get(query))
-    model_name = request.args.get('model')
-    lang = request.args.get('lang')
-    if lang is None:
-        lang = 'en'
+    try:
+        global cache
+        entities = []
+        labels = {}
+        query = request.args.get('q')
+        if (cache.get(query) is not None):
+            return response.json(cache.get(query))
+        model_name = request.args.get('model')
+        lang = request.args.get('lang')
+        if lang is None:
+            lang = 'en'
 
-    model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
+        model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
+        print(model_name)
+        ml_response = train_model.classifyKeras(query, model_name)
+        print(ml_response)
+        if query is not None:
+            if lang == 'en':
+                doc = nlp(query)
+                if len(doc.ents):
+                    ent = doc.ents[0]
+                    labels['tag'] = ent.label_
+                    labels['entity'] = ent.text
+                    entities.append(labels)
+                    labels = {}
+                    print(ent.text, ent.label_)
 
-    ml_response = train_model.classifyKeras(query, model_name)
-
-    if query is not None:
-        if lang == 'en':
-            doc = nlp(query)
-            if len(doc.ents):
-                ent = doc.ents[0]
-                labels['tag'] = ent.label_
-                labels['entity'] = ent.text
-                entities.append(labels)
-                labels = {}
-                print(ent.text, ent.label_)
-
-                ml_response['entities'] = entities
-                cache[query] = ml_response
+                    ml_response['entities'] = entities
+                    cache[query] = ml_response
+                else:
+                    crf_ent = crf_entity.predict(query, lang, model_name)
+                    print(crf_ent)
+                    if (crf_ent.get('entities') is not None and len(list(crf_ent.get('entities').keys())) > 0 and len(
+                        list(crf_ent.get('entities').values())[0]) > 0):
+                        entities = [{'tag': list(crf_ent.get('entities').keys())[0],
+                                 'value': list(crf_ent.get('entities').values())[0]}]
+                    ml_response['entities'] = entities
+                    cache[query] = ml_response
+                    print(ml_response)
+                    return response.json(ml_response)
             else:
                 crf_ent = crf_entity.predict(query, lang, model_name)
                 print(crf_ent)
                 if (crf_ent.get('entities') is not None and len(list(crf_ent.get('entities').keys())) > 0 and len(
-                        list(crf_ent.get('entities').values())[0]) > 0):
+                    list(crf_ent.get('entities').values())[0]) > 0):
                     entities = [{'tag': list(crf_ent.get('entities').keys())[0],
-                                 'value': list(crf_ent.get('entities').values())[0]}]
+                             'value': list(crf_ent.get('entities').values())[0]}]
                 ml_response['entities'] = entities
                 cache[query] = ml_response
                 print(ml_response)
                 return response.json(ml_response)
         else:
-            crf_ent = crf_entity.predict(query, lang, model_name)
-            print(crf_ent)
-            if (crf_ent.get('entities') is not None and len(list(crf_ent.get('entities').keys())) > 0 and len(
-                    list(crf_ent.get('entities').values())[0]) > 0):
-                entities = [{'tag': list(crf_ent.get('entities').keys())[0],
-                             'value': list(crf_ent.get('entities').values())[0]}]
+            entities = [{'tag': '', 'value': ''}]
             ml_response['entities'] = entities
             cache[query] = ml_response
-            print(ml_response)
             return response.json(ml_response)
-    else:
-        entities = [{'tag': '', 'value': ''}]
-        ml_response['entities'] = entities
-        cache[query] = ml_response
-        return response.json(ml_response)
+        
+    except Exception as e:
+        print(e)    
+        return response.json({'error':'No model found. Please train the model first.','status':'fail'})
+
     return response.json(ml_response)
 
 

@@ -192,16 +192,17 @@ def classifyKeras(sentence, model_name):
     with graph.as_default():
 
         threshold = 0.70
-
+        print(model_name)
         loaded_model = multiple_models.get(model_name)
         if loaded_model is None:
+            load_keras_model(model_name)
             multiple_models[model_name] = get_model_keras(model_name)
             loaded_model = multiple_models.get(model_name)
-
+        print(multiple_models)
         file_path = '/opt/models/{model_dir}/{model_name}.h5'.format(
             model_dir=model_name,
             model_name=model_name)
-
+        print(file_path)
         loaded_model.load_weights(file_path)
 
         result = loaded_model.predict(np.array([bow(sentence, words.get(model_name))]))[0]
