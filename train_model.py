@@ -72,8 +72,8 @@ def get_model_keras(model_name):
     train_x = train_x_dict[model_name]
     train_y = train_y_dict[model_name]
     model_nn = Sequential()
-    model_nn.add(Dense(12, input_dim=len(train_x[0]), activation='relu'))
-    model_nn.add(Dense(8, activation='relu'))
+    model_nn.add(Dense(32, input_dim=len(train_x[0]), activation='relu'))
+    model_nn.add(Dense(16, activation='relu'))
     model_nn.add(Dense(len(train_y[0]), activation='softmax'))
     return model_nn
 
@@ -96,7 +96,8 @@ def train_keras(model_name):
     print(output_data)
     print("%s sentences in training data" % len(output_data))
 
-    ignore_words = ['?',',','!','do','who','what','is','a','an','the','how','he']
+    ignore_words = ['?']
+    #ignore_words = ['?',',','!','do','who','what','is','a','an','the','how','he']
     print(ignore_words)
     for pattern in output_data:
         w = nltk.word_tokenize(pattern['text'])
@@ -136,8 +137,8 @@ def train_keras(model_name):
     train_youtput = list(training[:, 1])
     with graph.as_default():
         model_nn = Sequential()
-        model_nn.add(Dense(12, input_dim=len(train_xinput[0]), activation='relu'))
-        model_nn.add(Dense(8, activation='relu'))
+        model_nn.add(Dense(32, input_dim=len(train_xinput[0]), activation='relu'))
+        model_nn.add(Dense(16, activation='relu'))
         model_nn.add(Dense(len(train_youtput[0]), activation='softmax'))
 
         model_nn.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
