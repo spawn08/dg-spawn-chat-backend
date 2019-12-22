@@ -8,7 +8,8 @@ from flask import Flask, request, json, Response, jsonify
 import crf_entity
 import train_model
 
-es = Elasticsearch([{'host': 'api.spawnai.com'}], scheme='https')
+# es = Elasticsearch([{'host': 'api.spawnai.com'}], scheme='https')
+es = Elasticsearch([{'host': 'localhost', 'port': 9200}], scheme='http')
 
 app = Flask(__name__)
 cache = {}
@@ -75,6 +76,7 @@ def get_ner():
     else:
         return jsonify({'msg': 'query cannot be empty', 'status': 'false'})
     return jsonify({"answer": "42"})
+
 
 @app.route("/post_wiki", methods=['POST'])
 def post_data():
@@ -219,4 +221,18 @@ celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'])
 def my_background_task():
     # some long running task here
     time.sleep(1)
-    return {'result': 'ok'}'''
+    return {'result': 'ok'}
+from celery import Celery
+
+app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379/0'
+app.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379/0'
+
+celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'])
+
+
+@celery.task
+def my_background_task():
+    # some long running task here
+    # time.sleep(1)
+    es.index('boltcargo', doc_type='wiki', body={'name': 'hey spawn', 'status': 'success'})
+    return {'result': 'ok'} '''
