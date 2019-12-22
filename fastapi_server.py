@@ -6,13 +6,14 @@ import uvicorn
 
 import crf_entity
 import train_model
+import tensorflow as tf
 
 app = FastAPI()
 security = HTTPBasic()
 
 cache = {}
 nlp = None
-
+graph = tf.get_default_graph()
 
 async def get_current_username(credentials: HTTPBasicCredentials = Depends(security)):
     if credentials.username != "onebotsolution" or credentials.password != "OneBotFinancialServices":
@@ -58,10 +59,10 @@ async def classify(q: str, model: str, lang: str,
 
 
 if __name__ == '__main__':
-    import argparse
+    #import argparse
 
-    parser = argparse.ArgumentParser(description='Command line utility for accepting port number')
-    parser.add_argument('--port', type=int, help='Port number for running application')
+    #parser = argparse.ArgumentParser(description='Command line utility for accepting port number')
+    #parser.add_argument('--port', type=int, help='Port number for running application')
 
-    args = parser.parse_args()
-    uvicorn.run(app, port=args.port)
+    #args = parser.parse_args()
+    uvicorn.run(app)
