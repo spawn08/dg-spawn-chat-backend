@@ -58,4 +58,10 @@ async def classify(q: str, model: str, lang: str,
 
 
 if __name__ == '__main__':
-    uvicorn.run(app)
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Command line utility for accepting port number')
+    parser.add_argument('--port', type=int, help='Port number for running application')
+
+    args = parser.parse_args()
+    uvicorn.run(app, port=args.port)
