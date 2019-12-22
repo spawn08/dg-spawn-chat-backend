@@ -14,5 +14,5 @@ if __name__ == '__main__':
     http_server = HTTPServer(WSGIContainer(app))
     http_server.listen(args.port, 'localhost')
     print('port number ->' + str(args.port))
-    IOLoop.instance().start()
     print("Server Started")
+    IOLoop.instance().start()
