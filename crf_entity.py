@@ -1,9 +1,9 @@
-import sklearn_crfsuite
-import spacy
 import json
-from spacy.gold import GoldParse
 import os
+
 import joblib
+import sklearn_crfsuite
+from spacy.gold import GoldParse
 
 nlp = None  # spacy.load("en_core_web_md")
 crf = None

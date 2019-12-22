@@ -2,26 +2,22 @@ import json
 import os
 import pickle
 import random
+from multiprocessing.pool import ThreadPool
 from pathlib import Path
 
 import nltk
 import numpy as np
 import tensorflow as tf
-
-import keras
-from keras.models import load_model
 from keras.layers import Dense
 from keras.models import Sequential
-from keras.models import model_from_json
-
-from nltk.stem.lancaster import LancasterStemmer
 from nltk.stem.porter import PorterStemmer
-from multiprocessing.pool import ThreadPool
 
 # import spacy
 
 pool = ThreadPool(processes=20)
-
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_BASE_PATH = os.path.join(ROOT_DIR, 'opt/models/')
+DATA_BASE_PATH = os.path.join(ROOT_DIR, 'opt/data/')
 # nlp = spacy.load("en_core_web_md")
 
 stemmer = PorterStemmer()
@@ -42,21 +38,11 @@ def load_keras_model(model_name):
     global multiple_models
 
     multiple_models[model_name] = None
-    model_path = "/opt/models/{model_name}/{model_name}.json".format(
-        model_name=model_name)
-    model_path_h5 = '/opt/models/{model_dir}/{model_name}.h5'.format(
-        model_dir=model_name,
-        model_name=model_name)
-    if (os.path.isfile("/opt/models/{model_name}/{model_name}.json".format(
-            model_name=model_name))):
-        json_file = open(model_path, 'r')
-        loaded_model_json = json_file.read()
-        json_file.close()
 
-    my_file = Path("/opt/models/{model_name}/{name}".format(
+    my_file = Path(MODEL_BASE_PATH + "{model_name}/{name}".format(
         model_name=model_name, name=model_name))
     if my_file.is_file():
-        data = pickle.load(open("/opt/models/{model_name}/{name}".format(
+        data = pickle.load(open(MODEL_BASE_PATH + "{model_name}/{name}".format(
             model_name=model_name, name=model_name), "rb"))
         words[model_name] = data['words_{model}'.format(model=model_name)]
         classes[model_name] = data['classes_{model}'.format(model=model_name)]
@@ -68,13 +54,14 @@ def load_keras_model(model_name):
 pass
 
 
-def get_model_keras(model_name):
+def get_model_keras(model_name, file_path):
     train_x = train_x_dict[model_name]
     train_y = train_y_dict[model_name]
     model_nn = Sequential()
     model_nn.add(Dense(32, input_dim=len(train_x[0]), activation='relu'))
     model_nn.add(Dense(16, activation='relu'))
     model_nn.add(Dense(len(train_y[0]), activation='softmax'))
+    model_nn.load_weights(file_path)
     return model_nn
 
 
@@ -89,7 +76,7 @@ def train_keras(model_name):
     train_youtput = []
     tf.reset_default_graph()
 
-    with open('/opt/data/{model}_data.json'.format(model=model_name), encoding="utf-8") as f:
+    with open(DATA_BASE_PATH + '/{model}_data.json'.format(model=model_name), encoding="utf-8") as f:
         data = json.load(f)
 
     output_data = list((data.get('rasa_nlu_data').get('common_examples')))
@@ -97,7 +84,7 @@ def train_keras(model_name):
     print("%s sentences in training data" % len(output_data))
 
     ignore_words = ['?']
-    #ignore_words = ['?',',','!','do','who','what','is','a','an','the','how','he']
+    # ignore_words = ['?',',','!','do','who','what','is','a','an','the','how','he']
     print(ignore_words)
     for pattern in output_data:
         w = nltk.word_tokenize(pattern['text'])
@@ -144,7 +131,7 @@ def train_keras(model_name):
         model_nn.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
         model_nn.fit(np.array(train_xinput), np.array(train_youtput), epochs=120, batch_size=8)
 
-        model_path = '/opt/models/{model_dir}/{model_name}.h5'.format(
+        model_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
             model_dir=model_name,
             model_name=model_name)
         model_nn.save(model_path)
@@ -153,7 +140,7 @@ def train_keras(model_name):
         {'words_{model}'.format(model=model_name): words_list, 'classes_{model}'.format(model=model_name): inputclasses,
          'train_x_{model}'.format(model=model_name): train_xinput,
          'train_y_{model}'.format(model=model_name): train_youtput},
-        open("/opt/models/{model_name}/{name}".format(
+        open(MODEL_BASE_PATH + "{model_name}/{name}".format(
             model_name=model_name, name=model_name), "wb"))
 
     load_keras_model(model_name)
@@ -162,9 +149,9 @@ def train_keras(model_name):
 
 def train_parallel(model_name):
     my_file = os.path.isdir(
-        "/opt/models/{model_name}".format(model_name=model_name))
+        MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
     if my_file == False:
-        os.mkdir("/opt/models/{model_name}".format(model_name=model_name))
+        os.mkdir(MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
     async_train_result = pool.apply_async(train_keras, (model_name,))
     return async_train_result.get()
 
@@ -191,38 +178,29 @@ def bow(sentence, words, show_details=False):
 def classifyKeras(sentence, model_name):
     with graph.as_default():
 
-        threshold = 0.70
-        print(model_name)
+        file_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
+            model_dir=model_name,
+            model_name=model_name)
+
         loaded_model = multiple_models.get(model_name)
         if loaded_model is None:
             load_keras_model(model_name)
-            multiple_models[model_name] = get_model_keras(model_name)
+            multiple_models[model_name] = get_model_keras(model_name, file_path)
             loaded_model = multiple_models.get(model_name)
         print(multiple_models)
-        file_path = '/opt/models/{model_dir}/{model_name}.h5'.format(
-            model_dir=model_name,
-            model_name=model_name)
-        print(file_path)
-        loaded_model.load_weights(file_path)
 
-        result = loaded_model.predict(np.array([bow(sentence, words.get(model_name))]))[0]
-        result = [[i, r] for i, r in enumerate(result) if r > 0.75]
-        result.sort(key=lambda x: x[1], reverse=True)
-        return_list = []
-        return_intent = []
-        intent = []
-        return_probability = 0
-        for r in result:
-            return_list.append((classes.get(model_name)[r[0]], r[1]))
-        print(return_list)
-        if (len(return_list) > 0):
-            return_intent = return_list[0]
-            intent = return_intent[0]
-            return_probability = (return_intent[1])
+        result = loaded_model.predict(
+            np.array([bow(sentence, words.get(model_name))]))[0]
+        class_integer = np.argmax(result)
+        intent_class = classes.get(model_name)[class_integer]
+        probability = result[class_integer]
+
+        if (probability > 0.70):
+
             js = {
                 "intent": {
-                    "confidence": str(return_probability),
-                    "name": intent,
+                    "confidence": str(probability),
+                    "name": intent_class,
                 },
                 "text": sentence,
                 "model": model_name
@@ -245,22 +223,3 @@ def classifyKeras(sentence, model_name):
 def classify_parallel(sentence, model_name):
     async_train_result = pool.apply_async(classifyKeras, (sentence, model_name))
     return async_train_result.get()
-
-# def get_ner():
-#    entities = []
-#    labels = {}
-#    query = request.args.get('q')
-#    if query is not None:
-#        doc = nlp(query)
-#        for ent in doc.ents:
-#            labels['tag'] = ent.label_
-#            labels['value'] = ent.text
-#            labels['timestamp']= strftime("%Y-%m-%dT%H:%M:%SZ", gmtime())
-#            entities.append(labels)
-#            labels = {}
-#            print(ent.text, ent.label_)
-#        if (len(entities) == 0):
-#            return ([{'tag': '', 'value': query}])
-#    else:
-#        return ([{'tag': '', 'value': query}])
-#    return (entities)
