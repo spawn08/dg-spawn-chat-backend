@@ -1,6 +1,7 @@
 import spacy
 import tensorflow as tf
 import uvicorn
+from elasticsearch import Elasticsearch
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from starlette.status import HTTP_401_UNAUTHORIZED
@@ -14,6 +15,7 @@ security = HTTPBasic()
 cache = {}
 nlp = None
 graph = tf.get_default_graph()
+es = Elasticsearch([{'host': 'localhost', 'port': 9200}], scheme='http')
 
 
 async def get_current_username(credentials: HTTPBasicCredentials = Depends(security)):
@@ -23,6 +25,10 @@ async def get_current_username(credentials: HTTPBasicCredentials = Depends(secur
             detail="Incorrect email or password",
             headers={"WWW-Authenticate": "Basic"})
     return True
+
+
+'''def index_data(data):
+    es.index('boltcargo', doc_type='wiki', body=data)'''
 
 
 async def load_models():
@@ -43,7 +49,8 @@ async def load():
 
 @app.get('/api/classify')
 async def classify(q: str, model: str, lang: str,
-                   dependencies=Depends(get_current_username)):
+                   dependencies=Depends(get_current_username)
+                   ):
     sentence = q
     model_name = model
     if model_name is None:
@@ -54,18 +61,18 @@ async def classify(q: str, model: str, lang: str,
     model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
     if (sentence is not None):
         return_list = train_model.classifyKeras(sentence, model_name)
+        # task.add_task(index_data, data=return_list)
     else:
         return ({'message': 'query cannot be empty', 'status': 'error', 'model_name': model_name})
-    return (return_list)
+    return return_list
 
 
 if __name__ == '__main__':
-    # import argparse
+    import argparse
 
-    # parser = argparse.ArgumentParser(description='Command line utility for accepting port number')
-    # parser.add_argument('--port', type=int, help='Port number for running application')
-
-    # args = parser.parse_args()
+    parser = argparse.ArgumentParser(description='Command line utility for accepting port number')
+    parser.add_argument('--port', type=int, help='Port number for running application')
+    args = parser.parse_args()
     uvicorn.run(app)
 
 '''
