@@ -76,7 +76,6 @@ def get_ner():
         return jsonify({'msg': 'query cannot be empty', 'status': 'false'})
     return jsonify({"answer": "42"})
 
-
 @app.route("/post_wiki", methods=['POST'])
 def post_data():
     body = request.json
