@@ -177,4 +177,7 @@ def set_nlp(nlp_load):
     global nlp
     nlp = nlp_load
 
+
+def get_nlp():
+    return nlp
     # train("E:/dg-spawn-chat-backend/opt/crf_en_data.json","spawn","en")

@@ -147,7 +147,7 @@ def classify():
 def get_ner_test():
     try:
         global cache
-        nlp = crf_entity.nlp
+        nlp = crf_entity.get_nlp()
         entities = []
         labels = {}
         query = request.args.get('q')
