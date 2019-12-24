@@ -7,10 +7,13 @@ from pathlib import Path
 
 import nltk
 import numpy as np
+import spacy
 import tensorflow as tf
 from keras.layers import Dense
 from keras.models import Sequential
 from nltk.stem.porter import PorterStemmer
+
+import crf_entity
 
 # import spacy
 
@@ -27,6 +30,22 @@ train_x_dict = {}
 train_y_dict = {}
 multiple_models = {}
 graph = tf.get_default_graph()
+
+
+class LoadModel():
+    def __init__(self):
+        self.nlp = spacy.load("en_core_web_md")
+        crf_entity.set_nlp(self.nlp)
+        self.models = {}
+
+    def load_current_model(self):
+        self.models = {'1': 'spawn_en', '2': 'spawn_hi'}
+        for loaded_model in self.models.values():
+            load_keras_model(loaded_model)
+        print("Success")
+
+    def get_nlp(self):
+        return self.nlp
 
 
 def load_keras_model(model_name):
@@ -187,7 +206,6 @@ def classifyKeras(sentence, model_name):
             load_keras_model(model_name)
             multiple_models[model_name] = get_model_keras(model_name, file_path)
             loaded_model = multiple_models.get(model_name)
-        print(multiple_models)
 
         result = loaded_model.predict(
             np.array([bow(sentence, words.get(model_name))]))[0]

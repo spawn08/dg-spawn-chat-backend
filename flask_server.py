@@ -1,7 +1,6 @@
 from time import gmtime, strftime
 
 import requests
-import spacy
 from elasticsearch import Elasticsearch
 from flask import Flask, request, json, Response, jsonify
 
@@ -13,8 +12,9 @@ es = Elasticsearch([{'host': 'localhost', 'port': 9200}], scheme='http')
 
 app = Flask(__name__)
 cache = {}
-nlp = None
 
+
+# nlp = None
 
 def check_auth(username, password):
     return username == 'onebotsolution' and password == 'OneBotFinancialServices'
@@ -37,6 +37,7 @@ def check_authorization():
         return authenticate()
 
 
+'''
 def load_models():
     global nlp
     models = {'1': 'spawn_en', '2': 'spawn_hi'}
@@ -45,6 +46,7 @@ def load_models():
     nlp = spacy.load("en_core_web_md")
     crf_entity.set_nlp(nlp)
     pass
+'''
 
 
 @app.route('/api/getFile', methods=["GET"])
@@ -145,7 +147,7 @@ def classify():
 def get_ner_test():
     try:
         global cache
-        global nlp
+        nlp = crf_entity.nlp
         entities = []
         labels = {}
         query = request.args.get('q')

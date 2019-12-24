@@ -1,13 +1,15 @@
+import argparse
+
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
 from tornado.wsgi import WSGIContainer
 
 from flask_server import app
-from flask_server import load_models
-import argparse
+from train_model import LoadModel
 
 if __name__ == '__main__':
-    load_models()
+    load_models = LoadModel()
+    load_models.load_current_model()
     parser = argparse.ArgumentParser(description='Input the port from user')
     parser.add_argument('--port', type=int, help='Port number for which application to be run')
     args = parser.parse_args()
