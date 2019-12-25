@@ -1,6 +1,5 @@
 import tensorflow as tf
 import uvicorn
-from elasticsearch import Elasticsearch
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from starlette.status import HTTP_401_UNAUTHORIZED
@@ -12,6 +11,8 @@ app = FastAPI()
 security = HTTPBasic()
 
 nlp = None
+
+
 # es = Elasticsearch([{'host': 'localhost', 'port': 9200}], scheme='http')
 
 async def get_current_username(credentials: HTTPBasicCredentials = Depends(security)):
@@ -41,6 +42,7 @@ async def load_models():
 @app.on_event("startup")
 async def load():
     global nlp
+    print(tf.__version__)
     print("Loading model..")
     load_model = LoadModel()
     load_model.load_current_model()

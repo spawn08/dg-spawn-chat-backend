@@ -6,8 +6,10 @@ from tornado.wsgi import WSGIContainer
 
 from flask_server import app
 from train_model import LoadModel
+import tensorflow as tf
 
 if __name__ == '__main__':
+    print(tf.__version__)
     load_models = LoadModel()
     load_models.load_current_model()
     parser = argparse.ArgumentParser(description='Input the port from user')
