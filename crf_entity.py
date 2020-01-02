@@ -7,6 +7,9 @@ from spacy.gold import GoldParse
 
 nlp = None  # spacy.load("en_core_web_md")
 crf = None
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_BASE_PATH = os.path.join(ROOT_DIR, 'opt/models/')
+DATA_BASE_PATH = os.path.join(ROOT_DIR, 'opt/data/')
 
 
 def train(filePath, model_name, lang):
@@ -14,7 +17,7 @@ def train(filePath, model_name, lang):
         global crf
         global nlp
 
-        model_path = "{model_name}_classifier_{lang}".format(model_name=model_name, lang=lang)
+        model_path = "{model_name}_{lang}_classifier".format(model_name=model_name, lang=lang)
 
         if not filePath.lower().endswith('json'):
             return {'success': False, 'message': 'Training file should be in json format'}
@@ -27,15 +30,15 @@ def train(filePath, model_name, lang):
             algorithm='lbfgs',
             c1=0.01,
             c2=0.01,
-            max_iterations=100,
+            max_iterations=150,
             all_possible_transitions=True
         )
         crf.fit(X_train, y_train)
-        if (not os.path.exists("/opt/models/crfModel/")):
-            os.mkdir("/opt/models/crfModel/")
-        if (os.path.isfile("/opt/models/crfModel/{model}.pkl".format(model=model_path))):
-            os.remove("/opt/models/crfModel/{model}.pkl".format(model=model_path))
-        joblib.dump(crf, "/opt/models/crfModel/{model}.pkl".format(model=model_path))
+        if (not os.path.exists(MODEL_BASE_PATH + 'crfModel/')):
+            os.mkdir(MODEL_BASE_PATH + 'crfModel/')
+        if (os.path.isfile(MODEL_BASE_PATH + 'crfModel/' + '{model}.pkl'.format(model=model_path))):
+            os.remove(MODEL_BASE_PATH + 'crfModel/' + '{model}.pkl'.format(model=model_path))
+        joblib.dump(crf, MODEL_BASE_PATH + 'crfModel/' + '{model}.pkl'.format(model=model_path))
         return {'success': True, 'message': 'Model Trained Successfully'}
     except Exception as ex:
         return {'success': False, 'message': 'Error while Training the model - ' + str(ex)}
@@ -59,10 +62,10 @@ def predict(utterance, lang, model_name):
             test = [sent2features(s) for s in finallist]
             crf = crf_cache.get(model_path)
             if (os.path.isfile(
-                    "/opt/models/crfModel/{model_path}".format(
+                            MODEL_BASE_PATH + 'crfModel/' + '{model_path}.pkl'.format(
                         model_path=model_path)) and crf is None):
                 crf = joblib.load(
-                    "/opt/models/crfModel/{model_path}".format(model_path=model_path))
+                    MODEL_BASE_PATH + 'crfModel/' + '{model_path}.pkl'.format(model_path=model_path))
                 crf_cache[model_path] = crf
                 print("CRF MODEL LOADED")
                 predicted = crf.predict(test)

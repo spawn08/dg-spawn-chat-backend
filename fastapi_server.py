@@ -4,13 +4,15 @@ from fastapi import FastAPI, HTTPException, Depends
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from starlette.status import HTTP_401_UNAUTHORIZED
 
+import crf_entity
 from train_model import LoadModel
-from train_model import classifyKeras
+from train_model import classifyKeras, train_parallel
 
 app = FastAPI()
 security = HTTPBasic()
 
 nlp = None
+cache = {}
 
 
 # es = Elasticsearch([{'host': 'localhost', 'port': 9200}], scheme='http')
@@ -67,6 +69,102 @@ async def classify(q: str, model: str, lang: str,
     else:
         return ({'message': 'query cannot be empty', 'status': 'error', 'model_name': model_name})
     return return_list
+
+
+@app.get('/api/train')
+async def train(model_name: str, lang: str,
+                dependencies=Depends(get_current_username)
+                ):
+    try:
+
+        if model_name is None:
+            return ({'error': 'Incorrent parameter arguments', 'status': 'fail'})
+        if (model_name is None):
+            return ({'message': 'Model name parameter is not defined / empty.',
+                     'error': 'Model could not be trained',
+                     'status': 'error'})
+        if lang is None:
+            lang = 'en'
+        model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
+
+        train_msg = train_parallel(model_name)
+
+    except Exception as e:
+        print(e)
+        return ({'message': 'Error processing request.',
+                 'error': 'Model could not be trained', 'status': 'error',
+                 'model_name': model_name})
+
+    return train_msg
+
+
+@app.get('/entity_extract')
+async def entity_extract(q: str, model: str, lang: str,
+                         dependencies=Depends(get_current_username)
+                         ):
+    try:
+        global cache
+        nlp = crf_entity.get_nlp()
+        entities = []
+        labels = {}
+
+        if (cache.get(q) is not None):
+            return (cache.get(q))
+
+        if model is None:
+            return ({'error': 'Incorrent parameter arguments', 'status': 'fail'})
+        if lang is None:
+            lang = 'en'
+
+        model_name = '{model_name}_{lang}'.format(model_name=model, lang=lang)
+        print(model_name)
+        ml_response = classifyKeras(q, model_name)
+        print(ml_response)
+        if q is not None:
+            if lang == 'en':
+                doc = nlp(q)
+                if len(doc.ents):
+                    ent = doc.ents[0]
+                    labels['tag'] = ent.label_
+                    labels['entity'] = ent.text
+                    entities.append(labels)
+                    labels = {}
+                    print(ent.text, ent.label_)
+
+                    ml_response['entities'] = entities
+                    cache[q] = ml_response
+                else:
+                    crf_ent = crf_entity.predict(q, lang, model_name)
+                    print(crf_ent)
+                    if (crf_ent.get('entities') is not None and len(list(crf_ent.get('entities').keys())) > 0 and len(
+                            list(crf_ent.get('entities').values())[0]) > 0):
+                        entities = [{'tag': list(crf_ent.get('entities').keys())[0],
+                                     'value': list(crf_ent.get('entities').values())[0]}]
+                    ml_response['entities'] = entities
+                    cache[q] = ml_response
+                    print(ml_response)
+                    return ml_response
+            else:
+                crf_ent = crf_entity.predict(q, lang, model_name)
+                print(crf_ent)
+                if (crf_ent.get('entities') is not None and len(list(crf_ent.get('entities').keys())) > 0 and len(
+                        list(crf_ent.get('entities').values())[0]) > 0):
+                    entities = [{'tag': list(crf_ent.get('entities').keys())[0],
+                                 'value': list(crf_ent.get('entities').values())[0]}]
+                ml_response['entities'] = entities
+                cache[q] = ml_response
+                print(ml_response)
+                return ml_response
+        else:
+            entities = [{'tag': '', 'value': ''}]
+            ml_response['entities'] = entities
+            cache[q] = ml_response
+            return ml_response
+    except Exception as e:
+        print(e)
+        return ({'error': 'No model found. Please train the model first.', 'status': 'fail'})
+
+    return ml_response
 
 
 if __name__ == '__main__':
