@@ -3,7 +3,7 @@ import uvicorn
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from starlette.status import HTTP_401_UNAUTHORIZED
-
+import requests
 import crf_entity
 from train_model import LoadModel
 from train_model import classifyKeras, train_parallel
@@ -13,7 +13,7 @@ security = HTTPBasic()
 
 nlp = None
 cache = {}
-
+SEARCH_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/search'
 
 # es = Elasticsearch([{'host': 'localhost', 'port': 9200}], scheme='http')
 
@@ -97,6 +97,19 @@ async def train(model_name: str, lang: str,
 
     return train_msg
 
+@app.get('/websearch')
+async def entity_extract(q: str, count:str,
+        dependencies=Depends(get_current_username)
+        ):
+    global cache
+    if (cache.get(q) is not None):
+        return (cache.get(q))
+
+    results = requests.get(SEARCH_URL, params={'q':q, 'count':count},
+            headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN'})
+    results = results.json()
+    cache[q] = results
+    return results
 
 @app.get('/entity_extract')
 async def entity_extract(q: str, model: str, lang: str,
@@ -108,8 +121,8 @@ async def entity_extract(q: str, model: str, lang: str,
         entities = []
         labels = {}
 
-        if (cache.get(q) is not None):
-            return (cache.get(q))
+        #if (cache.get(q) is not None):
+        #    return (cache.get(q))
 
         if model is None:
             return ({'error': 'Incorrent parameter arguments', 'status': 'fail'})
@@ -172,8 +185,9 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Command line utility for accepting port number')
     parser.add_argument('--port', type=int, help='Port number for running application')
+    parser.add_argument('--host', type=str, help='Hostname for the application')
     args = parser.parse_args()
-    uvicorn.run(app)
+    uvicorn.run(app,port=args.port,host=args.host)
 
 '''
 def test():
