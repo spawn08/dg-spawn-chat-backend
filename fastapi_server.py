@@ -13,7 +13,10 @@ security = HTTPBasic()
 
 nlp = None
 cache = {}
+web_cache = {}
+news_cache = {}
 SEARCH_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/search'
+NEWS_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/news/search'
 
 # es = Elasticsearch([{'host': 'localhost', 'port': 9200}], scheme='http')
 
@@ -98,18 +101,30 @@ async def train(model_name: str, lang: str,
     return train_msg
 
 @app.get('/websearch')
-async def entity_extract(q: str, count:str,
+async def websearch(q: str, count:str, result_type: str,
         dependencies=Depends(get_current_username)
         ):
-    global cache
-    if (cache.get(q) is not None):
-        return (cache.get(q))
+    global web_cache
+    global news_cache
 
-    results = requests.get(SEARCH_URL, params={'q':q, 'count':count},
+    if result_type == 'search':
+        if (web_cache.get(q) is not None):
+            return (web_cache.get(q))
+        else:
+            results = requests.get(SEARCH_URL, params={'q':q, 'count':count},
             headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN'})
-    results = results.json()
-    cache[q] = results
-    return results
+            results = results.json()
+            web_cache[q] = results
+            return results
+    elif result_type == 'news':
+        if(news_cache.get(q) is not None):
+            return news_cache.get(q)
+        else:
+            results = requests.get(NEWS_URL, params={'q':q, 'count':count, 'mkt':'en-IN'}, headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN'})
+
+            results = results.json()
+            news_cache[q] = results
+            return results
 
 @app.get('/entity_extract')
 async def entity_extract(q: str, model: str, lang: str,
