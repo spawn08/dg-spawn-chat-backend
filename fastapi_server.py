@@ -126,6 +126,14 @@ async def websearch(q: str, count:str, result_type: str,
             news_cache[q] = results
             return results
 
+@app.get('/clear_cache')
+async def clear_cache(dependencies=Depends(get_current_username)):
+    global web_cache
+    global news_cache
+    web_cache.clear()
+    news_cache.clear()
+    return {'status':'success'}
+
 @app.get('/entity_extract')
 async def entity_extract(q: str, model: str, lang: str,
                          dependencies=Depends(get_current_username)
