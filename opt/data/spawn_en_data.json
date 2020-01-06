@@ -435,7 +435,22 @@
         "intent": "bot_negative",
         "text": "you cannot help me",
         "entities": []
-      }
+      },
+      {
+        "intent":"bot_news",
+	"text":"show me lastest news",
+	"entities":[]
+      },
+      {
+        "intent":"bot_news",
+	"text":"latest news",
+        "entities":[]	
+      },
+      {
+        "intent":"bot_news",
+	"text":"show me the news",
+	"entites":[]
+      }	      
     ]
   }
 }

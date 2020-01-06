@@ -15,9 +15,10 @@ nlp = None
 cache = {}
 web_cache = {}
 news_cache = {}
+entity_cache = {}
 SEARCH_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/search'
 NEWS_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/news/search'
-
+ENTITY_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/entities'
 # es = Elasticsearch([{'host': 'localhost', 'port': 9200}], scheme='http')
 
 async def get_current_username(credentials: HTTPBasicCredentials = Depends(security)):
@@ -112,7 +113,7 @@ async def websearch(q: str, count:str, result_type: str,
             return (web_cache.get(q))
         else:
             results = requests.get(SEARCH_URL, params={'q':q, 'count':count},
-            headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN'})
+                    headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN','User-Agent':'Android'})
             results = results.json()
             web_cache[q] = results
             return results
@@ -120,11 +121,20 @@ async def websearch(q: str, count:str, result_type: str,
         if(news_cache.get(q) is not None):
             return news_cache.get(q)
         else:
-            results = requests.get(NEWS_URL, params={'q':q, 'count':count, 'mkt':'en-IN'}, headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN'})
+            results = requests.get(NEWS_URL, params={'q':q, 'count':count, 'mkt':'en-IN'}, headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN','User-Agent':'Android'})
 
             results = results.json()
             news_cache[q] = results
             return results
+    elif result_type == 'entity':
+        if(entity_cache.get(q) is not None):
+            return entity_cache.get(q)
+        else:
+            results = requests.get(ENTITY_URL, params={'q':q,'mkt':'en-IN'}, headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','User-Agent':'Android'})
+            results= results.json()
+            entity_cache[q] = results
+            return results
+
 
 @app.get('/clear_cache')
 async def clear_cache(dependencies=Depends(get_current_username)):

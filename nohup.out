@@ -25,40 +25,7 @@
 Using TensorFlow backend.
 WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:32: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
 
-INFO:     Started server process [22327]
-INFO:     Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-Using TensorFlow backend.
-WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:32: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-INFO:     Started server process [22511]
+INFO:     Started server process [13951]
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
@@ -67,229 +34,7 @@ Loading model..
 Loaded model from disk
 Loaded model from disk
 Success
-INFO:     139.59.16.164:56014 - "GET /entity_extract HTTP/1.0" 401 Unauthorized
-INFO:     139.59.16.164:56016 - "GET /entity_extract HTTP/1.0" 401 Unauthorized
-INFO:     139.59.16.164:56018 - "GET /entity_extract HTTP/1.0" 401 Unauthorized
-INFO:     139.59.16.164:56020 - "GET /api/train HTTP/1.0" 401 Unauthorized
-INFO:     139.59.16.164:56022 - "GET /api/train HTTP/1.0" 401 Unauthorized
-INFO:     139.59.16.164:56024 - "GET /docs HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56026 - "GET /docs HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56028 - "GET /docs/ HTTP/1.0" 404 Not Found
-INFO:     139.59.16.164:56030 - "GET /docs HTTP/1.0" 200 OK
-INFO:     203.189.180.175:61900 - "GET /docs HTTP/1.1" 200 OK
-INFO:     203.189.180.175:61900 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     203.189.180.175:61900 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     139.59.16.164:56032 - "GET /docs HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56034 - "GET /openapi.json HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56036 - "GET /docs HTTP/1.0" 200 OK
-model_en
-'model_en'
-INFO:     139.59.16.164:56038 - "GET /entity_extract?q=hello&model=model&lang=en HTTP/1.0" 200 OK
-2020-01-03 10:00:22.239403: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-01-03 10:00:22.245884: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1799995000 Hz
-2020-01-03 10:00:22.246189: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0xaf76a90 executing computations on platform Host. Devices:
-2020-01-03 10:00:22.246231: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-01-03 10:00:22.265527: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
-
-WARNING:  From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
-
-spawn_en
-Loaded model from disk
-{'intent': {'confidence': '0.9801819', 'name': 'bot_hi'}, 'text': 'hello', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9801819', 'name': 'bot_hi'}, 'text': 'hello', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56040 - "GET /entity_extract?q=hello&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9801819', 'name': 'bot_hi'}, 'text': 'hello', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9801819', 'name': 'bot_hi'}, 'text': 'hello', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56042 - "GET /entity_extract?q=hello&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56044 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56046 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56048 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56050 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56052 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56054 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56056 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56058 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56060 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56062 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56064 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56066 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56068 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56070 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9858993', 'name': 'greet'}, 'text': 'how are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56072 - "GET /entity_extract?q=how%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-INFO:     109.234.153.133:7279 - "POST /azenv.php?s=157802730255381PC233590390808000 HTTP/1.1" 404 Not Found
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-INFO:     139.59.16.164:56074 - "GET /docs HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56076 - "GET /openapi.json HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56078 - "GET /entity_extract?q=who%20are%20you&model=spawn&lang=en HTTP/1.0" 401 Unauthorized
-spawn_en
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56080 - "GET /entity_extract?q=who%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56082 - "GET /entity_extract?q=who%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56084 - "GET /entity_extract?q=who%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56086 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56088 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56090 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56092 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56094 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
-spawn_en
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56096 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56098 - "GET /openapi.json HTTP/1.0" 200 OK
-INFO:     109.234.153.132:59005 - "POST /azenv.php?s=157804210229630PC233590390808000 HTTP/1.1" 404 Not Found
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-Using TensorFlow backend.
-WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:32: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-INFO:     Started server process [27849]
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-1.14.0
-Loading model..
-Loaded model from disk
-Loaded model from disk
-Success
-INFO:     139.59.16.164:56102 - "GET /entity_extract HTTP/1.0" 422 Unprocessable Entity
-2020-01-03 16:07:28.385977: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-01-03 16:07:28.393851: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1799995000 Hz
-2020-01-03 16:07:28.394467: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0xb39e090 executing computations on platform Host. Devices:
-2020-01-03 16:07:28.394520: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-01-03 16:07:28.411569: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
-
-WARNING:  From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
-
-spawn_en
-Loaded model from disk
-{'intent': {'confidence': '0.9801819', 'name': 'bot_hi'}, 'text': 'hello', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9801819', 'name': 'bot_hi'}, 'text': 'hello', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56104 - "GET /entity_extract?q=hello&model=spawn&lang=en HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56106 - "GET /websearch?q=hello&model=spawn&lang=en&count=5 HTTP/1.0" 500 Internal Server Error
+INFO:     139.59.16.164:58122 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 500 Internal Server Error
 ERROR:    Exception in ASGI application
 Traceback (most recent call last):
   File "/usr/local/lib/python3.6/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 385, in run_asgi
@@ -316,9 +61,13 @@ Traceback (most recent call last):
     response = await func(request)
   File "/usr/local/lib/python3.6/dist-packages/fastapi/routing.py", line 127, in app
     raw_response = await dependant.call(**values)
-  File "/opt/dg-spawn-chat-backend/fastapi_server.py", line 105, in entity_extract
-    headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN'})
-TypeError: object Response can't be used in 'await' expression
+  File "/opt/dg-spawn-chat-backend/fastapi_server.py", line 129, in websearch
+    elif result == 'entity':
+NameError: name 'result' is not defined
+  File "/opt/dg-spawn-chat-backend/fastapi_server.py", line 105
+    async def websearch(q: str, count:str = '5', result_type: str,
+                       ^
+SyntaxError: non-default argument follows default argument
 /usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
 /usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
@@ -346,7 +95,7 @@ TypeError: object Response can't be used in 'await' expression
 Using TensorFlow backend.
 WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:32: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
 
-INFO:     Started server process [27923]
+INFO:     Started server process [14037]
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
@@ -355,681 +104,421 @@ Loading model..
 Loaded model from disk
 Loaded model from disk
 Success
-INFO:     139.59.16.164:56110 - "GET /websearch?q=hello&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56114 - "GET /websearch?q=hello&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56118 - "GET /websearch?q=hello&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-Using TensorFlow backend.
-WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:32: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-INFO:     Started server process [27989]
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-1.14.0
-Loading model..
-Loaded model from disk
-Loaded model from disk
-Success
-INFO:     139.59.16.164:56122 - "GET /entity_extract HTTP/1.0" 422 Unprocessable Entity
-INFO:     139.59.16.164:56124 - "GET /websearch?q=hello&model=spawn&lang=en&count=5 HTTP/1.0" 500 Internal Server Error
-ERROR:    Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 385, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.6/dist-packages/uvicorn/middleware/proxy_headers.py", line 45, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.6/dist-packages/fastapi/applications.py", line 142, in __call__
-    await super().__call__(scope, receive, send)  # pragma: no cover
-  File "/usr/local/lib/python3.6/dist-packages/starlette/applications.py", line 134, in __call__
-    await self.error_middleware(scope, receive, send)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 178, in __call__
-    raise exc from None
-  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 156, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 73, in __call__
-    raise exc from None
-  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 62, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 590, in __call__
-    await route(scope, receive, send)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 208, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 41, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.6/dist-packages/fastapi/routing.py", line 127, in app
-    raw_response = await dependant.call(**values)
-  File "/opt/dg-spawn-chat-backend/fastapi_server.py", line 110, in entity_extract
-    results = await results.json()
-TypeError: object dict can't be used in 'await' expression
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-Using TensorFlow backend.
-WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:32: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-INFO:     Started server process [28045]
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-1.14.0
-Loading model..
-Loaded model from disk
-Loaded model from disk
-Success
-INFO:     139.59.16.164:56128 - "GET /websearch?q=hello&model=spawn&lang=en&count=5 HTTP/1.0" 500 Internal Server Error
-ERROR:    Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 385, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.6/dist-packages/uvicorn/middleware/proxy_headers.py", line 45, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.6/dist-packages/fastapi/applications.py", line 142, in __call__
-    await super().__call__(scope, receive, send)  # pragma: no cover
-  File "/usr/local/lib/python3.6/dist-packages/starlette/applications.py", line 134, in __call__
-    await self.error_middleware(scope, receive, send)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 178, in __call__
-    raise exc from None
-  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 156, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 73, in __call__
-    raise exc from None
-  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 62, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 590, in __call__
-    await route(scope, receive, send)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 208, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 41, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.6/dist-packages/fastapi/routing.py", line 127, in app
-    raw_response = await dependant.call(**values)
-  File "/opt/dg-spawn-chat-backend/fastapi_server.py", line 112, in entity_extract
-    return results.json()
-AttributeError: 'dict' object has no attribute 'json'
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-Using TensorFlow backend.
-WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:32: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-INFO:     Started server process [28110]
-ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-Using TensorFlow backend.
-WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:32: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-INFO:     Started server process [28147]
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-1.14.0
-Loading model..
-Loaded model from disk
-Loaded model from disk
-Success
-INFO:     139.59.16.164:56132 - "GET /websearch?q=hello&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56136 - "GET /websearch?q=hello&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56138 - "GET /websearch?q=hello&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56140 - "GET /websearch?q=hello&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56142 - "GET /websearch?q=hello&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56144 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56148 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56150 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56152 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56154 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56156 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56158 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56160 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56162 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56164 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56166 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56168 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56170 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56172 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56174 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56176 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56178 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56180 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56182 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56184 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56186 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56188 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56190 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56192 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56194 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56196 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56198 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56200 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56202 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56204 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56206 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56208 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56210 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 401 Unauthorized
-INFO:     139.59.16.164:56212 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56214 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56216 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56218 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56220 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56222 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56224 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56226 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56228 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56230 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56232 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56234 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56236 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56238 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56240 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56242 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56244 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56246 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56248 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56250 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56252 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56254 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56256 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56258 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56260 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56262 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56264 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56266 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56268 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56270 - "GET /websearch?q=narendra%20modi&model=spawn&lang=en&count=5 HTTP/1.0" 200 OK
-2020-01-03 17:06:31.395658: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-01-03 17:06:31.404489: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1799995000 Hz
-2020-01-03 17:06:31.404835: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0xa243480 executing computations on platform Host. Devices:
-2020-01-03 17:06:31.404881: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-01-03 17:06:31.428592: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:     139.59.16.164:58124 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58128 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58130 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58132 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58134 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58136 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58138 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58140 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58142 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58144 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58146 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58148 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58150 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58152 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58154 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58156 - "GET /websearch?q=narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58158 - "GET /websearch?q=news%20on%20narendra%20modi&count=5&result_type=entity HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58162 - "GET /websearch?q=news%20on%20narendra%20modi&count=5&result_type=news HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58166 - "GET /websearch?q=news%20on%20narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60336 - "GET /clear_cache HTTP/1.1" 200 OK
+2020-01-06 10:13:17.577004: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-01-06 10:13:17.583799: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1799995000 Hz
+2020-01-06 10:13:17.584124: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0xa3a6380 executing computations on platform Host. Devices:
+2020-01-06 10:13:17.584164: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-01-06 10:13:17.602919: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
 
 WARNING:  From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
 
 spawn_en
 Loaded model from disk
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58172 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58174 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58178 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58180 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58182 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58184 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58186 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58188 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60356 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     139.59.16.164:58192 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58196 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58198 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Melinda movie', 'model': 'spawn_en'}
+Melinda PERSON
+INFO:     139.59.16.164:58202 - "GET /entity_extract?q=Melinda%20movie&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58204 - "GET /websearch?q=Melinda%20movie&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Melinda Modi', 'model': 'spawn_en'}
+Melinda Modi PERSON
+INFO:     139.59.16.164:58208 - "GET /entity_extract?q=Melinda%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58210 - "GET /websearch?q=Melinda%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58214 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58216 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60384 - "GET /clear_cache HTTP/1.1" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Melinda Moody', 'model': 'spawn_en'}
+Melinda Moody PERSON
+INFO:     139.59.16.164:58220 - "GET /entity_extract?q=Melinda%20Moody&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58222 - "GET /websearch?q=Melinda%20Moody&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Melinda Modi', 'model': 'spawn_en'}
+Melinda Modi PERSON
+INFO:     139.59.16.164:58226 - "GET /entity_extract?q=Melinda%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58228 - "GET /websearch?q=Melinda%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Mary II located', 'model': 'spawn_en'}
+Mary II PERSON
+INFO:     139.59.16.164:58232 - "GET /entity_extract?q=Mary%20II%20located&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58234 - "GET /websearch?q=Mary%20II%20located&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58238 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58240 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'alimony', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'alimony', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58244 - "GET /entity_extract?q=alimony&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58246 - "GET /websearch?q=alimony&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58250 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58252 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Nintendo Modi', 'model': 'spawn_en'}
+Nintendo Modi PERSON
+INFO:     139.59.16.164:58254 - "GET /entity_extract?q=Nintendo%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58256 - "GET /websearch?q=Nintendo%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58260 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58262 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58264 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58266 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58268 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58270 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9977094', 'name': 'bot_news'}, 'text': 'show me the news on Iran', 'model': 'spawn_en'}
+Iran GPE
+INFO:     139.59.16.164:58272 - "GET /entity_extract?q=show%20me%20the%20news%20on%20Iran&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58274 - "GET /websearch?q=show%20me%20the%20news%20on%20Iran&count=10&result_type=news HTTP/1.0" 200 OK
+spawn_en
 {'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
 Narendra Modi PERSON
-INFO:     139.59.16.164:56272 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58278 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58280 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
 spawn_en
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56274 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58284 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58286 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
 spawn_en
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9809734', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56276 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
-INFO:     189.180.99.55:55966 - "GET / HTTP/1.1" 404 Not Found
-INFO:     109.234.153.133:63853 - "POST /azenv.php?s=157805607789376PC233590390808000 HTTP/1.1" 404 Not Found
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-INFO:     139.59.16.164:56290 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56292 - "GET /websearch?q=narendra%20modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56294 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56296 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56298 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56300 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56302 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 401 Unauthorized
-INFO:     139.59.16.164:56304 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56306 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56308 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56310 - "GET /websearch?q=narendra%20modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56312 - "GET /websearch?q=narendra%20modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56314 - "GET /websearch?q=narendra%20modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56316 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56318 - "GET /websearch?q=Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56322 - "GET /websearch?q=who%20is%20narendra%20modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56326 - "GET /websearch?q=Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56328 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56330 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-Using TensorFlow backend.
-WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:32: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-INFO:     Started server process [29784]
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-1.14.0
-Loading model..
-Loaded model from disk
-Loaded model from disk
-Success
-INFO:     139.59.16.164:56332 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56336 - "GET /websearch?q=who%20is%20narendra%20modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56340 - "GET /websearch?q=who%20is%20narendra%20modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56342 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56344 - "GET /websearch?q=who%20is%20who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56348 - "GET /websearch?q=Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56352 - "GET /websearch?q=india&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56356 - "GET /websearch?q=capital%20of%20maharashtra&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56360 - "GET /websearch?q=capital%20of%20india&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56364 - "GET /websearch?q=narendra%20modi&count=5 HTTP/1.0" 200 OK
-INFO:     109.234.153.133:48269 - "POST /azenv.php?s=157807044671546PC233590390808000 HTTP/1.1" 404 Not Found
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-INFO:     139.59.16.164:56368 - "GET /websearch?q=Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     218.111.10.190:54959 - "GET / HTTP/1.1" 404 Not Found
-WARNING:  Invalid HTTP request received.
-INFO:     85.119.151.250:19989 - "POST /azenv.php?s=157808494311916PC233590390808000 HTTP/1.1" 404 Not Found
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-INFO:     82.53.44.68:58024 - "GET / HTTP/1.1" 404 Not Found
-INFO:     85.119.151.253:32925 - "POST /azenv.php?s=157809930213350PC233590390808000 HTTP/1.1" 404 Not Found
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-INFO:     85.119.151.254:8925 - "POST /azenv.php?s=157811366479904PC233590390808000 HTTP/1.1" 404 Not Found
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-INFO:     52.71.66.203:27363 - "GET / HTTP/1.1" 404 Not Found
-INFO:     52.71.66.203:37905 - "GET / HTTP/1.1" 404 Not Found
-INFO:     52.71.66.203:28659 - "GET / HTTP/1.1" 404 Not Found
-INFO:     139.59.16.164:56380 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 401 Unauthorized
-INFO:     139.59.16.164:56382 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 401 Unauthorized
-INFO:     139.59.16.164:56384 - "GET /docs HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56386 - "GET /openapi.json HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56388 - "GET /websearch?q=narendra%20modi&count=5 HTTP/1.0" 401 Unauthorized
-INFO:     139.59.16.164:56390 - "GET /websearch?q=narendra%20modi&count=5 HTTP/1.0" 200 OK
-2020-01-04 10:57:38.035121: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-01-04 10:57:38.045078: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1799995000 Hz
-2020-01-04 10:57:38.045406: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0xbac03a0 executing computations on platform Host. Devices:
-2020-01-04 10:57:38.045456: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-01-04 10:57:38.075690: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
-
-WARNING:  From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
-
+{'intent': {'confidence': '0.8446646', 'name': 'bot_news'}, 'text': 'news on Iran', 'model': 'spawn_en'}
+Iran GPE
+INFO:     139.59.16.164:58288 - "GET /entity_extract?q=news%20on%20Iran&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58290 - "GET /websearch?q=news%20on%20Iran&count=10&result_type=news HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60460 - "GET /clear_cache HTTP/1.1" 200 OK
 spawn_en
-Loaded model from disk
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56392 - "GET /entity_extract?q=who%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Mahindra movie', 'model': 'spawn_en'}
+Mahindra ORG
+INFO:     139.59.16.164:58296 - "GET /entity_extract?q=Mahindra%20movie&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58298 - "GET /websearch?q=Mahindra%20movie&count=5&result_type=search HTTP/1.0" 200 OK
 spawn_en
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56394 - "GET /entity_extract?q=who%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58302 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58304 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
 spawn_en
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en'}
-{'success': False, 'entities': None}
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56396 - "GET /entity_extract?q=who%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Donald Trump', 'model': 'spawn_en'}
+Donald Trump PERSON
+INFO:     139.59.16.164:58308 - "GET /entity_extract?q=Donald%20Trump&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58310 - "GET /websearch?q=Donald%20Trump&count=5&result_type=search HTTP/1.0" 200 OK
 spawn_en
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en'}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is the temperature of Maricela', 'model': 'spawn_en'}
 {'success': False, 'entities': None}
-{'intent': {'confidence': '0.9636967', 'name': 'bot_identity'}, 'text': 'who are you', 'model': 'spawn_en', 'entities': []}
-INFO:     139.59.16.164:56398 - "GET /entity_extract?q=who%20are%20you&model=spawn&lang=en HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56400 - "GET /openapi.json HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56402 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56404 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56406 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56408 - "GET /websearch?q=what%20is%20your%20name&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56412 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56414 - "GET /websearch?q=Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56416 - "GET /websearch?q=Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56418 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56420 - "GET /websearch?q=Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56422 - "GET /websearch?q=Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56424 - "GET /websearch?q=11%20ramadi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56428 - "GET /websearch?q=Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56430 - "GET /websearch?q=Narendra%20Modi&count=5 HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56432 - "GET /websearch?q=show%20me%20lastest%20news&count=5 HTTP/1.0" 200 OK
-INFO:     89.177.140.104:45822 - "GET / HTTP/1.1" 404 Not Found
-  File "/opt/dg-spawn-chat-backend/fastapi_server.py", line 105
-    dependencies=Depends(get_current_username)
-               ^
-SyntaxError: invalid syntax
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-Using TensorFlow backend.
-WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:32: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-INFO:     Started server process [1051]
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-1.14.0
-Loading model..
-Loaded model from disk
-Loaded model from disk
-Success
-INFO:     139.59.16.164:56436 - "GET /websearch?q=narendra%20modi&count=5&type=search HTTP/1.0" 422 Unprocessable Entity
-INFO:     139.59.16.164:56438 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56442 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56444 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56446 - "GET /websearch?q=narendra%20modi&count=5&result_type=news HTTP/1.0" 500 Internal Server Error
-ERROR:    Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 385, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.6/dist-packages/uvicorn/middleware/proxy_headers.py", line 45, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.6/dist-packages/fastapi/applications.py", line 142, in __call__
-    await super().__call__(scope, receive, send)  # pragma: no cover
-  File "/usr/local/lib/python3.6/dist-packages/starlette/applications.py", line 134, in __call__
-    await self.error_middleware(scope, receive, send)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 178, in __call__
-    raise exc from None
-  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 156, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 73, in __call__
-    raise exc from None
-  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 62, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 590, in __call__
-    await route(scope, receive, send)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 208, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 41, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.6/dist-packages/fastapi/routing.py", line 127, in app
-    raw_response = await dependant.call(**values)
-  File "/opt/dg-spawn-chat-backend/fastapi_server.py", line 123, in websearch
-    results = requests.get(NEW_URL, params={'q':q, 'count':count, 'mkt':'en-IN'}, headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN'})
-NameError: name 'NEW_URL' is not defined
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-Using TensorFlow backend.
-WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:32: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-INFO:     Started server process [1115]
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-1.14.0
-Loading model..
-Loaded model from disk
-Loaded model from disk
-Success
-INFO:     139.59.16.164:56448 - "GET /websearch?q=narendra%20modi&count=5&result_type=news HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56452 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56454 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56456 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-Using TensorFlow backend.
-WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:32: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-INFO:     Started server process [1172]
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-1.14.0
-Loading model..
-Loaded model from disk
-Loaded model from disk
-Success
-INFO:     139.59.16.164:56458 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56462 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56464 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56466 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56468 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56470 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56472 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56474 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56476 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56478 - "GET /websearch?q=narendra%20modi&count=5&result_type=news HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56482 - "GET /websearch?q=narendra%20modi&count=5&result_type=news HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56484 - "GET /websearch?q=narendra%20modi&count=5&result_type=news HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56486 - "GET /websearch?q=narendra%20modi&count=5&result_type=news HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56488 - "GET /websearch?q=narendra%20modi&count=5&result_type=news HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56490 - "GET /websearch?q=narendra%20modi&count=5&result_type=news HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56492 - "GET /websearch?q=narendra%20modi&count=5&result_type=news HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56496 - "GET /websearch?q=narendra%20modi&count=5&result_type=news HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56498 - "GET /websearch?q=narendra%20modi&count=5&result_type=news HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56500 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56502 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56504 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56506 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56508 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56510 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56512 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56514 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56516 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56518 - "GET /websearch?q=narendra%20modi&count=100&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56520 - "GET /websearch?q=narendra&count=100&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56524 - "GET /websearch?q=narendra&count=100&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56526 - "GET /websearch?q=narendra&count=100&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56528 - "GET /websearch?q=narendra&count=100&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56530 - "GET /websearch?q=narendra&count=100&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56532 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is the temperature of Maricela', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58314 - "GET /entity_extract?q=what%20is%20the%20temperature%20of%20Maricela&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58316 - "GET /websearch?q=what%20is%20the%20temperature%20of%20Maricela&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'capital of America', 'model': 'spawn_en'}
+America GPE
+INFO:     139.59.16.164:58320 - "GET /entity_extract?q=capital%20of%20America&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58322 - "GET /websearch?q=capital%20of%20America&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Mumbai', 'model': 'spawn_en'}
+Mumbai GPE
+INFO:     139.59.16.164:58326 - "GET /entity_extract?q=Mumbai&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58328 - "GET /websearch?q=Mumbai&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9860881', 'name': 'bot_news'}, 'text': 'latest news', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9860881', 'name': 'bot_news'}, 'text': 'latest news', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58332 - "GET /entity_extract?q=latest%20news&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58334 - "GET /websearch?q=latest%20news&count=10&result_type=news HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60504 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60506 - "GET /clear_cache HTTP/1.1" 200 OK
 WARNING:  Invalid HTTP request received.
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-Using TensorFlow backend.
-WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:32: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-INFO:     Started server process [1308]
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-1.14.0
-Loading model..
-Loaded model from disk
-Loaded model from disk
-Success
-INFO:     139.59.16.164:56536 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56540 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56542 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56544 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     127.0.0.1:58712 - "GET /clear_cache HTTP/1.1" 200 OK
-INFO:     139.59.16.164:56548 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56552 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56554 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     127.0.0.1:58722 - "GET /clear_cache HTTP/1.1" 200 OK
-INFO:     139.59.16.164:56558 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56562 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56564 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56566 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56568 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56570 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56572 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
-INFO:     139.59.16.164:56574 - "GET /websearch?q=narendra&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58342 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58344 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58348 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58350 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58354 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58356 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58358 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58360 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58362 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58364 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58366 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58368 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58370 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58372 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58374 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58376 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58378 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58380 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'calendar Monday', 'model': 'spawn_en'}
+Monday DATE
+INFO:     139.59.16.164:58382 - "GET /entity_extract?q=calendar%20Monday&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58384 - "GET /websearch?q=calendar%20Monday&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58388 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58390 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Sentinel Andromeda', 'model': 'spawn_en'}
+Sentinel Andromeda ORG
+INFO:     139.59.16.164:58392 - "GET /entity_extract?q=Sentinel%20Andromeda&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58394 - "GET /websearch?q=Sentinel%20Andromeda&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58398 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58400 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Nintendo Modi', 'model': 'spawn_en'}
+Nintendo Modi PERSON
+INFO:     139.59.16.164:58402 - "GET /entity_extract?q=Nintendo%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58404 - "GET /websearch?q=Nintendo%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58408 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58410 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Melinda moti', 'model': 'spawn_en'}
+Melinda moti PERSON
+INFO:     139.59.16.164:58412 - "GET /entity_extract?q=Melinda%20moti&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58414 - "GET /websearch?q=Melinda%20moti&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58418 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58420 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58422 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58424 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': '9 remedy', 'model': 'spawn_en'}
+9 CARDINAL
+INFO:     139.59.16.164:58426 - "GET /entity_extract?q=9%20remedy&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58428 - "GET /websearch?q=9%20remedy&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9406934', 'name': 'morning'}, 'text': '9 in the morning', 'model': 'spawn_en'}
+9 in the morning TIME
+INFO:     139.59.16.164:58432 - "GET /entity_extract?q=9%20in%20the%20morning&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58434 - "GET /websearch?q=9%20in%20the%20morning&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58438 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58440 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58442 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58444 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Calandra Modi', 'model': 'spawn_en'}
+Calandra Modi PERSON
+INFO:     139.59.16.164:58446 - "GET /entity_extract?q=Calandra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58448 - "GET /websearch?q=Calandra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58452 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58454 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58456 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58458 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'share price of vodka sugar', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'share price of vodka sugar', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58460 - "GET /entity_extract?q=share%20price%20of%20vodka%20sugar&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58462 - "GET /websearch?q=share%20price%20of%20vodka%20sugar&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58466 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58468 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58470 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58474 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58476 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58478 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58480 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Highlander movie', 'model': 'spawn_en'}
+Highlander ORG
+INFO:     139.59.16.164:58482 - "GET /entity_extract?q=Highlander%20movie&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58484 - "GET /websearch?q=Highlander%20movie&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.8446646', 'name': 'bot_news'}, 'text': 'news on Iran', 'model': 'spawn_en'}
+Iran GPE
+INFO:     139.59.16.164:58488 - "GET /entity_extract?q=news%20on%20Iran&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58490 - "GET /websearch?q=news%20on%20Iran&count=10&result_type=news HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58494 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58496 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60664 - "GET /clear_cache HTTP/1.1" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'calendar Monday', 'model': 'spawn_en'}
+Monday DATE
+INFO:     139.59.16.164:58500 - "GET /entity_extract?q=calendar%20Monday&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58502 - "GET /websearch?q=calendar%20Monday&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Iran', 'model': 'spawn_en'}
+Iran GPE
+INFO:     139.59.16.164:58506 - "GET /entity_extract?q=Iran&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58508 - "GET /websearch?q=Iran&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Iran', 'model': 'spawn_en'}
+Iran GPE
+INFO:     139.59.16.164:58512 - "GET /entity_extract?q=Iran&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58514 - "GET /websearch?q=Iran&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'United States and Iran', 'model': 'spawn_en'}
+United States GPE
+INFO:     139.59.16.164:58516 - "GET /entity_extract?q=United%20States%20and%20Iran&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58518 - "GET /websearch?q=United%20States%20and%20Iran&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58522 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58524 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58528 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58530 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Donald Trump', 'model': 'spawn_en'}
+Donald Trump PERSON
+INFO:     139.59.16.164:58532 - "GET /entity_extract?q=Donald%20Trump&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58534 - "GET /websearch?q=Donald%20Trump&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Donald Trump', 'model': 'spawn_en'}
+Donald Trump PERSON
+INFO:     139.59.16.164:58538 - "GET /entity_extract?q=Donald%20Trump&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58540 - "GET /websearch?q=Donald%20Trump&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60708 - "GET /clear_cache HTTP/1.1" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58544 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is an empanada', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is an empanada', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58546 - "GET /entity_extract?q=what%20is%20an%20empanada&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58548 - "GET /websearch?q=what%20is%20an%20empanada&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'images of Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58552 - "GET /entity_extract?q=images%20of%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58554 - "GET /websearch?q=images%20of%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58558 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58560 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58564 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58566 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58570 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58572 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58574 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
