@@ -188,3 +188,528 @@ INFO:     139.59.16.164:60582 - "GET /websearch?q=messi&count=5&result_type=sear
 INFO:     139.59.16.164:60584 - "GET /websearch?q=messi&count=5&result_type=search HTTP/1.0" 200 OK
 INFO:     139.59.16.164:60586 - "GET /websearch?q=messi&count=5&result_type=search HTTP/1.0" 200 OK
 INFO:     139.59.16.164:60588 - "GET /websearch?q=messi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60592 - "GET /websearch?q=messi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60594 - "GET /websearch?q=messi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60596 - "GET /websearch?q=messi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60598 - "GET /websearch?q=messi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60600 - "GET /websearch?q=messi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60602 - "GET /websearch?q=messi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60604 - "GET /websearch?q=messi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60608 - "GET /entity_extract HTTP/1.0" 401 Unauthorized
+INFO:     139.59.16.164:60610 - "GET /entity_extract HTTP/1.0" 401 Unauthorized
+WARNING:  Invalid HTTP request received.
+INFO:     85.119.151.252:3819 - "POST /azenv.php?s=157848798371424PC233590390808000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     139.59.16.164:60754 - "GET /entity_extract?q=latest%20news&model=spawn_E5DDF876C2B1405996D2AC3BB498AD0E&lang=en HTTP/1.0" 401 Unauthorized
+spawn_E5DDF876C2B1405996D2AC3BB498AD0E_en
+'spawn_E5DDF876C2B1405996D2AC3BB498AD0E_en'
+INFO:     139.59.16.164:60758 - "GET /entity_extract?q=latest%20news&model=spawn_E5DDF876C2B1405996D2AC3BB498AD0E&lang=en HTTP/1.0" 200 OK
+WARNING:tensorflow:From /opt/dg-spawn-chat-backend/train_model.py:96: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+WARNING:  From /opt/dg-spawn-chat-backend/train_model.py:96: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+[Errno 2] No such file or directory: '/opt/dg-spawn-chat-backend/opt/data//spawn_E5DDF876C2B1405996D2AC3BB498AD0E_en_data.json'
+INFO:     139.59.16.164:60762 - "GET /api/train?model_name=spawn_E5DDF876C2B1405996D2AC3BB498AD0E&lang=en HTTP/1.0" 200 OK
+2020-01-08 21:15:37.345957: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-01-08 21:15:37.378751: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1799995000 Hz
+2020-01-08 21:15:37.379803: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f42f43c4c70 executing computations on platform Host. Devices:
+2020-01-08 21:15:37.379863: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-01-08 21:15:37.519091: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:  From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+[{'text': 'how can you help me', 'intent': 'bot_skills', 'entities': []}, {'text': 'what can you do', 'intent': 'bot_skills', 'entities': []}, {'text': 'help me', 'intent': 'bot_skills', 'entities': []}, {'text': 'what skills do you have', 'intent': 'bot_skills', 'entities': []}, {'text': 'what things you can do', 'intent': 'bot_skills', 'entities': []}, {'text': 'what are your skills', 'intent': 'bot_skills', 'entities': []}, {'text': 'what do you know', 'intent': 'bot_skills', 'entities': []}, {'text': 'shut up', 'intent': 'bot_shutup', 'entities': []}, {'text': 'shut the fuck up', 'intent': 'bot_shutup', 'entities': []}, {'text': 'keep quiet', 'intent': 'bot_shutup', 'entities': []}, {'text': 'keep your mouth shut', 'intent': 'bot_shutup', 'entities': []}, {'text': 'hello spawn', 'intent': 'bot_hi', 'entities': []}, {'text': 'heya', 'intent': 'bot_hi', 'entities': []}, {'text': 'heya spawn', 'intent': 'bot_hi', 'entities': []}, {'text': 'hey spawn', 'intent': 'bot_hi', 'entities': []}, {'text': 'hey hi', 'intent': 'bot_hi', 'entities': []}, {'text': 'hello there', 'intent': 'bot_hi', 'entities': []}, {'text': 'hello', 'intent': 'bot_hi', 'entities': []}, {'text': 'hey spawn good morning', 'intent': 'morning', 'entities': []}, {'text': 'good morning', 'intent': 'morning', 'entities': []}, {'text': 'morning', 'intent': 'morning', 'entities': []}, {'intent': 'morning', 'text': 'good morning spawn', 'entities': []}, {'intent': 'morning', 'text': 'great morning', 'entities': []}, {'intent': 'morning', 'text': 'great morning spawn', 'entities': []}, {'intent': 'morning', 'text': 'good morning', 'entities': []}, {'intent': 'afernoon', 'text': 'hey spawn good afternoon', 'entities': []}, {'intent': 'afernoon', 'text': 'good afternoon', 'entities': []}, {'intent': 'afernoon', 'text': 'good afternoon spawn', 'entities': []}, {'intent': 'afernoon', 'text': 'great morning', 'entities': []}, {'intent': 'afernoon', 'text': 'hey good afternoon', 'entities': []}, {'intent': 'bot_love', 'text': 'i love you', 'entities': []}, {'intent': 'bot_love', 'text': 'love you', 'entities': []}, {'intent': 'bot_love', 'text': 'hey spawn i love you', 'entities': []}, {'intent': 'bot_love', 'text': 'i like you', 'entities': []}, {'intent': 'bot_greet_reply', 'text': 'i am doing great', 'entities': []}, {'intent': 'bot_greet_reply', 'text': 'great', 'entities': []}, {'intent': 'bot_greet_reply', 'text': 'ok great', 'entities': []}, {'intent': 'bot_greet_reply', 'text': 'ok fantastic', 'entities': []}, {'intent': 'bot_greet_reply', 'text': 'awesome', 'entities': []}, {'intent': 'bot_greet_reply', 'text': 'good', 'entities': []}, {'intent': 'bot_greet_reply', 'text': 'i am doing good', 'entities': []}, {'intent': 'bot_greet_reply', 'text': 'i am doing fine', 'entities': []}, {'intent': 'bot_greet_reply', 'text': 'i am fantastic', 'entities': []}, {'intent': 'bot_bye', 'text': 'bye bye', 'entities': []}, {'intent': 'bot_bye', 'text': 'bye-bye', 'entities': []}, {'intent': 'bot_bye', 'text': 'goodbye', 'entities': []}, {'intent': 'bot_bye', 'text': 'good bye', 'entities': []}, {'intent': 'bot_bye', 'text': 'see you later', 'entities': []}, {'intent': 'bot_bye', 'text': 'talk to you later', 'entities': []}, {'intent': 'bot_bye', 'text': 'catch you later', 'entities': []}, {'intent': 'bot_quotes', 'text': 'send me a quote', 'entities': []}, {'intent': 'bot_quotes', 'text': 'todays quote', 'entities': []}, {'intent': 'bot_quotes', 'text': "today's quote", 'entities': []}, {'intent': 'bot_quotes', 'text': 'tell me a quote', 'entities': []}, {'intent': 'bot_quotes', 'text': 'motivation quotes', 'entities': []}, {'intent': 'bot_quotes', 'text': 'inspirational quote', 'entities': []}, {'intent': 'spawn_name', 'text': 'your name', 'entities': []}, {'intent': 'spawn_name', 'text': 'your identity', 'entities': []}, {'intent': 'spawn_name', 'text': 'your name', 'entities': []}, {'intent': 'spawn_name', 'text': "what's your name", 'entities': []}, {'intent': 'spawn_name', 'text': 'professor spawn', 'entities': []}, {'intent': 'spawn_name', 'text': 'who are you professor spawn', 'entities': []}, {'intent': 'greet', 'text': 'how are you', 'entities': []}, {'intent': 'greet', 'text': 'hey how are you', 'entities': []}, {'intent': 'greet', 'text': 'are you doing ok', 'entities': []}, {'intent': 'greet', 'text': 'are you ok', 'entities': []}, {'intent': 'bot_identity', 'text': 'who are you', 'entities': []}, {'intent': 'bot_identity', 'text': 'about you', 'entities': []}, {'intent': 'bot_identity', 'text': 'i dont know you', 'entities': []}, {'intent': 'bot_thanks', 'text': 'thank you', 'entities': []}, {'intent': 'bot_thanks', 'text': 'thanks you', 'entities': []}, {'intent': 'bot_thanks', 'text': 'ok thanks', 'entities': []}, {'intent': 'bot_thanks', 'text': 'thank you spawn', 'entities': []}, {'intent': 'bot_thanks', 'text': 'thank you professor spawn', 'entities': []}, {'intent': 'bot_negative', 'text': 'nothing', 'entities': []}, {'intent': 'bot_negative', 'text': 'i dont need your help', 'entities': []}, {'intent': 'bot_negative', 'text': 'no need', 'entities': []}, {'intent': 'bot_negative', 'text': 'i dont want your help', 'entities': []}, {'intent': 'bot_negative', 'text': 'nothing', 'entities': []}, {'intent': 'bot_negative', 'text': 'you are an idiot', 'entities': []}, {'intent': 'bot_negative', 'text': 'you dumb fuck', 'entities': []}, {'intent': 'bot_negative', 'text': 'you are dumb', 'entities': []}, {'intent': 'bot_negative', 'text': 'you are stupid bitch', 'entities': []}, {'intent': 'bot_negative', 'text': 'you are stupid', 'entities': []}, {'intent': 'bot_negative', 'text': "you don't know anything", 'entities': []}, {'intent': 'bot_negative', 'text': 'you motherfucker', 'entities': []}, {'intent': 'bot_negative', 'text': 'you cannot help me', 'entities': []}, {'intent': 'bot_news', 'text': 'show me lastest news', 'entities': []}, {'intent': 'bot_news', 'text': 'latest news', 'entities': []}, {'intent': 'bot_news', 'text': 'show me the news', 'entites': []}]
+90 sentences in training data
+['?']
+90 documents_vocab
+15 classes ['afernoon', 'bot_bye', 'bot_greet_reply', 'bot_hi', 'bot_identity', 'bot_love', 'bot_negative', 'bot_news', 'bot_quotes', 'bot_shutup', 'bot_skills', 'bot_thanks', 'greet', 'morning', 'spawn_name']
+78 unique stemmed words ["'s", 'a', 'about', 'afternoon', 'am', 'an', 'anyth', 'are', 'awesom', 'bitch', 'bye', 'bye-by', 'can', 'catch', 'do', 'dont', 'dumb', 'fantast', 'fine', 'fuck', 'good', 'goodby', 'great', 'have', 'hello', 'help', 'hey', 'heya', 'hi', 'how', 'i', 'ident', 'idiot', 'inspir', 'keep', 'know', 'lastest', 'later', 'latest', 'like', 'love', 'me', 'morn', 'motherfuck', 'motiv', 'mouth', "n't", 'name', 'need', 'news', 'no', 'not', 'noth', 'ok', 'professor', 'quiet', 'quot', 'see', 'send', 'show', 'shut', 'skill', 'spawn', 'stupid', 'talk', 'tell', 'thank', 'the', 'there', 'thing', 'to', 'today', 'up', 'want', 'what', 'who', 'you', 'your']
+Epoch 1/120
+
+ 8/90 [=>............................] - ETA: 3s - loss: 2.7061 - accuracy: 0.2500
+90/90 [==============================] - 0s 4ms/step - loss: 2.7037 - accuracy: 0.1111
+Epoch 2/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.6939 - accuracy: 0.1250
+90/90 [==============================] - 0s 282us/step - loss: 2.6813 - accuracy: 0.1444
+Epoch 3/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.6370 - accuracy: 0.3750
+90/90 [==============================] - 0s 304us/step - loss: 2.6627 - accuracy: 0.2333
+Epoch 4/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.6620 - accuracy: 0.1250
+90/90 [==============================] - 0s 255us/step - loss: 2.6451 - accuracy: 0.2667
+Epoch 5/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.6068 - accuracy: 0.2500
+90/90 [==============================] - 0s 248us/step - loss: 2.6254 - accuracy: 0.2556
+Epoch 6/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.5659 - accuracy: 0.5000
+90/90 [==============================] - 0s 214us/step - loss: 2.6033 - accuracy: 0.2889
+Epoch 7/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.5149 - accuracy: 0.6250
+90/90 [==============================] - 0s 215us/step - loss: 2.5788 - accuracy: 0.3444
+Epoch 8/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.5273 - accuracy: 0.3750
+90/90 [==============================] - 0s 282us/step - loss: 2.5511 - accuracy: 0.3667
+Epoch 9/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.4515 - accuracy: 0.7500
+90/90 [==============================] - 0s 246us/step - loss: 2.5195 - accuracy: 0.3889
+Epoch 10/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.5826 - accuracy: 0.1250
+90/90 [==============================] - 0s 238us/step - loss: 2.4825 - accuracy: 0.4111
+Epoch 11/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.4353 - accuracy: 0.3750
+90/90 [==============================] - 0s 257us/step - loss: 2.4386 - accuracy: 0.4444
+Epoch 12/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.4150 - accuracy: 0.5000
+90/90 [==============================] - 0s 262us/step - loss: 2.3883 - accuracy: 0.4778
+Epoch 13/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.4815 - accuracy: 0.2500
+90/90 [==============================] - 0s 231us/step - loss: 2.3322 - accuracy: 0.4889
+Epoch 14/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.2153 - accuracy: 0.6250
+90/90 [==============================] - 0s 252us/step - loss: 2.2713 - accuracy: 0.4889
+Epoch 15/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.2200 - accuracy: 0.5000
+90/90 [==============================] - 0s 199us/step - loss: 2.2048 - accuracy: 0.5444
+Epoch 16/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.3401 - accuracy: 0.3750
+90/90 [==============================] - 0s 195us/step - loss: 2.1286 - accuracy: 0.5778
+Epoch 17/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.0007 - accuracy: 0.6250
+90/90 [==============================] - 0s 262us/step - loss: 2.0472 - accuracy: 0.5889
+Epoch 18/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.0242 - accuracy: 0.7500
+90/90 [==============================] - 0s 207us/step - loss: 1.9561 - accuracy: 0.6556
+Epoch 19/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 2.0140 - accuracy: 0.2500
+90/90 [==============================] - 0s 203us/step - loss: 1.8629 - accuracy: 0.6667
+Epoch 20/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 1.8166 - accuracy: 0.6250
+90/90 [==============================] - 0s 192us/step - loss: 1.7640 - accuracy: 0.7111
+Epoch 21/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 1.8230 - accuracy: 0.5000
+90/90 [==============================] - 0s 214us/step - loss: 1.6635 - accuracy: 0.7333
+Epoch 22/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 1.3868 - accuracy: 1.0000
+90/90 [==============================] - 0s 257us/step - loss: 1.5580 - accuracy: 0.7444
+Epoch 23/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 1.6502 - accuracy: 0.5000
+90/90 [==============================] - 0s 235us/step - loss: 1.4544 - accuracy: 0.7778
+Epoch 24/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 1.5125 - accuracy: 0.7500
+90/90 [==============================] - 0s 234us/step - loss: 1.3530 - accuracy: 0.7889
+Epoch 25/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 1.0648 - accuracy: 0.8750
+90/90 [==============================] - 0s 243us/step - loss: 1.2513 - accuracy: 0.8111
+Epoch 26/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 1.4246 - accuracy: 0.7500
+90/90 [==============================] - 0s 262us/step - loss: 1.1517 - accuracy: 0.8444
+Epoch 27/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.9368 - accuracy: 0.8750
+90/90 [==============================] - 0s 261us/step - loss: 1.0607 - accuracy: 0.8667
+Epoch 28/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.7834 - accuracy: 0.8750
+90/90 [==============================] - 0s 275us/step - loss: 0.9773 - accuracy: 0.8889
+Epoch 29/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.7819 - accuracy: 1.0000
+90/90 [==============================] - 0s 241us/step - loss: 0.8973 - accuracy: 0.8889
+Epoch 30/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 1.0839 - accuracy: 0.7500
+90/90 [==============================] - 0s 252us/step - loss: 0.8274 - accuracy: 0.9111
+Epoch 31/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.7357 - accuracy: 1.0000
+90/90 [==============================] - 0s 267us/step - loss: 0.7598 - accuracy: 0.9111
+Epoch 32/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.6638 - accuracy: 0.8750
+90/90 [==============================] - 0s 238us/step - loss: 0.7015 - accuracy: 0.9111
+Epoch 33/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.6635 - accuracy: 0.8750
+90/90 [==============================] - 0s 243us/step - loss: 0.6475 - accuracy: 0.9333
+Epoch 34/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.4168 - accuracy: 1.0000
+90/90 [==============================] - 0s 203us/step - loss: 0.5945 - accuracy: 0.9333
+Epoch 35/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.5102 - accuracy: 1.0000
+90/90 [==============================] - 0s 208us/step - loss: 0.5512 - accuracy: 0.9444
+Epoch 36/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.3675 - accuracy: 1.0000
+90/90 [==============================] - 0s 231us/step - loss: 0.5065 - accuracy: 0.9444
+Epoch 37/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.3634 - accuracy: 1.0000
+90/90 [==============================] - 0s 225us/step - loss: 0.4698 - accuracy: 0.9444
+Epoch 38/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.4998 - accuracy: 0.8750
+90/90 [==============================] - 0s 296us/step - loss: 0.4353 - accuracy: 0.9556
+Epoch 39/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.3565 - accuracy: 1.0000
+90/90 [==============================] - 0s 241us/step - loss: 0.4037 - accuracy: 0.9556
+Epoch 40/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.2579 - accuracy: 1.0000
+90/90 [==============================] - 0s 228us/step - loss: 0.3723 - accuracy: 0.9778
+Epoch 41/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.4707 - accuracy: 1.0000
+90/90 [==============================] - 0s 212us/step - loss: 0.3473 - accuracy: 0.9778
+Epoch 42/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.3323 - accuracy: 1.0000
+90/90 [==============================] - 0s 203us/step - loss: 0.3232 - accuracy: 0.9778
+Epoch 43/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.3576 - accuracy: 0.8750
+90/90 [==============================] - 0s 283us/step - loss: 0.3014 - accuracy: 0.9778
+Epoch 44/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.2301 - accuracy: 1.0000
+90/90 [==============================] - 0s 253us/step - loss: 0.2814 - accuracy: 0.9778
+Epoch 45/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.5815 - accuracy: 0.8750
+90/90 [==============================] - 0s 277us/step - loss: 0.2628 - accuracy: 0.9778
+Epoch 46/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.4033 - accuracy: 0.8750
+90/90 [==============================] - 0s 239us/step - loss: 0.2467 - accuracy: 0.9778
+Epoch 47/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.4896 - accuracy: 0.8750
+90/90 [==============================] - 0s 218us/step - loss: 0.2326 - accuracy: 0.9889
+Epoch 48/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.3080 - accuracy: 1.0000
+90/90 [==============================] - 0s 240us/step - loss: 0.2178 - accuracy: 0.9889
+Epoch 49/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1633 - accuracy: 1.0000
+90/90 [==============================] - 0s 216us/step - loss: 0.2047 - accuracy: 0.9889
+Epoch 50/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1777 - accuracy: 1.0000
+90/90 [==============================] - 0s 236us/step - loss: 0.1941 - accuracy: 0.9889
+Epoch 51/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1164 - accuracy: 1.0000
+90/90 [==============================] - 0s 217us/step - loss: 0.1818 - accuracy: 0.9889
+Epoch 52/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1402 - accuracy: 1.0000
+90/90 [==============================] - 0s 271us/step - loss: 0.1737 - accuracy: 0.9889
+Epoch 53/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.5073 - accuracy: 0.8750
+90/90 [==============================] - 0s 295us/step - loss: 0.1643 - accuracy: 0.9889
+Epoch 54/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1226 - accuracy: 1.0000
+90/90 [==============================] - 0s 263us/step - loss: 0.1550 - accuracy: 0.9889
+Epoch 55/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1418 - accuracy: 1.0000
+90/90 [==============================] - 0s 232us/step - loss: 0.1468 - accuracy: 0.9889
+Epoch 56/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0797 - accuracy: 1.0000
+90/90 [==============================] - 0s 251us/step - loss: 0.1405 - accuracy: 0.9889
+Epoch 57/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1651 - accuracy: 1.0000
+90/90 [==============================] - 0s 254us/step - loss: 0.1328 - accuracy: 0.9889
+Epoch 58/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.2136 - accuracy: 1.0000
+90/90 [==============================] - 0s 220us/step - loss: 0.1270 - accuracy: 0.9889
+Epoch 59/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0505 - accuracy: 1.0000
+90/90 [==============================] - 0s 237us/step - loss: 0.1216 - accuracy: 0.9889
+Epoch 60/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0715 - accuracy: 1.0000
+90/90 [==============================] - 0s 262us/step - loss: 0.1165 - accuracy: 0.9889
+Epoch 61/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0787 - accuracy: 1.0000
+90/90 [==============================] - 0s 226us/step - loss: 0.1114 - accuracy: 0.9889
+Epoch 62/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0878 - accuracy: 1.0000
+90/90 [==============================] - 0s 192us/step - loss: 0.1066 - accuracy: 0.9889
+Epoch 63/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1420 - accuracy: 1.0000
+90/90 [==============================] - 0s 256us/step - loss: 0.1026 - accuracy: 0.9889
+Epoch 64/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0697 - accuracy: 1.0000
+90/90 [==============================] - 0s 257us/step - loss: 0.0987 - accuracy: 0.9889
+Epoch 65/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0734 - accuracy: 1.0000
+90/90 [==============================] - 0s 260us/step - loss: 0.0949 - accuracy: 0.9889
+Epoch 66/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1361 - accuracy: 1.0000
+90/90 [==============================] - 0s 211us/step - loss: 0.0918 - accuracy: 0.9889
+Epoch 67/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0558 - accuracy: 1.0000
+90/90 [==============================] - 0s 229us/step - loss: 0.0881 - accuracy: 0.9889
+Epoch 68/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0638 - accuracy: 1.0000
+90/90 [==============================] - 0s 261us/step - loss: 0.0849 - accuracy: 0.9889
+Epoch 69/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0703 - accuracy: 1.0000
+90/90 [==============================] - 0s 231us/step - loss: 0.0817 - accuracy: 0.9889
+Epoch 70/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0342 - accuracy: 1.0000
+90/90 [==============================] - 0s 224us/step - loss: 0.0800 - accuracy: 0.9889
+Epoch 71/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0913 - accuracy: 1.0000
+90/90 [==============================] - 0s 209us/step - loss: 0.0760 - accuracy: 0.9889
+Epoch 72/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0565 - accuracy: 1.0000
+90/90 [==============================] - 0s 216us/step - loss: 0.0736 - accuracy: 0.9889
+Epoch 73/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0460 - accuracy: 1.0000
+90/90 [==============================] - 0s 248us/step - loss: 0.0708 - accuracy: 0.9889
+Epoch 74/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0371 - accuracy: 1.0000
+90/90 [==============================] - 0s 209us/step - loss: 0.0689 - accuracy: 0.9889
+Epoch 75/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0388 - accuracy: 1.0000
+90/90 [==============================] - 0s 204us/step - loss: 0.0673 - accuracy: 0.9889
+Epoch 76/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0505 - accuracy: 1.0000
+90/90 [==============================] - 0s 228us/step - loss: 0.0645 - accuracy: 0.9889
+Epoch 77/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0638 - accuracy: 1.0000
+90/90 [==============================] - 0s 222us/step - loss: 0.0633 - accuracy: 0.9889
+Epoch 78/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0362 - accuracy: 1.0000
+90/90 [==============================] - 0s 269us/step - loss: 0.0596 - accuracy: 0.9889
+Epoch 79/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0207 - accuracy: 1.0000
+90/90 [==============================] - 0s 215us/step - loss: 0.0619 - accuracy: 0.9889
+Epoch 80/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0433 - accuracy: 1.0000
+90/90 [==============================] - 0s 216us/step - loss: 0.0591 - accuracy: 0.9889
+Epoch 81/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0483 - accuracy: 1.0000
+90/90 [==============================] - 0s 221us/step - loss: 0.0571 - accuracy: 0.9889
+Epoch 82/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0291 - accuracy: 1.0000
+90/90 [==============================] - 0s 237us/step - loss: 0.0548 - accuracy: 0.9889
+Epoch 83/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0746 - accuracy: 1.0000
+90/90 [==============================] - 0s 245us/step - loss: 0.0533 - accuracy: 0.9889
+Epoch 84/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1717 - accuracy: 0.8750
+90/90 [==============================] - 0s 232us/step - loss: 0.0525 - accuracy: 0.9889
+Epoch 85/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0451 - accuracy: 1.0000
+90/90 [==============================] - 0s 279us/step - loss: 0.0509 - accuracy: 0.9889
+Epoch 86/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0192 - accuracy: 1.0000
+90/90 [==============================] - 0s 352us/step - loss: 0.0499 - accuracy: 0.9889
+Epoch 87/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0200 - accuracy: 1.0000
+90/90 [==============================] - 0s 294us/step - loss: 0.0489 - accuracy: 0.9889
+Epoch 88/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0432 - accuracy: 1.0000
+90/90 [==============================] - 0s 285us/step - loss: 0.0475 - accuracy: 0.9889
+Epoch 89/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0190 - accuracy: 1.0000
+90/90 [==============================] - 0s 264us/step - loss: 0.0465 - accuracy: 0.9889
+Epoch 90/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0212 - accuracy: 1.0000
+90/90 [==============================] - 0s 274us/step - loss: 0.0462 - accuracy: 0.9889
+Epoch 91/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0681 - accuracy: 1.0000
+90/90 [==============================] - 0s 231us/step - loss: 0.0445 - accuracy: 0.9889
+Epoch 92/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0291 - accuracy: 1.0000
+90/90 [==============================] - 0s 227us/step - loss: 0.0441 - accuracy: 0.9889
+Epoch 93/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0636 - accuracy: 1.0000
+90/90 [==============================] - 0s 221us/step - loss: 0.0426 - accuracy: 0.9889
+Epoch 94/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0356 - accuracy: 1.0000
+90/90 [==============================] - 0s 205us/step - loss: 0.0422 - accuracy: 0.9889
+Epoch 95/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0200 - accuracy: 1.0000
+90/90 [==============================] - 0s 221us/step - loss: 0.0415 - accuracy: 0.9889
+Epoch 96/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1516 - accuracy: 0.8750
+90/90 [==============================] - 0s 243us/step - loss: 0.0411 - accuracy: 0.9889
+Epoch 97/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0136 - accuracy: 1.0000
+90/90 [==============================] - 0s 309us/step - loss: 0.0400 - accuracy: 0.9889
+Epoch 98/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0412 - accuracy: 1.0000
+90/90 [==============================] - 0s 263us/step - loss: 0.0391 - accuracy: 0.9889
+Epoch 99/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0087 - accuracy: 1.0000
+90/90 [==============================] - 0s 243us/step - loss: 0.0391 - accuracy: 0.9889
+Epoch 100/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0186 - accuracy: 1.0000
+90/90 [==============================] - 0s 186us/step - loss: 0.0380 - accuracy: 0.9889
+Epoch 101/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0363 - accuracy: 1.0000
+90/90 [==============================] - 0s 239us/step - loss: 0.0377 - accuracy: 0.9889
+Epoch 102/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0952 - accuracy: 1.0000
+90/90 [==============================] - 0s 270us/step - loss: 0.0376 - accuracy: 0.9889
+Epoch 103/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0178 - accuracy: 1.0000
+90/90 [==============================] - 0s 282us/step - loss: 0.0371 - accuracy: 0.9889
+Epoch 104/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0290 - accuracy: 1.0000
+90/90 [==============================] - 0s 281us/step - loss: 0.0357 - accuracy: 0.9889
+Epoch 105/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1606 - accuracy: 0.8750
+90/90 [==============================] - 0s 302us/step - loss: 0.0366 - accuracy: 0.9889
+Epoch 106/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0088 - accuracy: 1.0000
+90/90 [==============================] - 0s 206us/step - loss: 0.0351 - accuracy: 0.9889
+Epoch 107/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0099 - accuracy: 1.0000
+90/90 [==============================] - 0s 217us/step - loss: 0.0343 - accuracy: 0.9889
+Epoch 108/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0266 - accuracy: 1.0000
+90/90 [==============================] - 0s 256us/step - loss: 0.0336 - accuracy: 0.9889
+Epoch 109/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0106 - accuracy: 1.0000
+90/90 [==============================] - 0s 269us/step - loss: 0.0333 - accuracy: 0.9889
+Epoch 110/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1422 - accuracy: 0.8750
+90/90 [==============================] - 0s 260us/step - loss: 0.0340 - accuracy: 0.9889
+Epoch 111/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0100 - accuracy: 1.0000
+90/90 [==============================] - 0s 252us/step - loss: 0.0326 - accuracy: 0.9889
+Epoch 112/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0076 - accuracy: 1.0000
+90/90 [==============================] - 0s 278us/step - loss: 0.0323 - accuracy: 0.9889
+Epoch 113/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0092 - accuracy: 1.0000
+90/90 [==============================] - 0s 263us/step - loss: 0.0319 - accuracy: 0.9889
+Epoch 114/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0088 - accuracy: 1.0000
+90/90 [==============================] - 0s 325us/step - loss: 0.0313 - accuracy: 0.9889
+Epoch 115/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0089 - accuracy: 1.0000
+90/90 [==============================] - 0s 331us/step - loss: 0.0318 - accuracy: 0.9889
+Epoch 116/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0056 - accuracy: 1.0000
+90/90 [==============================] - 0s 341us/step - loss: 0.0311 - accuracy: 0.9889
+Epoch 117/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0100 - accuracy: 1.0000
+90/90 [==============================] - 0s 312us/step - loss: 0.0318 - accuracy: 0.9889
+Epoch 118/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0056 - accuracy: 1.0000
+90/90 [==============================] - 0s 332us/step - loss: 0.0308 - accuracy: 0.9889
+Epoch 119/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.1571 - accuracy: 0.8750
+90/90 [==============================] - 0s 308us/step - loss: 0.0304 - accuracy: 0.9889
+Epoch 120/120
+
+ 8/90 [=>............................] - ETA: 0s - loss: 0.0151 - accuracy: 1.0000
+90/90 [==============================] - 0s 274us/step - loss: 0.0297 - accuracy: 0.9889
+Loaded model from disk
+INFO:     139.59.16.164:60764 - "GET /api/train?model_name=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     85.119.151.253:62979 - "POST /azenv.php?s=157850236785766PC233590390808000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
