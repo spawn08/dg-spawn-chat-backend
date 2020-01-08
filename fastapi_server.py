@@ -1,13 +1,13 @@
 import tensorflow as tf
 import uvicorn
+from aiohttp import ClientSession
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from starlette.status import HTTP_401_UNAUTHORIZED
-import requests
+
 import crf_entity
 from train_model import LoadModel
 from train_model import classifyKeras, train_parallel
-from aiohttp import ClientSession
 
 app = FastAPI()
 security = HTTPBasic()
@@ -21,6 +21,8 @@ client_session = None
 SEARCH_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/search'
 NEWS_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/news/search'
 ENTITY_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/entities'
+
+
 # es = Elasticsearch([{'host': 'localhost', 'port': 9200}], scheme='http')
 
 async def get_current_username(credentials: HTTPBasicCredentials = Depends(security)):
@@ -103,10 +105,11 @@ async def train(model_name: str, lang: str,
 
     return train_msg
 
+
 @app.get('/websearch')
-async def websearch(q: str, count:str, result_type: str,
-        dependencies=Depends(get_current_username)
-        ):
+async def websearch(q: str, count: str, result_type: str,
+                    dependencies=Depends(get_current_username)
+                    ):
     global web_cache
     global news_cache
     global client_session
@@ -114,46 +117,40 @@ async def websearch(q: str, count:str, result_type: str,
         client_session = ClientSession()
 
     if result_type == 'search':
-        params = {'q':q, 'count':count}
-        headers = {'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN', 'User-Agent':'Android'}
+        params = {'q': q, 'count': count}
+        headers = {'Ocp-Apim-Subscription-Key': 'f5873c265b8247a7af3490e7648c6c37', 'BingAPIs-Market': 'en-IN',
+                   'User-Agent': 'Android'}
 
         if (web_cache.get(q) is not None):
             return (web_cache.get(q))
         else:
             async with client_session.get(SEARCH_URL, params=params, headers=headers) as resp:
                 results = await resp.json()
-                        
-            #results = requests.get(SEARCH_URL, params={'q':q, 'count':count},
-            #        headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN','User-Agent':'Android'})
-            #results = results.json()
+
             web_cache[q] = results
             return results
     elif result_type == 'news':
-        if(news_cache.get(q) is not None):
+        if (news_cache.get(q) is not None):
             return news_cache.get(q)
         else:
-            params = {'q':q,'count':count,'mkt':'en-IN'}
-            headers = {'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37', 'BingAPIs-Market':'en-IN', 'User-Agent':'Android'}
+            params = {'q': q, 'count': count, 'mkt': 'en-IN'}
+            headers = {'Ocp-Apim-Subscription-Key': 'f5873c265b8247a7af3490e7648c6c37', 'BingAPIs-Market': 'en-IN',
+                       'User-Agent': 'Android'}
 
             async with client_session.get(NEWS_URL, params=params, headers=headers) as resp:
-                results = await resp.json() 
+                results = await resp.json()
 
-
-            #results = requests.get(NEWS_URL, params={'q':q, 'count':count, 'mkt':'en-IN'}, headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN','User-Agent':'Android'})
-
-            #results = results.json()
             news_cache[q] = results
             return results
     elif result_type == 'entity':
-        if(entity_cache.get(q) is not None):
+        if (entity_cache.get(q) is not None):
             return entity_cache.get(q)
         else:
-            async with client_session.get(ENTITY_URL, params={'q':q, 'mkt':'en-IN'}, headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','User-Agent':'Android'}) as resp:
+            async with client_session.get(ENTITY_URL, params={'q': q, 'mkt': 'en-IN'},
+                                          headers={'Ocp-Apim-Subscription-Key': 'f5873c265b8247a7af3490e7648c6c37',
+                                                   'User-Agent': 'Android'}) as resp:
                 results = await resp.json()
 
-
-            #results = requests.get(ENTITY_URL, params={'q':q,'mkt':'en-IN'}, headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','User-Agent':'Android'})
-            #results= results.json()
             entity_cache[q] = results
             return results
 
@@ -164,7 +161,8 @@ async def clear_cache(dependencies=Depends(get_current_username)):
     global news_cache
     web_cache.clear()
     news_cache.clear()
-    return {'status':'success'}
+    return {'status': 'success'}
+
 
 @app.get('/entity_extract')
 async def entity_extract(q: str, model: str, lang: str,
@@ -176,8 +174,8 @@ async def entity_extract(q: str, model: str, lang: str,
         entities = []
         labels = {}
 
-        #if (cache.get(q) is not None):
-        #    return (cache.get(q))
+        if (cache.get(q) is not None):
+            return (cache.get(q))
 
         if model is None:
             return ({'error': 'Incorrent parameter arguments', 'status': 'fail'})
@@ -242,7 +240,7 @@ if __name__ == '__main__':
     parser.add_argument('--port', type=int, help='Port number for running application')
     parser.add_argument('--host', type=str, help='Hostname for the application')
     args = parser.parse_args()
-    uvicorn.run(app,port=args.port,host=args.host)
+    uvicorn.run(app, port=args.port, host=args.host)
 
 '''
 def test():
