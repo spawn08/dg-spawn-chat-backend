@@ -522,3 +522,702 @@ Narendra Modi PERSON
 INFO:     139.59.16.164:58570 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
 INFO:     139.59.16.164:58572 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
 INFO:     139.59.16.164:58574 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60756 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     139.59.16.164:58594 - "GET /entity_extract HTTP/1.0" 401 Unauthorized
+INFO:     139.59.16.164:58596 - "GET /entity_extract HTTP/1.0" 422 Unprocessable Entity
+INFO:     139.59.16.164:58598 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58602 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58604 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58606 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58608 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58610 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58612 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58614 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58616 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58618 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58620 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58622 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58624 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58626 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58628 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58630 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58632 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58634 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58636 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58638 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58640 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58642 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58644 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58646 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58648 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58650 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:58652 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58654 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58658 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58660 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58662 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58664 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58666 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58668 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58670 - "GET /websearch?q=narendra%20modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'restaurants near me', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'restaurants near me', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58672 - "GET /entity_extract?q=restaurants%20near%20me&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58674 - "GET /websearch?q=restaurants%20near%20me&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'restaurants in borivali', 'model': 'spawn_en'}
+borivali GPE
+INFO:     139.59.16.164:58678 - "GET /entity_extract?q=restaurants%20in%20borivali&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58680 - "GET /websearch?q=restaurants%20in%20borivali&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'restaurants in borivali', 'model': 'spawn_en'}
+borivali GPE
+INFO:     139.59.16.164:58684 - "GET /entity_extract?q=restaurants%20in%20borivali&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58686 - "GET /websearch?q=restaurants%20in%20borivali&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.97954744', 'name': 'bot_greet_reply'}, 'text': 'am I', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.97954744', 'name': 'bot_greet_reply'}, 'text': 'am I', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58688 - "GET /entity_extract?q=am%20I&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Hawaii', 'model': 'spawn_en'}
+Hawaii GPE
+INFO:     139.59.16.164:58690 - "GET /entity_extract?q=Hawaii&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58692 - "GET /websearch?q=Hawaii&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58696 - "GET /websearch?q=where%20am%20I&count=5&result_type=search HTTP/1.0" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     109.234.153.133:18021 - "POST /azenv.php?s=157831513277775PC233590390808000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:60866 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60868 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     212.156.59.146:57666 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60870 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60882 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     139.59.16.164:58718 - "GET /api/train HTTP/1.0" 401 Unauthorized
+INFO:     139.59.16.164:58720 - "GET /api/train HTTP/1.0" 401 Unauthorized
+INFO:     139.59.16.164:58722 - "GET /entity_extract HTTP/1.0" 401 Unauthorized
+INFO:     139.59.16.164:58724 - "GET /entity_extract HTTP/1.0" 401 Unauthorized
+INFO:     139.59.16.164:58838 - "GET /entity_extract HTTP/1.0" 401 Unauthorized
+INFO:     139.59.16.164:58840 - "GET /entity_extract HTTP/1.0" 401 Unauthorized
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'tell me about Mumbai', 'model': 'spawn_en'}
+Mumbai GPE
+INFO:     139.59.16.164:58842 - "GET /entity_extract?q=tell%20me%20about%20Mumbai&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58844 - "GET /websearch?q=tell%20me%20about%20Mumbai&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'myself on YouTube videos', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'myself on YouTube videos', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58848 - "GET /entity_extract?q=myself%20on%20YouTube%20videos&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58850 - "GET /websearch?q=myself%20on%20YouTube%20videos&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Mumbai so far YouTube videos', 'model': 'spawn_en'}
+Mumbai GPE
+INFO:     139.59.16.164:58854 - "GET /entity_extract?q=Mumbai%20so%20far%20YouTube%20videos&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58856 - "GET /websearch?q=Mumbai%20so%20far%20YouTube%20videos&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'equation of the line passing through origin', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'equation of the line passing through origin', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58860 - "GET /entity_extract?q=equation%20of%20the%20line%20passing%20through%20origin&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58862 - "GET /websearch?q=equation%20of%20the%20line%20passing%20through%20origin&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.7517447', 'name': 'spawn_name'}, 'text': 'what is the equation of a line passing through origin', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.7517447', 'name': 'spawn_name'}, 'text': 'what is the equation of a line passing through origin', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58866 - "GET /entity_extract?q=what%20is%20the%20equation%20of%20a%20line%20passing%20through%20origin&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is the equation', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is the equation', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58868 - "GET /entity_extract?q=what%20is%20the%20equation&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58870 - "GET /websearch?q=what%20is%20the%20equation&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.7517447', 'name': 'spawn_name'}, 'text': 'what is the equation of a line', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.7517447', 'name': 'spawn_name'}, 'text': 'what is the equation of a line', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58874 - "GET /entity_extract?q=what%20is%20the%20equation%20of%20a%20line&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is the equation of the line passing through origin', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is the equation of the line passing through origin', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58876 - "GET /entity_extract?q=what%20is%20the%20equation%20of%20the%20line%20passing%20through%20origin&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58878 - "GET /websearch?q=what%20is%20the%20equation%20of%20the%20line%20passing%20through%20origin&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': "I'm having difficulty solving integration", 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': "I'm having difficulty solving integration", 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58882 - "GET /entity_extract?q=I%27m%20having%20difficulty%20solving%20integration&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58884 - "GET /websearch?q=I%27m%20having%20difficulty%20solving%20integration&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is the integration of x square', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is the integration of x square', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:58888 - "GET /entity_extract?q=what%20is%20the%20integration%20of%20x%20square&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58890 - "GET /websearch?q=what%20is%20the%20integration%20of%20x%20square&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     109.234.153.131:55925 - "POST /azenv.php?s=157832952207900PC233590390808000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Donald Trump', 'model': 'spawn_en'}
+Donald Trump PERSON
+INFO:     139.59.16.164:58894 - "GET /entity_extract?q=who%20is%20Donald%20Trump&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58896 - "GET /websearch?q=who%20is%20Donald%20Trump&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'president of United States', 'model': 'spawn_en'}
+United States GPE
+INFO:     139.59.16.164:58900 - "GET /entity_extract?q=president%20of%20United%20States&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58902 - "GET /websearch?q=president%20of%20United%20States&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'current president of the United States', 'model': 'spawn_en'}
+the United States GPE
+INFO:     139.59.16.164:58906 - "GET /entity_extract?q=current%20president%20of%20the%20United%20States&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58908 - "GET /websearch?q=current%20president%20of%20the%20United%20States&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.7460751', 'name': 'spawn_name'}, 'text': 'who is the prime minister of India', 'model': 'spawn_en'}
+India GPE
+INFO:     139.59.16.164:58912 - "GET /entity_extract?q=who%20is%20the%20prime%20minister%20of%20India&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'prime minister of India', 'model': 'spawn_en'}
+India GPE
+INFO:     139.59.16.164:58914 - "GET /entity_extract?q=prime%20minister%20of%20India&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:58916 - "GET /websearch?q=prime%20minister%20of%20India&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     127.0.0.1:32928 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     89.133.190.105:58469 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33060 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33088 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33090 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     5.178.86.74:35427 - "POST /azenv.php?s=157834404067228PC233590390808000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:33100 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33108 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33110 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33118 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     5.178.86.74:10647 - "POST /azenv.php?s=157835833831327PC233590390808000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:33120 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33126 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     37.147.241.199:51939 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33130 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     79.11.212.202:38230 - "GET / HTTP/1.1" 404 Not Found
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Linda Modi', 'model': 'spawn_en'}
+Linda Modi PERSON
+INFO:     139.59.16.164:59220 - "GET /entity_extract?q=Linda%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59222 - "GET /websearch?q=Linda%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59226 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59228 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'palindrome wedding', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'palindrome wedding', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59232 - "GET /entity_extract?q=palindrome%20wedding&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59234 - "GET /websearch?q=palindrome%20wedding&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Madden Mobile mod', 'model': 'spawn_en'}
+Madden Mobile ORG
+INFO:     139.59.16.164:59238 - "GET /entity_extract?q=Madden%20Mobile%20mod&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59240 - "GET /websearch?q=Madden%20Mobile%20mod&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59244 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59246 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59250 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59252 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9994254', 'name': 'bot_news'}, 'text': 'show me the latest news', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9994254', 'name': 'bot_news'}, 'text': 'show me the latest news', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59254 - "GET /entity_extract?q=show%20me%20the%20latest%20news&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59256 - "GET /websearch?q=show%20me%20the%20latest%20news&count=10&result_type=news HTTP/1.0" 200 OK
+spawn_hi
+Loaded model from disk
+{'intent': {'confidence': '0.99550194', 'name': 'spawn_name'}, 'text': 'तुम्हारा नाम क्या है', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.99550194', 'name': 'spawn_name'}, 'text': 'तुम्हारा नाम क्या है', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59260 - "GET /entity_extract?q=%E0%A4%A4%E0%A5%81%E0%A4%AE%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%B0%E0%A4%BE%20%E0%A4%A8%E0%A4%BE%E0%A4%AE%20%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%B9%E0%A5%88&model=spawn&lang=hi HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': '0.99475783', 'name': 'bot_skills'}, 'text': 'तुम क्या कर सकते हो', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.99475783', 'name': 'bot_skills'}, 'text': 'तुम क्या कर सकते हो', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59262 - "GET /entity_extract?q=%E0%A4%A4%E0%A5%81%E0%A4%AE%20%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%95%E0%A4%B0%20%E0%A4%B8%E0%A4%95%E0%A4%A4%E0%A5%87%20%E0%A4%B9%E0%A5%8B&model=spawn&lang=hi HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': '0.99460816', 'name': 'bot_skills'}, 'text': 'और क्या कर सकते हो', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.99460816', 'name': 'bot_skills'}, 'text': 'और क्या कर सकते हो', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59264 - "GET /entity_extract?q=%E0%A4%94%E0%A4%B0%20%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%95%E0%A4%B0%20%E0%A4%B8%E0%A4%95%E0%A4%A4%E0%A5%87%20%E0%A4%B9%E0%A5%8B&model=spawn&lang=hi HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': '0.99550194', 'name': 'spawn_name'}, 'text': 'तुम्हारा नाम क्या है', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.99550194', 'name': 'spawn_name'}, 'text': 'तुम्हारा नाम क्या है', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59266 - "GET /entity_extract?q=%E0%A4%A4%E0%A5%81%E0%A4%AE%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%B0%E0%A4%BE%20%E0%A4%A8%E0%A4%BE%E0%A4%AE%20%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%B9%E0%A5%88&model=spawn&lang=hi HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': 0, 'name': None}, 'text': 'तुम बहुत अच्छे हो', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'तुम बहुत अच्छे हो', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59268 - "GET /entity_extract?q=%E0%A4%A4%E0%A5%81%E0%A4%AE%20%E0%A4%AC%E0%A4%B9%E0%A5%81%E0%A4%A4%20%E0%A4%85%E0%A4%9A%E0%A5%8D%E0%A4%9B%E0%A5%87%20%E0%A4%B9%E0%A5%8B&model=spawn&lang=hi HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59270 - "GET /websearch?q=%E0%A4%A4%E0%A5%81%E0%A4%AE%20%E0%A4%AC%E0%A4%B9%E0%A5%81%E0%A4%A4%20%E0%A4%85%E0%A4%9A%E0%A5%8D%E0%A4%9B%E0%A5%87%20%E0%A4%B9%E0%A5%8B&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': '0.99913126', 'name': 'bot_love'}, 'text': 'मैं तुम्हें पसंद करता हूं', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.99913126', 'name': 'bot_love'}, 'text': 'मैं तुम्हें पसंद करता हूं', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59274 - "GET /entity_extract?q=%E0%A4%AE%E0%A5%88%E0%A4%82%20%E0%A4%A4%E0%A5%81%E0%A4%AE%E0%A5%8D%E0%A4%B9%E0%A5%87%E0%A4%82%20%E0%A4%AA%E0%A4%B8%E0%A4%82%E0%A4%A6%20%E0%A4%95%E0%A4%B0%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%82%E0%A4%82&model=spawn&lang=hi HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': '0.94928795', 'name': 'bot_negation'}, 'text': 'जी नहीं', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.94928795', 'name': 'bot_negation'}, 'text': 'जी नहीं', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59276 - "GET /entity_extract?q=%E0%A4%9C%E0%A5%80%20%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82&model=spawn&lang=hi HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': '0.9978975', 'name': 'bot_negative'}, 'text': 'तुम बेवकूफ हो', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9978975', 'name': 'bot_negative'}, 'text': 'तुम बेवकूफ हो', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59278 - "GET /entity_extract?q=%E0%A4%A4%E0%A5%81%E0%A4%AE%20%E0%A4%AC%E0%A5%87%E0%A4%B5%E0%A4%95%E0%A5%82%E0%A4%AB%20%E0%A4%B9%E0%A5%8B&model=spawn&lang=hi HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': '0.9957741', 'name': 'bot_work'}, 'text': 'क्या बात कर रहे हो', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9957741', 'name': 'bot_work'}, 'text': 'क्या बात कर रहे हो', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59280 - "GET /entity_extract?q=%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%AC%E0%A4%BE%E0%A4%A4%20%E0%A4%95%E0%A4%B0%20%E0%A4%B0%E0%A4%B9%E0%A5%87%20%E0%A4%B9%E0%A5%8B&model=spawn&lang=hi HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': '0.7426463', 'name': 'bot_greet_reply'}, 'text': 'अच्छा ठीक है तो तुम बताओ मुझे कि नरेंद्र मोदी कौन है', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.7426463', 'name': 'bot_greet_reply'}, 'text': 'अच्छा ठीक है तो तुम बताओ मुझे कि नरेंद्र मोदी कौन है', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59282 - "GET /entity_extract?q=%E0%A4%85%E0%A4%9A%E0%A5%8D%E0%A4%9B%E0%A4%BE%20%E0%A4%A0%E0%A5%80%E0%A4%95%20%E0%A4%B9%E0%A5%88%20%E0%A4%A4%E0%A5%8B%20%E0%A4%A4%E0%A5%81%E0%A4%AE%20%E0%A4%AC%E0%A4%A4%E0%A4%BE%E0%A4%93%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%95%E0%A4%BF%20%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80%20%E0%A4%95%E0%A5%8C%E0%A4%A8%20%E0%A4%B9%E0%A5%88&model=spawn&lang=hi HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': 0, 'name': None}, 'text': 'अरे तुम बताना मुझे कि नरेंद्र मोदी कौन है', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'अरे तुम बताना मुझे कि नरेंद्र मोदी कौन है', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59284 - "GET /entity_extract?q=%E0%A4%85%E0%A4%B0%E0%A5%87%20%E0%A4%A4%E0%A5%81%E0%A4%AE%20%E0%A4%AC%E0%A4%A4%E0%A4%BE%E0%A4%A8%E0%A4%BE%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%95%E0%A4%BF%20%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80%20%E0%A4%95%E0%A5%8C%E0%A4%A8%20%E0%A4%B9%E0%A5%88&model=spawn&lang=hi HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59286 - "GET /websearch?q=%E0%A4%85%E0%A4%B0%E0%A5%87%20%E0%A4%A4%E0%A5%81%E0%A4%AE%20%E0%A4%AC%E0%A4%A4%E0%A4%BE%E0%A4%A8%E0%A4%BE%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%95%E0%A4%BF%20%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80%20%E0%A4%95%E0%A5%8C%E0%A4%A8%20%E0%A4%B9%E0%A5%88&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59290 - "GET /entity_extract?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80&model=spawn&lang=hi HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59292 - "GET /websearch?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59296 - "GET /entity_extract?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80&model=spawn&lang=hi HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59298 - "GET /websearch?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': 0, 'name': None}, 'text': 'गुजरात की राजधानी क्या है', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'गुजरात की राजधानी क्या है', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:59300 - "GET /entity_extract?q=%E0%A4%97%E0%A5%81%E0%A4%9C%E0%A4%B0%E0%A4%BE%E0%A4%A4%20%E0%A4%95%E0%A5%80%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%A7%E0%A4%BE%E0%A4%A8%E0%A5%80%20%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%B9%E0%A5%88&model=spawn&lang=hi HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59302 - "GET /websearch?q=%E0%A4%97%E0%A5%81%E0%A4%9C%E0%A4%B0%E0%A4%BE%E0%A4%A4%20%E0%A4%95%E0%A5%80%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%A7%E0%A4%BE%E0%A4%A8%E0%A5%80%20%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%B9%E0%A5%88&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9727298', 'name': 'bot_identity'}, 'text': "I don't know about Carlos Slim", 'model': 'spawn_en'}
+Carlos Slim PERSON
+INFO:     139.59.16.164:59306 - "GET /entity_extract?q=I%20don%27t%20know%20about%20Carlos%20Slim&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'where is second located', 'model': 'spawn_en'}
+second ORDINAL
+INFO:     139.59.16.164:59308 - "GET /entity_extract?q=where%20is%20second%20located&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59310 - "GET /websearch?q=where%20is%20second%20located&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'where is 16 located', 'model': 'spawn_en'}
+16 CARDINAL
+INFO:     139.59.16.164:59314 - "GET /entity_extract?q=where%20is%2016%20located&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59316 - "GET /websearch?q=where%20is%2016%20located&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Fourier transform', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Fourier transform', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59320 - "GET /entity_extract?q=Fourier%20transform&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59322 - "GET /websearch?q=Fourier%20transform&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     127.0.0.1:33260 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     5.178.86.74:56743 - "POST /azenv.php?s=157837268017905PC233590390808000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:33262 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33304 - "GET /clear_cache HTTP/1.1" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59372 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59374 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59378 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59380 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'aluminum welding', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'aluminum welding', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59384 - "GET /entity_extract?q=aluminum%20welding&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59386 - "GET /websearch?q=aluminum%20welding&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59390 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59392 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59394 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59396 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59398 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59400 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     127.0.0.1:33338 - "GET /clear_cache HTTP/1.1" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59406 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59408 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59412 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59414 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59416 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59418 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59420 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.96691304', 'name': 'bot_greet_reply'}, 'text': 'I am the Modi', 'model': 'spawn_en'}
+Modi PERSON
+INFO:     139.59.16.164:59422 - "GET /entity_extract?q=I%20am%20the%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59424 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59426 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Reema lagoo', 'model': 'spawn_en'}
+Reema lagoo PERSON
+INFO:     139.59.16.164:59428 - "GET /entity_extract?q=Reema%20lagoo&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59430 - "GET /websearch?q=Reema%20lagoo&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     127.0.0.1:33368 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     5.178.86.74:52009 - "POST /azenv.php?s=157838704419429PC233590390808000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:33424 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     139.59.16.164:59492 - "GET /websearch?q=what%20is%20your%20name&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59496 - "GET /websearch?q=what%20is%20your%20name&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59498 - "GET /websearch?q=what%20is%20your%20name&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59500 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59504 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59506 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59622 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59624 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59626 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59630 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59632 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59634 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59636 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59638 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59640 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59642 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59644 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59646 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9957272', 'name': 'bot_skills'}, 'text': 'what can you do', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9957272', 'name': 'bot_skills'}, 'text': 'what can you do', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59648 - "GET /entity_extract?q=what%20can%20you%20do&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59650 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59652 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Fourier transform', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Fourier transform', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59654 - "GET /entity_extract?q=Fourier%20transform&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59656 - "GET /websearch?q=Fourier%20transform&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59660 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59662 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59664 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59666 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59668 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'calendar Monday', 'model': 'spawn_en'}
+Monday DATE
+INFO:     139.59.16.164:59670 - "GET /entity_extract?q=calendar%20Monday&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59672 - "GET /websearch?q=calendar%20Monday&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59676 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59678 - "GET /entity_extract?q=Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59680 - "GET /websearch?q=Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Mumbai', 'model': 'spawn_en'}
+Mumbai GPE
+INFO:     139.59.16.164:59682 - "GET /entity_extract?q=Mumbai&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59684 - "GET /websearch?q=Mumbai&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is a meme', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is a meme', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59688 - "GET /entity_extract?q=what%20is%20a%20meme&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59690 - "GET /websearch?q=what%20is%20a%20meme&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59694 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.89214826', 'name': 'spawn_name'}, 'text': 'what are your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.89214826', 'name': 'spawn_name'}, 'text': 'what are your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59696 - "GET /entity_extract?q=what%20are%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59698 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59700 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9957272', 'name': 'bot_skills'}, 'text': 'what can you do', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9957272', 'name': 'bot_skills'}, 'text': 'what can you do', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59702 - "GET /entity_extract?q=what%20can%20you%20do&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9957272', 'name': 'bot_skills'}, 'text': 'what can you do', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9957272', 'name': 'bot_skills'}, 'text': 'what can you do', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59704 - "GET /entity_extract?q=what%20can%20you%20do&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     127.0.0.1:33640 - "GET /clear_cache HTTP/1.1" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'tell me about Mumbai', 'model': 'spawn_en'}
+Mumbai GPE
+INFO:     139.59.16.164:59718 - "GET /entity_extract?q=tell%20me%20about%20Mumbai&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59720 - "GET /websearch?q=tell%20me%20about%20Mumbai&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'about Mumbai', 'model': 'spawn_en'}
+Mumbai GPE
+INFO:     139.59.16.164:59724 - "GET /entity_extract?q=about%20Mumbai&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59726 - "GET /websearch?q=about%20Mumbai&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9957272', 'name': 'bot_skills'}, 'text': 'what can you do', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9957272', 'name': 'bot_skills'}, 'text': 'what can you do', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59730 - "GET /entity_extract?q=what%20can%20you%20do&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': '0.9969212', 'name': 'spawn_name'}, 'text': 'what is your name', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:59732 - "GET /entity_extract?q=what%20is%20your%20name&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59734 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59736 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59744 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59746 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:59748 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:59750 - "GET /websearch?q=who%20is%20Narendra%20Modi&count=5&result_type=search HTTP/1.0" 200 OK
+INFO:     127.0.0.1:33686 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33692 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     5.178.86.76:55347 - "POST /azenv.php?s=157840135771250PC233590390808000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:33708 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33712 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     172.104.92.166:42302 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33774 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33892 - "GET /clear_cache HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     5.178.86.74:34041 - "POST /azenv.php?s=157841576207461PC233590390808000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:33924 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33926 - "GET /clear_cache HTTP/1.1" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:60040 - "GET /entity_extract?q=who%20is%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.9222663', 'name': 'bot_identity'}, 'text': 'can you tell me about Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:60042 - "GET /entity_extract?q=can%20you%20tell%20me%20about%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.7517447', 'name': 'spawn_name'}, 'text': 'what is the height of a Narendra Modi', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:60044 - "GET /entity_extract?q=what%20is%20the%20height%20of%20a%20Narendra%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'who is Ahmad', 'model': 'spawn_en'}
+Ahmad PERSON
+INFO:     139.59.16.164:60046 - "GET /entity_extract?q=who%20is%20Ahmad&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी कौन है', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी कौन है', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:60048 - "GET /entity_extract?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80%20%E0%A4%95%E0%A5%8C%E0%A4%A8%20%E0%A4%B9%E0%A5%88&model=spawn&lang=hi HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60050 - "GET /websearch?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80%20%E0%A4%95%E0%A5%8C%E0%A4%A8%20%E0%A4%B9%E0%A5%88&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी के समाचार दिखाओ', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी के समाचार दिखाओ', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:60054 - "GET /entity_extract?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%9A%E0%A4%BE%E0%A4%B0%20%E0%A4%A6%E0%A4%BF%E0%A4%96%E0%A4%BE%E0%A4%93&model=spawn&lang=hi HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60056 - "GET /websearch?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%9A%E0%A4%BE%E0%A4%B0%20%E0%A4%A6%E0%A4%BF%E0%A4%96%E0%A4%BE%E0%A4%93&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:60060 - "GET /entity_extract?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80&model=spawn&lang=hi HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60062 - "GET /websearch?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'नरेंद्र मोदी', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:60066 - "GET /entity_extract?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80&model=spawn&lang=hi HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60068 - "GET /websearch?q=%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A5%80&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_hi
+{'intent': {'confidence': 0, 'name': None}, 'text': 'शंकर भगवान', 'model': 'spawn_hi'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'शंकर भगवान', 'model': 'spawn_hi', 'entities': []}
+INFO:     139.59.16.164:60070 - "GET /entity_extract?q=%E0%A4%B6%E0%A4%82%E0%A4%95%E0%A4%B0%20%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%BE%E0%A4%A8&model=spawn&lang=hi HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60072 - "GET /websearch?q=%E0%A4%B6%E0%A4%82%E0%A4%95%E0%A4%B0%20%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%BE%E0%A4%A8&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.8446646', 'name': 'bot_news'}, 'text': 'Narendra Modi news', 'model': 'spawn_en'}
+Narendra Modi PERSON
+INFO:     139.59.16.164:60076 - "GET /entity_extract?q=Narendra%20Modi%20news&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'can you tell me the news on Modi', 'model': 'spawn_en'}
+Modi PERSON
+INFO:     139.59.16.164:60078 - "GET /entity_extract?q=can%20you%20tell%20me%20the%20news%20on%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is the modal class', 'model': 'spawn_en'}
+{'success': False, 'entities': None}
+{'intent': {'confidence': 0, 'name': None}, 'text': 'what is the modal class', 'model': 'spawn_en', 'entities': []}
+INFO:     139.59.16.164:60080 - "GET /entity_extract?q=what%20is%20the%20modal%20class&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     139.59.16.164:60082 - "GET /websearch?q=what%20is%20the%20modal%20class&count=5&result_type=search HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Donald Trump', 'model': 'spawn_en'}
+Donald Trump PERSON
+INFO:     139.59.16.164:60086 - "GET /entity_extract?q=Donald%20Trump&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'Donald Trump', 'model': 'spawn_en'}
+Donald Trump PERSON
+INFO:     139.59.16.164:60088 - "GET /entity_extract?q=Donald%20Trump&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': 0, 'name': None}, 'text': 'images on Modi', 'model': 'spawn_en'}
+Modi PERSON
+INFO:     139.59.16.164:60090 - "GET /entity_extract?q=images%20on%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.8119543', 'name': 'bot_news'}, 'text': 'show me the images of Modi', 'model': 'spawn_en'}
+Modi PERSON
+INFO:     139.59.16.164:60092 - "GET /entity_extract?q=show%20me%20the%20images%20of%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+spawn_en
+{'intent': {'confidence': '0.81425434', 'name': 'bot_news'}, 'text': 'the news on Modi', 'model': 'spawn_en'}
+Modi PERSON
+INFO:     139.59.16.164:60094 - "GET /entity_extract?q=the%20news%20on%20Modi&model=spawn&lang=en HTTP/1.0" 200 OK
+INFO:     127.0.0.1:34030 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34062 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     85.119.151.251:3287 - "POST /azenv.php?s=157843024463206PC233590390808000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:34064 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34066 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34070 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     1.202.114.65:11499 - "GET / HTTP/1.1" 404 Not Found
+INFO:     123.245.25.55:59320 - "GET /common/info.cgi HTTP/1.1" 404 Not Found
+INFO:     171.37.204.103:60900 - "GET /common/info.cgi HTTP/1.1" 404 Not Found
+INFO:     110.177.72.90:33616 - "GET /common/info.cgi HTTP/1.1" 404 Not Found
+INFO:     36.32.3.111:39198 - "GET / HTTP/1.1" 404 Not Found
+INFO:     1.30.174.147:13067 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:34078 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     85.119.151.250:35391 - "POST /azenv.php?s=157844466509670PC233590390808000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:34146 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34150 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34156 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34160 - "GET /clear_cache HTTP/1.1" 200 OK
+INFO:     85.119.151.251:22775 - "POST /azenv.php?s=157845918745961PC233590390808000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
