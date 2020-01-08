@@ -7,6 +7,7 @@ import requests
 import crf_entity
 from train_model import LoadModel
 from train_model import classifyKeras, train_parallel
+from aiohttp import ClientSession
 
 app = FastAPI()
 security = HTTPBasic()
@@ -16,6 +17,7 @@ cache = {}
 web_cache = {}
 news_cache = {}
 entity_cache = {}
+client_session = None
 SEARCH_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/search'
 NEWS_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/news/search'
 ENTITY_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/entities'
@@ -107,31 +109,51 @@ async def websearch(q: str, count:str, result_type: str,
         ):
     global web_cache
     global news_cache
+    global client_session
+    if client_session == None:
+        client_session = ClientSession()
 
     if result_type == 'search':
+        params = {'q':q, 'count':count}
+        headers = {'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN', 'User-Agent':'Android'}
+
         if (web_cache.get(q) is not None):
             return (web_cache.get(q))
         else:
-            results = requests.get(SEARCH_URL, params={'q':q, 'count':count},
-                    headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN','User-Agent':'Android'})
-            results = results.json()
+            async with client_session.get(SEARCH_URL, params=params, headers=headers) as resp:
+                results = await resp.json()
+                        
+            #results = requests.get(SEARCH_URL, params={'q':q, 'count':count},
+            #        headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN','User-Agent':'Android'})
+            #results = results.json()
             web_cache[q] = results
             return results
     elif result_type == 'news':
         if(news_cache.get(q) is not None):
             return news_cache.get(q)
         else:
-            results = requests.get(NEWS_URL, params={'q':q, 'count':count, 'mkt':'en-IN'}, headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN','User-Agent':'Android'})
+            params = {'q':q,'count':count,'mkt':'en-IN'}
+            headers = {'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37', 'BingAPIs-Market':'en-IN', 'User-Agent':'Android'}
 
-            results = results.json()
+            async with client_session.get(NEWS_URL, params=params, headers=headers) as resp:
+                results = await resp.json() 
+
+
+            #results = requests.get(NEWS_URL, params={'q':q, 'count':count, 'mkt':'en-IN'}, headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','BingAPIs-Market':'en-IN','User-Agent':'Android'})
+
+            #results = results.json()
             news_cache[q] = results
             return results
     elif result_type == 'entity':
         if(entity_cache.get(q) is not None):
             return entity_cache.get(q)
         else:
-            results = requests.get(ENTITY_URL, params={'q':q,'mkt':'en-IN'}, headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','User-Agent':'Android'})
-            results= results.json()
+            async with client_session.get(ENTITY_URL, params={'q':q, 'mkt':'en-IN'}, headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','User-Agent':'Android'}) as resp:
+                results = await resp.json()
+
+
+            #results = requests.get(ENTITY_URL, params={'q':q,'mkt':'en-IN'}, headers={'Ocp-Apim-Subscription-Key':'f5873c265b8247a7af3490e7648c6c37','User-Agent':'Android'})
+            #results= results.json()
             entity_cache[q] = results
             return results
 
