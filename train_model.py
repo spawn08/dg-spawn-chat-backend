@@ -98,7 +98,7 @@ def train_keras(model_name):
     with open(DATA_BASE_PATH + '/{model}_data.json'.format(model=model_name), encoding="utf-8") as f:
         data = json.load(f)
 
-    output_data = list((data.get('rasa_nlu_data').get('common_examples')))
+    output_data = list(data.get('intents'))
     print(output_data)
     print("%s sentences in training data" % len(output_data))
 

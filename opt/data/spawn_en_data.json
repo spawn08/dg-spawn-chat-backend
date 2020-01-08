@@ -1,456 +1,364 @@
 {
-  "rasa_nlu_data": {
-    "common_examples": [
-      {
-        "text": "how can you help me",
-        "intent": "bot_skills",
-        "entities": []
-      },
-      {
-        "text": "what can you do",
-        "intent": "bot_skills",
-        "entities": []
-      },
-      {
-        "text": "help me",
-        "intent": "bot_skills",
-        "entities": []
-      },
-      {
-        "text": "what skills do you have",
-        "intent": "bot_skills",
-        "entities": []
-      },
-      {
-        "text": "what things you can do",
-        "intent": "bot_skills",
-        "entities": []
-      },
-      {
-        "text": "what are your skills",
-        "intent": "bot_skills",
-        "entities": []
-      },
-      {
-        "text": "what do you know",
-        "intent": "bot_skills",
-        "entities": []
-      },
-      {
-        "text": "shut up",
-        "intent": "bot_shutup",
-        "entities": []
-      },
-      {
-        "text": "shut the fuck up",
-        "intent": "bot_shutup",
-        "entities": []
-      },
-      {
-        "text": "keep quiet",
-        "intent": "bot_shutup",
-        "entities": []
-      },
-      {
-        "text": "keep your mouth shut",
-        "intent": "bot_shutup",
-        "entities": []
-      },
-      {
-        "text": "hello spawn",
-        "intent": "bot_hi",
-        "entities": []
-      },
-      {
-        "text": "heya",
-        "intent": "bot_hi",
-        "entities": []
-      },
-      {
-        "text": "heya spawn",
-        "intent": "bot_hi",
-        "entities": []
-      },
-      {
-        "text": "hey spawn",
-        "intent": "bot_hi",
-        "entities": []
-      },
-      {
-        "text": "hey hi",
-        "intent": "bot_hi",
-        "entities": []
-      },
-      {
-        "text": "hello there",
-        "intent": "bot_hi",
-        "entities": []
-      },
-      {
-        "text": "hello",
-        "intent": "bot_hi",
-        "entities": []
-      },
-      {
-        "text": "hey spawn good morning",
-        "intent": "morning",
-        "entities": []
-      },
-      {
-        "text": "good morning",
-        "intent": "morning",
-        "entities": []
-      },
-      {
-        "text": "morning",
-        "intent": "morning",
-        "entities": []
-      },
-      {
-        "intent": "morning",
-        "text": "good morning spawn",
-        "entities": []
-      },
-      {
-        "intent": "morning",
-        "text": "great morning",
-        "entities": []
-      },
-      {
-        "intent": "morning",
-        "text": "great morning spawn",
-        "entities": []
-      },
-      {
-        "intent": "morning",
-        "text": "good morning",
-        "entities": []
-      },
-      {
-        "intent": "afernoon",
-        "text": "hey spawn good afternoon",
-        "entities": []
-      },
-      {
-        "intent": "afernoon",
-        "text": "good afternoon",
-        "entities": []
-      },
-      {
-        "intent": "afernoon",
-        "text": "good afternoon spawn",
-        "entities": []
-      },
-      {
-        "intent": "afernoon",
-        "text": "great morning",
-        "entities": []
-      },
-      {
-        "intent": "afernoon",
-        "text": "hey good afternoon",
-        "entities": []
-      },
-      {
-        "intent": "bot_love",
-        "text": "i love you",
-        "entities": []
-      },
-      {
-        "intent": "bot_love",
-        "text": "love you",
-        "entities": []
-      },
-      {
-        "intent": "bot_love",
-        "text": "hey spawn i love you",
-        "entities": []
-      },
-      {
-        "intent": "bot_love",
-        "text": "i like you",
-        "entities": []
-      },
-      {
-        "intent": "bot_greet_reply",
-        "text": "i am doing great",
-        "entities": []
-      },
-      {
-        "intent": "bot_greet_reply",
-        "text": "great",
-        "entities": []
-      },
-      {
-        "intent": "bot_greet_reply",
-        "text": "ok great",
-        "entities": []
-      },
-      {
-        "intent": "bot_greet_reply",
-        "text": "ok fantastic",
-        "entities": []
-      },
-      {
-        "intent": "bot_greet_reply",
-        "text": "awesome",
-        "entities": []
-      },
-      {
-        "intent": "bot_greet_reply",
-        "text": "good",
-        "entities": []
-      },
-      {
-        "intent": "bot_greet_reply",
-        "text": "i am doing good",
-        "entities": []
-      },
-      {
-        "intent": "bot_greet_reply",
-        "text": "i am doing fine",
-        "entities": []
-      },
-      {
-        "intent": "bot_greet_reply",
-        "text": "i am fantastic",
-        "entities": []
-      },
-      {
-        "intent": "bot_bye",
-        "text": "bye bye",
-        "entities": []
-      },
-      {
-        "intent": "bot_bye",
-        "text": "bye-bye",
-        "entities": []
-      },
-      {
-        "intent": "bot_bye",
-        "text": "goodbye",
-        "entities": []
-      },
-      {
-        "intent": "bot_bye",
-        "text": "good bye",
-        "entities": []
-      },
-      {
-        "intent": "bot_bye",
-        "text": "see you later",
-        "entities": []
-      },
-      {
-        "intent": "bot_bye",
-        "text": "talk to you later",
-        "entities": []
-      },
-      {
-        "intent": "bot_bye",
-        "text": "catch you later",
-        "entities": []
-      },
-      {
-        "intent": "bot_quotes",
-        "text": "send me a quote",
-        "entities": []
-      },
-      {
-        "intent": "bot_quotes",
-        "text": "todays quote",
-        "entities": []
-      },
-      {
-        "intent": "bot_quotes",
-        "text": "today's quote",
-        "entities": []
-      },
-      {
-        "intent": "bot_quotes",
-        "text": "tell me a quote",
-        "entities": []
-      },
-      {
-        "intent": "bot_quotes",
-        "text": "motivation quotes",
-        "entities": []
-      },
-      {
-        "intent": "bot_quotes",
-        "text": "inspirational quote",
-        "entities": []
-      },
-      {
-        "intent": "spawn_name",
-        "text": "your name",
-        "entities": []
-      },
-      {
-        "intent": "spawn_name",
-        "text": "your identity",
-        "entities": []
-      },
-      {
-        "intent": "spawn_name",
-        "text": "your name",
-        "entities": []
-      },
-      {
-        "intent": "spawn_name",
-        "text": "what's your name",
-        "entities": []
-      },
-      {
-        "intent": "spawn_name",
-        "text": "professor spawn",
-        "entities": []
-      },
-      {
-        "intent": "spawn_name",
-        "text": "who are you professor spawn",
-        "entities": []
-      },
-      {
-        "intent": "greet",
-        "text": "how are you",
-        "entities": []
-      },
-      {
-        "intent": "greet",
-        "text": "hey how are you",
-        "entities": []
-      },
-      {
-        "intent": "greet",
-        "text": "are you doing ok",
-        "entities": []
-      },
-      {
-        "intent": "greet",
-        "text": "are you ok",
-        "entities": []
-      },
-      {
-        "intent": "bot_identity",
-        "text": "who are you",
-        "entities": []
-      },
-      {
-        "intent": "bot_identity",
-        "text": "about you",
-        "entities": []
-      },
-      {
-        "intent": "bot_identity",
-        "text": "i dont know you",
-        "entities": []
-      },
-      {
-        "intent": "bot_thanks",
-        "text": "thank you",
-        "entities": []
-      },
-      {
-        "intent": "bot_thanks",
-        "text": "thanks you",
-        "entities": []
-      },
-      {
-        "intent": "bot_thanks",
-        "text": "ok thanks",
-        "entities": []
-      },
-      {
-        "intent": "bot_thanks",
-        "text": "thank you spawn",
-        "entities": []
-      },
-      {
-        "intent": "bot_thanks",
-        "text": "thank you professor spawn",
-        "entities": []
-      },
-      {
-        "intent": "bot_negative",
-        "text": "nothing",
-        "entities": []
-      },
-      {
-        "intent": "bot_negative",
-        "text": "i dont need your help",
-        "entities": []
-      },
-      {
-        "intent": "bot_negative",
-        "text": "no need",
-        "entities": []
-      },
-      {
-        "intent": "bot_negative",
-        "text": "i dont want your help",
-        "entities": []
-      },
-      {
-        "intent": "bot_negative",
-        "text": "nothing",
-        "entities": []
-      },
-      {
-        "intent": "bot_negative",
-        "text": "you are an idiot",
-        "entities": []
-      },
-      {
-        "intent": "bot_negative",
-        "text": "you dumb fuck",
-        "entities": []
-      },
-      {
-        "intent": "bot_negative",
-        "text": "you are dumb",
-        "entities": []
-      },
-      {
-        "intent": "bot_negative",
-        "text": "you are stupid bitch",
-        "entities": []
-      },
-      {
-        "intent": "bot_negative",
-        "text": "you are stupid",
-        "entities": []
-      },
-      {
-        "intent": "bot_negative",
-        "text": "you don't know anything",
-        "entities": []
-      },
-      {
-        "intent": "bot_negative",
-        "text": "you motherfucker",
-        "entities": []
-      },
-      {
-        "intent": "bot_negative",
-        "text": "you cannot help me",
-        "entities": []
-      },
-      {
-        "intent":"bot_news",
-	"text":"show me lastest news",
-	"entities":[]
-      },
-      {
-        "intent":"bot_news",
-	"text":"latest news",
-        "entities":[]	
-      },
-      {
-        "intent":"bot_news",
-	"text":"show me the news",
-	"entites":[]
-      }	      
-    ]
-  }
+  "intents": [
+    {
+      "text": "how can you help me",
+      "intent": "bot_skills"
+    },
+    {
+      "text": "what can you do",
+      "intent": "bot_skills"
+    },
+    {
+      "text": "help me",
+      "intent": "bot_skills"
+    },
+    {
+      "text": "what skills do you have",
+      "intent": "bot_skills"
+    },
+    {
+      "text": "what things you can do",
+      "intent": "bot_skills"
+    },
+    {
+      "text": "what are your skills",
+      "intent": "bot_skills"
+    },
+    {
+      "text": "what do you know",
+      "intent": "bot_skills"
+    },
+    {
+      "text": "shut up",
+      "intent": "bot_shutup"
+    },
+    {
+      "text": "shut the fuck up",
+      "intent": "bot_shutup"
+    },
+    {
+      "text": "keep quiet",
+      "intent": "bot_shutup"
+    },
+    {
+      "text": "keep your mouth shut",
+      "intent": "bot_shutup"
+    },
+    {
+      "text": "hello spawn",
+      "intent": "bot_hi"
+    },
+    {
+      "text": "heya",
+      "intent": "bot_hi"
+    },
+    {
+      "text": "heya spawn",
+      "intent": "bot_hi"
+    },
+    {
+      "text": "hey spawn",
+      "intent": "bot_hi"
+    },
+    {
+      "text": "hey hi",
+      "intent": "bot_hi"
+    },
+    {
+      "text": "hello there",
+      "intent": "bot_hi"
+    },
+    {
+      "text": "hello",
+      "intent": "bot_hi"
+    },
+    {
+      "text": "hey spawn good morning",
+      "intent": "morning"
+    },
+    {
+      "text": "good morning",
+      "intent": "morning"
+    },
+    {
+      "text": "morning",
+      "intent": "morning"
+    },
+    {
+      "intent": "morning",
+      "text": "good morning spawn"
+    },
+    {
+      "intent": "morning",
+      "text": "great morning"
+    },
+    {
+      "intent": "morning",
+      "text": "great morning spawn"
+    },
+    {
+      "intent": "morning",
+      "text": "good morning"
+    },
+    {
+      "intent": "afernoon",
+      "text": "hey spawn good afternoon"
+    },
+    {
+      "intent": "afernoon",
+      "text": "good afternoon"
+    },
+    {
+      "intent": "afernoon",
+      "text": "good afternoon spawn"
+    },
+    {
+      "intent": "afernoon",
+      "text": "great morning"
+    },
+    {
+      "intent": "afernoon",
+      "text": "hey good afternoon"
+    },
+    {
+      "intent": "bot_love",
+      "text": "i love you"
+    },
+    {
+      "intent": "bot_love",
+      "text": "love you"
+    },
+    {
+      "intent": "bot_love",
+      "text": "hey spawn i love you"
+    },
+    {
+      "intent": "bot_love",
+      "text": "i like you"
+    },
+    {
+      "intent": "bot_greet_reply",
+      "text": "i am doing great"
+    },
+    {
+      "intent": "bot_greet_reply",
+      "text": "great"
+    },
+    {
+      "intent": "bot_greet_reply",
+      "text": "ok great"
+    },
+    {
+      "intent": "bot_greet_reply",
+      "text": "ok fantastic"
+    },
+    {
+      "intent": "bot_greet_reply",
+      "text": "awesome"
+    },
+    {
+      "intent": "bot_greet_reply",
+      "text": "good"
+    },
+    {
+      "intent": "bot_greet_reply",
+      "text": "i am doing good"
+    },
+    {
+      "intent": "bot_greet_reply",
+      "text": "i am doing fine"
+    },
+    {
+      "intent": "bot_greet_reply",
+      "text": "i am fantastic"
+    },
+    {
+      "intent": "bot_bye",
+      "text": "bye bye"
+    },
+    {
+      "intent": "bot_bye",
+      "text": "bye-bye"
+    },
+    {
+      "intent": "bot_bye",
+      "text": "goodbye"
+    },
+    {
+      "intent": "bot_bye",
+      "text": "good bye"
+    },
+    {
+      "intent": "bot_bye",
+      "text": "see you later"
+    },
+    {
+      "intent": "bot_bye",
+      "text": "talk to you later"
+    },
+    {
+      "intent": "bot_bye",
+      "text": "catch you later"
+    },
+    {
+      "intent": "bot_quotes",
+      "text": "send me a quote"
+    },
+    {
+      "intent": "bot_quotes",
+      "text": "todays quote"
+    },
+    {
+      "intent": "bot_quotes",
+      "text": "today's quote"
+    },
+    {
+      "intent": "bot_quotes",
+      "text": "tell me a quote"
+    },
+    {
+      "intent": "bot_quotes",
+      "text": "motivation quotes"
+    },
+    {
+      "intent": "bot_quotes",
+      "text": "inspirational quote"
+    },
+    {
+      "intent": "spawn_name",
+      "text": "your name"
+    },
+    {
+      "intent": "spawn_name",
+      "text": "your identity"
+    },
+    {
+      "intent": "spawn_name",
+      "text": "your name"
+    },
+    {
+      "intent": "spawn_name",
+      "text": "what's your name"
+    },
+    {
+      "intent": "spawn_name",
+      "text": "professor spawn"
+    },
+    {
+      "intent": "spawn_name",
+      "text": "who are you professor spawn"
+    },
+    {
+      "intent": "greet",
+      "text": "how are you"
+    },
+    {
+      "intent": "greet",
+      "text": "hey how are you"
+    },
+    {
+      "intent": "greet",
+      "text": "are you doing ok"
+    },
+    {
+      "intent": "greet",
+      "text": "are you ok"
+    },
+    {
+      "intent": "bot_identity",
+      "text": "who are you"
+    },
+    {
+      "intent": "bot_identity",
+      "text": "about you"
+    },
+    {
+      "intent": "bot_identity",
+      "text": "i dont know you"
+    },
+    {
+      "intent": "bot_thanks",
+      "text": "thank you"
+    },
+    {
+      "intent": "bot_thanks",
+      "text": "thanks you"
+    },
+    {
+      "intent": "bot_thanks",
+      "text": "ok thanks"
+    },
+    {
+      "intent": "bot_thanks",
+      "text": "thank you spawn"
+    },
+    {
+      "intent": "bot_thanks",
+      "text": "thank you professor spawn"
+    },
+    {
+      "intent": "bot_negative",
+      "text": "nothing"
+    },
+    {
+      "intent": "bot_negative",
+      "text": "i dont need your help"
+    },
+    {
+      "intent": "bot_negative",
+      "text": "no need"
+    },
+    {
+      "intent": "bot_negative",
+      "text": "i dont want your help"
+    },
+    {
+      "intent": "bot_negative",
+      "text": "nothing"
+    },
+    {
+      "intent": "bot_negative",
+      "text": "you are an idiot"
+    },
+    {
+      "intent": "bot_negative",
+      "text": "you dumb fuck"
+    },
+    {
+      "intent": "bot_negative",
+      "text": "you are dumb"
+    },
+    {
+      "intent": "bot_negative",
+      "text": "you are stupid bitch"
+    },
+    {
+      "intent": "bot_negative",
+      "text": "you are stupid"
+    },
+    {
+      "intent": "bot_negative",
+      "text": "you don't know anything"
+    },
+    {
+      "intent": "bot_negative",
+      "text": "you motherfucker"
+    },
+    {
+      "intent": "bot_negative",
+      "text": "you cannot help me"
+    },
+    {
+      "intent": "bot_news",
+      "text": "show me lastest news"
+    },
+    {
+      "intent": "bot_news",
+      "text": "latest news"
+    },
+    {
+      "intent": "bot_news",
+      "text": "show me the news"
+    }
+  ]
 }
