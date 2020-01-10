@@ -176,7 +176,7 @@ def train_parallel(model_name, training_data,training_type):
         MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
     if my_file == False:
         os.mkdir(MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
-    async_train_result = pool.apply_async(train_keras, (model_name,training_type,))
+    async_train_result = pool.apply_async(train_keras, (model_name,training_data,training_type,))
     return async_train_result.get()
 
 
