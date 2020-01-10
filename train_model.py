@@ -12,10 +12,12 @@ import tensorflow as tf
 from keras.layers import Dense
 from keras.models import Sequential
 from nltk.stem.porter import PorterStemmer
+from elasticsearch import Elasticsearch
 
 import crf_entity
 
 # import spacy
+es = Elasticsearch(['api2.spawnai.com'],scheme='https',port=443)
 
 pool = ThreadPool(processes=20)
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -84,7 +86,7 @@ def get_model_keras(model_name, file_path):
     return model_nn
 
 
-def train_keras(model_name):
+def train_keras(model_name,training_data,training_type):
     global graph
     global ignore_words
     output_data = []
@@ -94,9 +96,12 @@ def train_keras(model_name):
     train_xinput = []
     train_youtput = []
     tf.reset_default_graph()
-
-    with open(DATA_BASE_PATH + '/{model}_data.json'.format(model=model_name), encoding="utf-8") as f:
-        data = json.load(f)
+    if training_type == 'elastic':
+        data = es.get(index='spawnai_file',doc_type='file',id=training_data)
+        data = data['_source']
+    else:    
+        with open(DATA_BASE_PATH + '/{model}_data.json'.format(model=model_name), encoding="utf-8") as f:
+            data = json.load(f)
 
     output_data = list(data.get('intents'))
     print(output_data)
@@ -166,12 +171,12 @@ def train_keras(model_name):
     return {'message': 'success', 'model_name': model_name}
 
 
-def train_parallel(model_name):
+def train_parallel(model_name, training_data,training_type):
     my_file = os.path.isdir(
         MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
     if my_file == False:
         os.mkdir(MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
-    async_train_result = pool.apply_async(train_keras, (model_name,))
+    async_train_result = pool.apply_async(train_keras, (model_name,training_type,))
     return async_train_result.get()
 
 
