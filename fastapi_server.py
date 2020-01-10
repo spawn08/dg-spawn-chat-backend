@@ -119,6 +119,36 @@ async def train(model_name: str, lang: str,
         model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
 
         train_msg = train_parallel(model_name)
+        #if train_msg['message'] == 'success':
+        #    task.add_task(send_notification, reg_id, username)
+    except Exception as e:
+        print(e)
+        return ({'message': 'Error processing request.',
+                 'error': 'Model could not be trained', 'status': 'error',
+                 'model_name': model_name})
+
+    return train_msg
+
+@app.get('/api/train_bot')
+async def train(model_name: str, lang: str, 
+                task: BackgroundTasks,
+                reg_id: str = None, username:str = None,
+                dependencies=Depends(get_current_username)
+                ):
+    try:
+
+        if model_name is None:
+            return ({'error': 'Incorrent parameter arguments', 'status': 'fail'})
+        if (model_name is None):
+            return ({'message': 'Model name parameter is not defined / empty.',
+                     'error': 'Model could not be trained',
+                     'status': 'error'})
+        if lang is None:
+            lang = 'en'
+        model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
+        training_data = model_name+"_data"
+        training_type = 'elastic'
+        train_msg = train_parallel(model_name, training_data,training_type)
         if train_msg['message'] == 'success':
             task.add_task(send_notification, reg_id, username)
     except Exception as e:
