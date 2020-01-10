@@ -1,6 +1,8 @@
 import tensorflow as tf
 import uvicorn
 import aiohttp
+import requests
+import json
 from aiohttp import ClientSession
 from fastapi import FastAPI, HTTPException, Depends, BackgroundTasks
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
@@ -60,13 +62,14 @@ async def send_notification(reg_id: str, username: str):
     
     message = notif_message.format(username=username)
     payload_data = {'data':{'title':'BotBuilder: SpawN AI','body':message,'type':'default'},'registration_ids':[reg_id]}
+    print(payload_data)
     headers = {'Content-Type':'application/json','Authorization':'key=AIzaSyBxYCj9Aw6RrI_gsshp1tISVWebR1uScL4'}
     if notif_session == None:
         notif_session = ClientSession()
         
-    async with notif_session.post(NOTIFICATION_URL, data=payload_data, headers=headers) as resp:
-        assert resp.status == 200
-        print(await resp.text())     
+    async with notif_session.post(NOTIFICATION_URL, data=json.dumps(payload_data), headers=headers) as resp:
+        respose = await resp.json()
+        print(respose)
     pass
     
 
