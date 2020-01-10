@@ -1,7 +1,8 @@
 import tensorflow as tf
 import uvicorn
+import aiohttp
 from aiohttp import ClientSession
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI, HTTPException, Depends, BackgroundTasks
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from starlette.status import HTTP_401_UNAUTHORIZED
 
@@ -17,10 +18,13 @@ cache = {}
 web_cache = {}
 news_cache = {}
 entity_cache = {}
+notif_message = 'Dear {username}, Your model training has been complete. Your virtual assistant is ready to answer your queries. \n Regards, \n SpawN AI Team'
 client_session = None
+notif_session = None
 SEARCH_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/search'
 NEWS_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/news/search'
 ENTITY_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/entities'
+NOTIFICATION_URL = 'https://fcm.googleapis.com/fcm/send'
 
 
 # es = Elasticsearch([{'host': 'localhost', 'port': 9200}], scheme='http')
@@ -47,7 +51,20 @@ async def load_models():
     crf_entity.set_nlp(nlp)
     pass
 '''
-
+async def send_notification(reg_id: str, username: str):
+    global notif_message
+    global notif_session
+    message = notif_message.format(username=username)
+    payload_data = {'data':{'title':'BotBuilder: SpawN AI','body':message,'type':'default'},'registration_ids':[reg_id]}
+    headers = {'Content-Type':'application/json','Authorization':'key=AIzaSyBxYCj9Aw6RrI_gsshp1tISVWebR1uScL4'}
+    if notif_session == None:
+        notif_session = ClientSession()
+        
+    async with notif_session.post(NOTIFICATION_URL, data=payload_data, headers=headers) as resp:
+        assert resp.status == 200
+        print(await resp.text())     
+    pass
+    
 
 @app.on_event("startup")
 async def load():
@@ -80,8 +97,9 @@ async def classify(q: str, model: str, lang: str,
 
 
 @app.get('/api/train')
-async def train(model_name: str, lang: str,
-                dependencies=Depends(get_current_username)
+async def train(model_name: str, lang: str, reg_id: str = None, username:str = None,
+                dependencies=Depends(get_current_username),
+                task: BackgroundTasks
                 ):
     try:
 
@@ -96,7 +114,8 @@ async def train(model_name: str, lang: str,
         model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
 
         train_msg = train_parallel(model_name)
-
+        if train_msg['message'] == 'success':
+            task.add_task(send_notification, reg_id, username)
     except Exception as e:
         print(e)
         return ({'message': 'Error processing request.',

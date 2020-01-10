@@ -148,7 +148,7 @@ def train_keras(model_name):
         model_nn.add(Dense(len(train_youtput[0]), activation='softmax'))
 
         model_nn.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-        model_nn.fit(np.array(train_xinput), np.array(train_youtput), epochs=120, batch_size=8)
+        model_nn.fit(np.array(train_xinput), np.array(train_youtput), epochs=95, batch_size=8)
 
         model_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
             model_dir=model_name,
