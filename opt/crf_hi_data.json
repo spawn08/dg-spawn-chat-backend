@@ -1,0 +1,172 @@
+{
+  "entity_examples": [
+    {
+      "text": "मुझे सिक्किम के बारे में बताओ",
+      "intent": "",
+      "entities": [
+        {
+          "start": 5,
+          "end": 12,
+          "value": "सिक्किम",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "मुझे मुंबई के बारे में बताओ",
+      "intent": "",
+      "entities": [
+        {
+          "start": 5,
+          "end": 10,
+          "value": "मुंबई",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "मुंबई के बारे में बताओ",
+      "intent": "",
+      "entities": [
+        {
+          "start": 0,
+          "end": 5,
+          "value": "मुंबई",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "मुझे नरेंद्र मोदी के बारे में बताएं",
+      "intent": "",
+      "entities": [
+        {
+          "start": 5,
+          "end": 17,
+          "value": "नरेंद्र मोदी",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "मुझे अमित शाह के बारे में बताओ",
+      "intent": "",
+      "entities": [
+        {
+          "start": 5,
+          "end": 13,
+          "value": "अमित शाह",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "अमित शाह के बारे में बता",
+      "intent": "",
+      "entities": [
+        {
+          "start": 0,
+          "end": 8,
+          "value": "अमित शाह",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "मुंबई के बारे में बता",
+      "intent": "",
+      "entities": [
+        {
+          "start": 0,
+          "end": 5,
+          "value": "मुंबई",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "दिल्ली के बारे में",
+      "intent": "",
+      "entities": [
+        {
+          "start": 0,
+          "end": 6,
+          "value": "दिल्ली",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "चंडीगढ़ के बारे में",
+      "intent": "",
+      "entities": [
+        {
+          "start": 0,
+          "end": 7,
+          "value": "चंडीगढ़",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "सिक्कीम के बारे में",
+      "intent": "",
+      "entities": [
+        {
+          "start": 0,
+          "end": 7,
+          "value": "सिक्कीम",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "कौन है नरेंद्र मोदी",
+      "intent": "",
+      "entities": [
+        {
+          "start": 7,
+          "end": 19,
+          "value": "नरेंद्र मोदी",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "राउल गाँधी कौन है",
+      "intent": "",
+      "entities": [
+        {
+          "start": 0,
+          "end": 10,
+          "value": "राउल गाँधी",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "सोनिया कौन है",
+      "intent": "",
+      "entities": [
+        {
+          "start": 0,
+          "end": 6,
+          "value": "सोनिया",
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "text": "मुझे माउंट एवरेस्ट के बारे में बताएं",
+      "intent": "",
+      "entities": [
+        {
+          "start": 5,
+          "end": 18,
+          "value": "माउंट एवरेस्ट",
+          "entity": "tag"
+        }
+      ]
+    }
+  ]
+}
