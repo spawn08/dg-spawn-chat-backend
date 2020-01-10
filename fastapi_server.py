@@ -54,6 +54,10 @@ async def load_models():
 async def send_notification(reg_id: str, username: str):
     global notif_message
     global notif_session
+    
+    if username is None:
+        username = 'User'
+    
     message = notif_message.format(username=username)
     payload_data = {'data':{'title':'BotBuilder: SpawN AI','body':message,'type':'default'},'registration_ids':[reg_id]}
     headers = {'Content-Type':'application/json','Authorization':'key=AIzaSyBxYCj9Aw6RrI_gsshp1tISVWebR1uScL4'}
