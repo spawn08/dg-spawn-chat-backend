@@ -19,8 +19,8 @@ import crf_entity
 
 pool = ThreadPool(processes=20)
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_BASE_PATH = os.path.join(ROOT_DIR, 'opt/models/')
-DATA_BASE_PATH = os.path.join(ROOT_DIR, 'opt/data/')
+MODEL_BASE_PATH = '/opt/models/'#os.path.join(ROOT_DIR, 'opt/models/')
+DATA_BASE_PATH = '/opt/data/'#os.path.join(ROOT_DIR, 'opt/data/')
 # nlp = spacy.load("en_core_web_md")
 
 stemmer = PorterStemmer()
