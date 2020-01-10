@@ -98,9 +98,9 @@ async def classify(q: str, model: str, lang: str,
 
 @app.get('/api/train')
 async def train(model_name: str, lang: str, 
-                dependencies=Depends(get_current_username),
                 task: BackgroundTasks,
-                reg_id: str = None, username:str = None
+                reg_id: str = None, username:str = None,
+                dependencies=Depends(get_current_username)
                 ):
     try:
 
