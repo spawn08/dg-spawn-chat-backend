@@ -121,7 +121,7 @@ async def train(model_name: str, lang: str,
             lang = 'en'
         model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
 
-        train_msg = train_parallel(model_name)
+        train_msg = train_parallel(model_name, "","")
         #if train_msg['message'] == 'success':
         #    task.add_task(send_notification, reg_id, username)
     except Exception as e:
@@ -292,7 +292,7 @@ async def entity_extract(q: str, model: str, lang: str,
 
 if __name__ == '__main__':
     import argparse
-
+    
     parser = argparse.ArgumentParser(description='Command line utility for accepting port number')
     parser.add_argument('--port', type=int, help='Port number for running application')
     parser.add_argument('--host', type=str, help='Hostname for the application')
