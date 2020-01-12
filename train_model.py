@@ -4,7 +4,8 @@ import pickle
 import random
 from multiprocessing.pool import ThreadPool
 from pathlib import Path
-
+import requests 
+from requests.auth import HTTPBasicAuth
 import nltk
 import numpy as np
 import spacy
@@ -17,7 +18,7 @@ from elasticsearch import Elasticsearch
 import crf_entity
 
 # import spacy
-es = Elasticsearch(['api2.spawnai.com'],scheme='https',port=443)
+es = Elasticsearch(['api2.spawnai.com'],scheme='https',port=443,http_auth=('spawnai_elastic','Spawn@#543'))
 
 pool = ThreadPool(processes=20)
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -97,7 +98,7 @@ def train_keras(model_name,training_data,training_type):
     train_youtput = []
     tf.reset_default_graph()
     if training_type == 'elastic':
-        data = es.get(index='spawnai_file',doc_type='file',id=training_data)
+        data = es.get('spawnai_file',doc_type='file',id=training_data)
         data = data['_source']
     else:    
         with open(DATA_BASE_PATH + '/{model}_data.json'.format(model=model_name), encoding="utf-8") as f:
