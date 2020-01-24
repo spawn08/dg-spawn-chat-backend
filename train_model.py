@@ -9,20 +9,20 @@ import nltk
 import numpy as np
 import spacy
 import tensorflow as tf
+from elasticsearch import Elasticsearch
 from keras.layers import Dense
 from keras.models import Sequential
 from nltk.stem.porter import PorterStemmer
-from elasticsearch import Elasticsearch
 
 import crf_entity
 
 # import spacy
-es = Elasticsearch(['api2.spawnai.com'],scheme='https',port=443)
+es = Elasticsearch(['api2.spawnai.com'], scheme='https', port=443, http_auth=('spawnai_elastic', 'Spawn@#543'))
 
 pool = ThreadPool(processes=20)
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_BASE_PATH = os.path.join(ROOT_DIR, 'opt/models/')
-DATA_BASE_PATH = os.path.join(ROOT_DIR, 'opt/data/')
+MODEL_BASE_PATH = os.path.join(ROOT_DIR, 'opt/models/') #'/opt/models/'
+DATA_BASE_PATH = os.path.join(ROOT_DIR, 'opt/data/') #'/opt/data/'
 # nlp = spacy.load("en_core_web_md")
 
 stemmer = PorterStemmer()
@@ -86,7 +86,7 @@ def get_model_keras(model_name, file_path):
     return model_nn
 
 
-def train_keras(model_name,training_data,training_type):
+def train_keras(model_name, training_data, training_type):
     global graph
     global ignore_words
     output_data = []
@@ -97,9 +97,9 @@ def train_keras(model_name,training_data,training_type):
     train_youtput = []
     tf.reset_default_graph()
     if training_type == 'elastic':
-        data = es.get(index='spawnai_file',doc_type='file',id=training_data)
+        data = es.get('spawnai_file', doc_type='file', id=training_data)
         data = data['_source']
-    else:    
+    else:
         with open(DATA_BASE_PATH + '/{model}_data.json'.format(model=model_name), encoding="utf-8") as f:
             data = json.load(f)
 
@@ -171,12 +171,12 @@ def train_keras(model_name,training_data,training_type):
     return {'message': 'success', 'model_name': model_name}
 
 
-def train_parallel(model_name, training_data,training_type):
+def train_parallel(model_name, training_data, training_type):
     my_file = os.path.isdir(
         MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
     if my_file == False:
         os.mkdir(MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
-    async_train_result = pool.apply_async(train_keras, (model_name,training_type,))
+    async_train_result = pool.apply_async(train_keras, (model_name, training_data, training_type,))
     return async_train_result.get()
 
 

@@ -1,6 +1,7 @@
+import json
+
 import tensorflow as tf
 import uvicorn
-import aiohttp
 from aiohttp import ClientSession
 from fastapi import FastAPI, HTTPException, Depends, BackgroundTasks
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
@@ -51,24 +52,28 @@ async def load_models():
     crf_entity.set_nlp(nlp)
     pass
 '''
+
+
 async def send_notification(reg_id: str, username: str):
     global notif_message
     global notif_session
-    
+
     if username is None:
         username = 'User'
-    
+
     message = notif_message.format(username=username)
-    payload_data = {'data':{'title':'BotBuilder: SpawN AI','body':message,'type':'default'},'registration_ids':[reg_id]}
-    headers = {'Content-Type':'application/json','Authorization':'key=AIzaSyBxYCj9Aw6RrI_gsshp1tISVWebR1uScL4'}
+    payload_data = {'data': {'title': 'BotBuilder: SpawN AI', 'body': message, 'type': 'default'},
+                    'registration_ids': [reg_id]}
+    print(payload_data)
+    headers = {'Content-Type': 'application/json', 'Authorization': 'key=AIzaSyBxYCj9Aw6RrI_gsshp1tISVWebR1uScL4'}
     if notif_session == None:
         notif_session = ClientSession()
-        
-    async with notif_session.post(NOTIFICATION_URL, data=payload_data, headers=headers) as resp:
-        assert resp.status == 200
-        print(await resp.text())     
+
+    async with notif_session.post(NOTIFICATION_URL, data=json.dumps(payload_data), headers=headers) as resp:
+        respose = await resp.json()
+        print(respose)
     pass
-    
+
 
 @app.on_event("startup")
 async def load():
@@ -101,9 +106,9 @@ async def classify(q: str, model: str, lang: str,
 
 
 @app.get('/api/train')
-async def train(model_name: str, lang: str, 
+async def train(model_name: str, lang: str,
                 task: BackgroundTasks,
-                reg_id: str = None, username:str = None,
+                reg_id: str = None, username: str = None,
                 dependencies=Depends(get_current_username)
                 ):
     try:
@@ -118,8 +123,8 @@ async def train(model_name: str, lang: str,
             lang = 'en'
         model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
 
-        train_msg = train_parallel(model_name)
-        #if train_msg['message'] == 'success':
+        train_msg = train_parallel(model_name, "", "")
+        # if train_msg['message'] == 'success':
         #    task.add_task(send_notification, reg_id, username)
     except Exception as e:
         print(e)
@@ -129,10 +134,11 @@ async def train(model_name: str, lang: str,
 
     return train_msg
 
+
 @app.get('/api/train_bot')
-async def train(model_name: str, lang: str, 
+async def train(model_name: str, lang: str,
                 task: BackgroundTasks,
-                reg_id: str = None, username:str = None,
+                reg_id: str = None, username: str = None,
                 dependencies=Depends(get_current_username)
                 ):
     try:
@@ -146,9 +152,9 @@ async def train(model_name: str, lang: str,
         if lang is None:
             lang = 'en'
         model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
-        training_data = model_name+"_data"
+        training_data = model_name + "_data"
         training_type = 'elastic'
-        train_msg = train_parallel(model_name, training_data,training_type)
+        train_msg = train_parallel(model_name, training_data, training_type)
         if train_msg['message'] == 'success':
             task.add_task(send_notification, reg_id, username)
     except Exception as e:
