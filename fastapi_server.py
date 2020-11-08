@@ -10,6 +10,7 @@ from starlette.status import HTTP_401_UNAUTHORIZED
 import crf_entity
 from train_model import LoadModel
 from train_model import classifyKeras, train_parallel
+import config
 
 app = FastAPI()
 security = HTTPBasic()
@@ -23,7 +24,7 @@ notif_message = 'Dear {username}, Your model training has been complete. Your vi
 client_session = None
 notif_session = None
 SEARCH_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/search'
-NEWS_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/news/search'
+NEWS_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/news/search?sortby=date'
 ENTITY_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/entities'
 NOTIFICATION_URL = 'https://fcm.googleapis.com/fcm/send'
 
@@ -65,7 +66,8 @@ async def send_notification(reg_id: str, username: str):
     payload_data = {'data': {'title': 'BotBuilder: SpawN AI', 'body': message, 'type': 'default'},
                     'registration_ids': [reg_id]}
     print(payload_data)
-    headers = {'Content-Type': 'application/json', 'Authorization': 'key=AIzaSyBxYCj9Aw6RrI_gsshp1tISVWebR1uScL4'}
+    headers = {'Content-Type': 'application/json', 'Authorization': config.PROFESSOR_SPAWN_API_KEY}
+    print(headers)
     if notif_session == None:
         notif_session = ClientSession()
 
@@ -164,6 +166,15 @@ async def train_bot(model_name: str, lang: str,
                  'model_name': model_name})
 
     return train_msg
+
+@app.get('/send_notification')
+async def notification(reg_id: str, task: BackgroundTasks):
+    try:
+        task.add_task(send_notification, reg_id,"Notifcaiton")
+        return "Success"
+    except Exception as e:
+        print(e)
+        return "Notifcaiton Failure"        
 
 
 @app.get('/websearch')
