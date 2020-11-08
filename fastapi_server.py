@@ -78,7 +78,7 @@ async def send_notification(reg_id: str, username: str):
 @app.on_event("startup")
 async def load():
     global nlp
-    print(tf.__version__)
+    print(tf.version)
     print("Loading model..")
     load_model = LoadModel()
     load_model.load_current_model()
@@ -136,7 +136,7 @@ async def train(model_name: str, lang: str,
 
 
 @app.get('/api/train_bot')
-async def train(model_name: str, lang: str,
+async def train_bot(model_name: str, lang: str,
                 task: BackgroundTasks,
                 reg_id: str = None, username: str = None,
                 dependencies=Depends(get_current_username)

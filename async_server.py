@@ -9,7 +9,7 @@ from train_model import LoadModel
 import tensorflow as tf
 
 if __name__ == '__main__':
-    print(tf.__version__)
+    print(tf.version)
     load_models = LoadModel()
     load_models.load_current_model()
     parser = argparse.ArgumentParser(description='Input the port from user')
