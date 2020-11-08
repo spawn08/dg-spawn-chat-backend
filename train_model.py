@@ -31,7 +31,6 @@ classes = {}
 train_x_dict = {}
 train_y_dict = {}
 multiple_models = {}
-#graph = tf.compat.v1.get_default_graph()
 
 
 class LoadModel():
@@ -70,8 +69,6 @@ def load_keras_model(model_name):
         train_x_dict[model_name] = data['train_x_{model}'.format(model=model_name)]
         train_y_dict[model_name] = data['train_y_{model}'.format(model=model_name)]
         print("Loaded model from disk")
-
-
 pass
 
 
@@ -86,7 +83,6 @@ def get_model_keras(model_name, file_path):
     return model_nn
 
 def train_keras(model_name, training_data, training_type):
-  #  global graph
     global ignore_words
     output_data = []
     words_list = []
@@ -94,7 +90,7 @@ def train_keras(model_name, training_data, training_type):
     documents_vocab = []
     train_xinput = []
     train_youtput = []
-    #tf.reset_default_graph()
+
     if training_type == 'elastic':
         data = es.get('spawnai_file', doc_type='file', id=training_data)
         data = data['_source']
@@ -145,7 +141,6 @@ def train_keras(model_name, training_data, training_type):
     training = np.array(training)
     train_xinput = list(training[:, 0])
     train_youtput = list(training[:, 1])
-    #with graph.as_default():
     model_nn = Sequential()
     model_nn.add(Dense(32, input_dim=len(train_xinput[0]), activation='relu'))
     model_nn.add(Dense(16, activation='relu'))
@@ -198,7 +193,6 @@ def bow(sentence, words, show_details=False):
     return (bag)
 
 def classifyKeras(sentence, model_name):
-    #with graph.as_default():
 
     file_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
             model_dir=model_name,
