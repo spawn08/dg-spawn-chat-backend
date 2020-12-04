@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM python:3.6
 
 RUN apt-get update
 RUN apt-get -y  upgrade
@@ -9,7 +9,7 @@ COPY opt/ /opt/
 COPY opt/data/ /opt/
 COPY opt/models/ /opt/
 COPY opt/training_data/ /opt/
-RUN pip3 --no-cache-dir install tensorflow==1.14.0
+RUN pip3 --no-cache-dir install tensorflow==2.3.0
 RUN pip3 --no-cache-dir install fastapi
 RUN pip3 --no-cache-dir install sklearn
 RUN pip3 --no-cache-dir install scikit-learn
