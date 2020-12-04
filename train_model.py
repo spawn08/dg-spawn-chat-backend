@@ -10,8 +10,8 @@ import numpy as np
 import spacy
 import tensorflow as tf
 from elasticsearch import Elasticsearch
-from keras.layers import Dense
-from keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.models import Sequential
 from nltk.stem.porter import PorterStemmer
 
 import crf_entity
@@ -31,7 +31,6 @@ classes = {}
 train_x_dict = {}
 train_y_dict = {}
 multiple_models = {}
-graph = tf.get_default_graph()
 
 
 class LoadModel():
@@ -70,8 +69,6 @@ def load_keras_model(model_name):
         train_x_dict[model_name] = data['train_x_{model}'.format(model=model_name)]
         train_y_dict[model_name] = data['train_y_{model}'.format(model=model_name)]
         print("Loaded model from disk")
-
-
 pass
 
 
@@ -85,9 +82,7 @@ def get_model_keras(model_name, file_path):
     model_nn.load_weights(file_path)
     return model_nn
 
-
 def train_keras(model_name, training_data, training_type):
-    global graph
     global ignore_words
     output_data = []
     words_list = []
@@ -95,7 +90,7 @@ def train_keras(model_name, training_data, training_type):
     documents_vocab = []
     train_xinput = []
     train_youtput = []
-    tf.reset_default_graph()
+
     if training_type == 'elastic':
         data = es.get('spawnai_file', doc_type='file', id=training_data)
         data = data['_source']
@@ -146,19 +141,18 @@ def train_keras(model_name, training_data, training_type):
     training = np.array(training)
     train_xinput = list(training[:, 0])
     train_youtput = list(training[:, 1])
-    with graph.as_default():
-        model_nn = Sequential()
-        model_nn.add(Dense(32, input_dim=len(train_xinput[0]), activation='relu'))
-        model_nn.add(Dense(16, activation='relu'))
-        model_nn.add(Dense(len(train_youtput[0]), activation='softmax'))
+    model_nn = Sequential()
+    model_nn.add(Dense(32, input_dim=len(train_xinput[0]), activation='relu'))
+    model_nn.add(Dense(16, activation='relu'))
+    model_nn.add(Dense(len(train_youtput[0]), activation='softmax'))
 
-        model_nn.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-        model_nn.fit(np.array(train_xinput), np.array(train_youtput), epochs=95, batch_size=8)
+    model_nn.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    model_nn.fit(np.array(train_xinput), np.array(train_youtput), epochs=95, batch_size=8)
 
-        model_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
+    model_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
             model_dir=model_name,
             model_name=model_name)
-        model_nn.save(model_path)
+    model_nn.save(model_path)
 
     pickle.dump(
         {'words_{model}'.format(model=model_name): words_list, 'classes_{model}'.format(model=model_name): inputclasses,
@@ -198,27 +192,25 @@ def bow(sentence, words, show_details=False):
 
     return (bag)
 
-
 def classifyKeras(sentence, model_name):
-    with graph.as_default():
 
-        file_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
+    file_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
             model_dir=model_name,
             model_name=model_name)
 
+    loaded_model = multiple_models.get(model_name)
+    if loaded_model is None:
+        load_keras_model(model_name)
+        multiple_models[model_name] = get_model_keras(model_name, file_path)
         loaded_model = multiple_models.get(model_name)
-        if loaded_model is None:
-            load_keras_model(model_name)
-            multiple_models[model_name] = get_model_keras(model_name, file_path)
-            loaded_model = multiple_models.get(model_name)
 
-        result = loaded_model.predict(
+    result = loaded_model.predict(
             np.array([bow(sentence, words.get(model_name))]))[0]
-        class_integer = np.argmax(result)
-        intent_class = classes.get(model_name)[class_integer]
-        probability = result[class_integer]
+    class_integer = np.argmax(result)
+    intent_class = classes.get(model_name)[class_integer]
+    probability = result[class_integer]
 
-        if (probability > 0.70):
+    if (probability > 0.70):
 
             js = {
                 "intent": {
@@ -230,7 +222,7 @@ def classifyKeras(sentence, model_name):
             }
 
             return (js)
-        else:
+    else:
             js = {
                 "intent": {
                     "confidence": 0,
@@ -240,7 +232,7 @@ def classifyKeras(sentence, model_name):
                 "model": model_name
             }
 
-        return (js)
+    return (js)
 
 
 def classify_parallel(sentence, model_name):
