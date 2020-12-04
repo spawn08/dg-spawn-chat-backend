@@ -2,7 +2,7 @@ FROM python:3.6
 
 RUN apt-get update
 RUN apt-get -y  upgrade
-RUN apt-get -y install python3-pip
+#RUN apt-get -y install python3-pip
 WORKDIR /opt
 COPY . /opt
 COPY opt/ /opt/
