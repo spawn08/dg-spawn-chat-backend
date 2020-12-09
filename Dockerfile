@@ -1,15 +1,15 @@
-FROM debian:latest
+FROM python:3.6
 
 RUN apt-get update
 RUN apt-get -y  upgrade
-RUN apt-get -y install python3-pip
+#RUN apt-get -y install python3-pip
 WORKDIR /opt
 COPY . /opt
 COPY opt/ /opt/
 COPY opt/data/ /opt/
 COPY opt/models/ /opt/
 COPY opt/training_data/ /opt/
-RUN pip3 --no-cache-dir install tensorflow==1.14.0
+RUN pip3 install tensorflow==1.14.0
 RUN pip3 --no-cache-dir install fastapi
 RUN pip3 --no-cache-dir install sklearn
 RUN pip3 --no-cache-dir install scikit-learn
@@ -17,7 +17,7 @@ RUN pip3 --no-cache-dir install sklearn_crfsuite
 RUN pip3 --no-cache-dir install nltk
 RUN pip3 --no-cache-dir install spacy
 RUN pip3 --no-cache-dir install tornado
-RUN pip3 --no-cache-dir install keras
+RUN pip3 --no-cache-dir install keras==2.3.1
 RUN pip3 --no-cache-dir install sklearn_crfsuite
 RUN pip3 --no-cache-dir install sklearn
 RUN pip3 --no-cache-dir install elasticsearch
