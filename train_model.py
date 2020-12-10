@@ -21,10 +21,11 @@ es = Elasticsearch(['api2.spawnai.com'], scheme='https', port=443, http_auth=('s
 
 pool = ThreadPool(processes=20)
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_BASE_PATH = os.path.join(ROOT_DIR, 'opt/models/') #'/opt/models/'
-DATA_BASE_PATH = os.path.join(ROOT_DIR, 'opt/data/') #'/opt/data/'
+MODEL_BASE_PATH = os.path.join(ROOT_DIR, 'opt/models/')  # '/opt/models/'
+DATA_BASE_PATH = os.path.join(ROOT_DIR, 'opt/data/')  # '/opt/data/'
 # nlp = spacy.load("en_core_web_md")
 
+graph = tf.compat.v1.get_default_graph()
 stemmer = PorterStemmer()
 words = {}
 classes = {}
@@ -69,6 +70,8 @@ def load_keras_model(model_name):
         train_x_dict[model_name] = data['train_x_{model}'.format(model=model_name)]
         train_y_dict[model_name] = data['train_y_{model}'.format(model=model_name)]
         print("Loaded model from disk")
+
+
 pass
 
 
@@ -81,6 +84,7 @@ def get_model_keras(model_name, file_path):
     model_nn.add(Dense(len(train_y[0]), activation='softmax'))
     model_nn.load_weights(file_path)
     return model_nn
+
 
 def train_keras(model_name, training_data, training_type):
     global ignore_words
@@ -150,8 +154,8 @@ def train_keras(model_name, training_data, training_type):
     model_nn.fit(np.array(train_xinput), np.array(train_youtput), epochs=95, batch_size=8)
 
     model_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
-            model_dir=model_name,
-            model_name=model_name)
+        model_dir=model_name,
+        model_name=model_name)
     model_nn.save(model_path)
 
     pickle.dump(
@@ -192,25 +196,26 @@ def bow(sentence, words, show_details=False):
 
     return (bag)
 
-def classifyKeras(sentence, model_name):
 
-    file_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
+def classifyKeras(sentence, model_name):
+    with graph.as_default():
+        file_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
             model_dir=model_name,
             model_name=model_name)
 
-    loaded_model = multiple_models.get(model_name)
-    if loaded_model is None:
-        load_keras_model(model_name)
-        multiple_models[model_name] = get_model_keras(model_name, file_path)
         loaded_model = multiple_models.get(model_name)
+        if loaded_model is None:
+            load_keras_model(model_name)
+            multiple_models[model_name] = get_model_keras(model_name, file_path)
+            loaded_model = multiple_models.get(model_name)
 
-    result = loaded_model.predict(
+        result = loaded_model.predict(
             np.array([bow(sentence, words.get(model_name))]))[0]
-    class_integer = np.argmax(result)
-    intent_class = classes.get(model_name)[class_integer]
-    probability = result[class_integer]
+        class_integer = np.argmax(result)
+        intent_class = classes.get(model_name)[class_integer]
+        probability = result[class_integer]
 
-    if (probability > 0.70):
+        if probability > 0.70:
 
             js = {
                 "intent": {
@@ -221,8 +226,8 @@ def classifyKeras(sentence, model_name):
                 "model": model_name
             }
 
-            return (js)
-    else:
+            return js
+        else:
             js = {
                 "intent": {
                     "confidence": 0,
@@ -232,7 +237,7 @@ def classifyKeras(sentence, model_name):
                 "model": model_name
             }
 
-    return (js)
+        return js
 
 
 def classify_parallel(sentence, model_name):
