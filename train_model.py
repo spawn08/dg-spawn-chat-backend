@@ -210,7 +210,7 @@ def classifyKeras(sentence, model_name):
     intent_class = classes.get(model_name)[class_integer]
     probability = result[class_integer]
 
-    if (probability > 0.70):
+    if probability > 0.70:
 
             js = {
                 "intent": {
@@ -221,7 +221,7 @@ def classifyKeras(sentence, model_name):
                 "model": model_name
             }
 
-            return (js)
+            return js
     else:
             js = {
                 "intent": {
@@ -232,7 +232,7 @@ def classifyKeras(sentence, model_name):
                 "model": model_name
             }
 
-    return (js)
+    return js
 
 
 def classify_parallel(sentence, model_name):
