@@ -16,7 +16,6 @@ RUN pip3 --no-cache-dir install scikit-learn
 RUN pip3 --no-cache-dir install sklearn_crfsuite
 RUN pip3 --no-cache-dir install nltk
 RUN pip3 --no-cache-dir install spacy
-RUN pip3 --no-cache-dir install tornado
 RUN pip3 --no-cache-dir install keras
 RUN pip3 --no-cache-dir install sklearn_crfsuite
 RUN pip3 --no-cache-dir install sklearn
@@ -26,7 +25,7 @@ RUN pip3 --no-cache-dir install aiohttp
 RUN python3 -m spacy download en_core_web_md
 RUN python3 -m nltk.downloader punkt
 EXPOSE 8000
-ENTRYPOINT ["python3","fastapi_server.py"]
+ENTRYPOINT ["python3","run.py"]
 CMD ["--port 8000", "--host 0.0.0.0"]
 
  
