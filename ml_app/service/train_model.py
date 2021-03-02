@@ -14,15 +14,16 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import Sequential
 from nltk.stem.porter import PorterStemmer
 
-import crf_entity
+from service import crf_entity
 
 # import spacy
+
+ROOT_DIR = ''
 es = Elasticsearch(['api2.spawnai.com'], scheme='https', port=443, http_auth=('spawnai_elastic', 'Spawn@#543'))
 
 pool = ThreadPool(processes=20)
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_BASE_PATH = os.path.join(ROOT_DIR, 'opt/models/')  # '/opt/models/'
-DATA_BASE_PATH = os.path.join(ROOT_DIR, 'opt/data/')  # '/opt/data/'
+MODEL_BASE_PATH = ''
+DATA_BASE_PATH = ''
 # nlp = spacy.load("en_core_web_md")
 
 graph = tf.compat.v1.get_default_graph()
@@ -49,6 +50,15 @@ class LoadModel():
     def get_nlp(self):
         return self.nlp
 
+def set_root_dir(root_dir):
+    global ROOT_DIR
+    global MODEL_BASE_PATH
+    global DATA_BASE_PATH
+
+    ROOT_DIR = root_dir
+    MODEL_BASE_PATH = os.path.join(ROOT_DIR, 'opt/models/')  # '/opt/models/'
+    DATA_BASE_PATH = os.path.join(ROOT_DIR, 'opt/data/')  # '/opt/data/'
+    pass
 
 def load_keras_model(model_name):
     global words
@@ -70,8 +80,6 @@ def load_keras_model(model_name):
         train_x_dict[model_name] = data['train_x_{model}'.format(model=model_name)]
         train_y_dict[model_name] = data['train_y_{model}'.format(model=model_name)]
         print("Loaded model from disk")
-
-
 pass
 
 
@@ -198,6 +206,7 @@ def bow(sentence, words, show_details=False):
 
 
 def classifyKeras(sentence, model_name):
+
     with graph.as_default():
         file_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
             model_dir=model_name,
