@@ -9,7 +9,7 @@ from starlette.status import HTTP_401_UNAUTHORIZED
 from service import crf_entity
 from service.utils import get_current_username, send_notification
 from service.train_model import LoadModel
-from service.train_model import classifyKeras, train_parallel, set_root_dir
+from service.train_model import classifyKeras, train_keras, set_root_dir
 from config.config import Config as cfg
 
 app = FastAPI()
@@ -26,29 +26,12 @@ client_session = None
 
 # es = Elasticsearch([{'host': 'localhost', 'port': 9200}], scheme='http')
 
-'''def index_data(data):
-    es.index('boltcargo', doc_type='wiki', body=data)'''
-
-'''
-async def load_models():
-    global nlp
-    models = {'1': 'spawn_en', '2': 'spawn_hi'}
-    for loaded_model in models.values():
-        train_model.load_keras_model(loaded_model)
-    nlp = spacy.load("en_core_web_md")
-    crf_entity.set_nlp(nlp)
-    pass
-'''
-
-
 @app.on_event("startup")
 async def load():
     global nlp
     print(tf.version)
     print("Loading model..")
     load_model = LoadModel()
-    #load_model.load_current_model()
-    #nlp = load_model.get_nlp()
 
 
 @app.get('/')
@@ -70,7 +53,7 @@ async def classify(q: str, model: str, lang: str,
         lang = 'en'
     model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
     if sentence is not None:
-        return_list = classifyKeras(sentence, model_name)
+        return_list = await classifyKeras(sentence, model_name)
         # task.add_task(index_data, data=return_list)
     else:
         return ({'message': 'query cannot be empty', 'status': 'error', 'model_name': model_name})
@@ -95,22 +78,21 @@ async def train(model_name: str, lang: str,
             lang = 'en'
         model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
 
-        train_msg = train_parallel(model_name, "", "")
-        # if train_msg['message'] == 'success':
-        #    task.add_task(send_notification, reg_id, username)
+        task.add_task(train_keras, model_name, "", "")
     except Exception as e:
         print(e)
         return ({'message': 'Error processing request.',
                  'error': 'Model could not be trained', 'status': 'error',
                  'model_name': model_name})
 
-    return train_msg
+    return {'message': 'success', 'model_name': model_name}
 
 
 @app.get('/api/train_bot', tags=['Bot Service'])
 async def train_bot(model_name: str, lang: str,
                 task: BackgroundTasks,
                 reg_id: str = None, username: str = None,
+                train_type: str = "local",
                 dependencies=Depends(get_current_username)
                 ):
     try:
@@ -125,17 +107,15 @@ async def train_bot(model_name: str, lang: str,
             lang = 'en'
         model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
         training_data = model_name + "_data"
-        training_type = 'elastic'
-        train_msg = train_parallel(model_name, training_data, training_type)
-        if train_msg['message'] == 'success':
-            task.add_task(send_notification, reg_id, username)
+        task.add_task(train_keras, model_name, training_data, train_type, reg_id, username)
+    
     except Exception as e:
         print(e)
         return ({'message': 'Error processing request.',
                  'error': 'Model could not be trained', 'status': 'error',
                  'model_name': model_name})
 
-    return train_msg
+    return {'message': 'success', 'model_name': model_name}
 
 @app.get('/send_notification', tags=['Notification Service'])
 async def notification(reg_id: str, task: BackgroundTasks):
@@ -236,7 +216,7 @@ async def entity_extract(q: str, model: str, lang: str,
 
         model_name = '{model_name}_{lang}'.format(model_name=model, lang=lang)
         print(model_name)
-        ml_response = classifyKeras(q, model_name)
+        ml_response = await classifyKeras(q, model_name)
         print(ml_response)
         if q is not None:
             if lang == 'en':

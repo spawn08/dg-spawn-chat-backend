@@ -13,8 +13,7 @@ from elasticsearch import Elasticsearch
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import Sequential
 from nltk.stem.porter import PorterStemmer
-
-from service import crf_entity
+from service import crf_entity, utils
 
 # import spacy
 
@@ -94,7 +93,7 @@ def get_model_keras(model_name, file_path):
     return model_nn
 
 
-def train_keras(model_name, training_data, training_type):
+async def train_keras(model_name, training_data, training_type, reg_id, username):
     global ignore_words
     output_data = []
     words_list = []
@@ -103,6 +102,11 @@ def train_keras(model_name, training_data, training_type):
     train_xinput = []
     train_youtput = []
 
+    my_file = os.path.isdir(
+        MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
+    if my_file == False:
+        os.mkdir(MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
+        
     if training_type == 'elastic':
         data = es.get('spawnai_file', doc_type='file', id=training_data)
         data = data['_source']
@@ -172,8 +176,8 @@ def train_keras(model_name, training_data, training_type):
          'train_y_{model}'.format(model=model_name): train_youtput},
         open(MODEL_BASE_PATH + "{model_name}/{name}".format(
             model_name=model_name, name=model_name), "wb"))
-
     load_keras_model(model_name)
+    await utils.send_notification(reg_id, username)
     return {'message': 'success', 'model_name': model_name}
 
 
@@ -205,7 +209,7 @@ def bow(sentence, words, show_details=False):
     return (bag)
 
 
-def classifyKeras(sentence, model_name):
+async def classifyKeras(sentence, model_name):
 
     with graph.as_default():
         file_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
