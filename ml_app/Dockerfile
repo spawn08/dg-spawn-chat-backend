@@ -9,19 +9,7 @@ COPY opt/ /opt/
 COPY opt/data/ /opt/
 COPY opt/models/ /opt/
 COPY opt/training_data/ /opt/
-RUN pip3 --no-cache-dir install tensorflow==2.3.0
-RUN pip3 --no-cache-dir install fastapi
-RUN pip3 --no-cache-dir install sklearn
-RUN pip3 --no-cache-dir install scikit-learn
-RUN pip3 --no-cache-dir install sklearn_crfsuite
-RUN pip3 --no-cache-dir install nltk
-RUN pip3 --no-cache-dir install spacy
-RUN pip3 --no-cache-dir install keras
-RUN pip3 --no-cache-dir install sklearn_crfsuite
-RUN pip3 --no-cache-dir install sklearn
-RUN pip3 --no-cache-dir install elasticsearch
-RUN pip3 --no-cache-dir install uvicorn
-RUN pip3 --no-cache-dir install aiohttp
+RUN pip3 install -r requirements.txt
 RUN python3 -m spacy download en_core_web_md
 RUN python3 -m nltk.downloader punkt
 EXPOSE 8000

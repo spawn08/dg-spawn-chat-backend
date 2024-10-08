@@ -1,6 +1,8 @@
 .vscode/*
 .idea/
 __pychache__/
+__pycache__/
+ml_app/spawn/
 ml_app/__pychache__/
 ml_app/config/__pychache__/
 .idea/dg-spawn-chat-backend.iml

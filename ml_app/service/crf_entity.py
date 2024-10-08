@@ -3,7 +3,7 @@ import os
 
 import joblib
 import sklearn_crfsuite
-from spacy.gold import GoldParse
+from spacy.training import biluo_tags_to_offsets
 
 nlp = None  # spacy.load("en_core_web_md")
 crf = None
@@ -90,7 +90,7 @@ def jsonToCrf(json_eg, spacy_nlp):
     doc = spacy_nlp(json_eg['text'])
     for i in json_eg['entities']:
         entity_offsets.append(tuple((i['start'], i['end'], i['entity'])))
-    gold = GoldParse(doc, entities=entity_offsets)
+    gold = biluo_tags_to_offsets(doc, entities=entity_offsets)
     ents = [l[5] for l in gold.orig_annot]
     crf_format = [(doc[i].text, doc[i].tag_, ents[i]) for i in range(len(doc))]
     return crf_format

@@ -9,4 +9,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     if args.port is not None and args.host is not None:
         uvicorn.run(app, port=args.port, host=args.host)
-    else: uvicorn.run(app, host='localhost', port=8000)    
+    else: uvicorn.run(app, host='localhost', port=8000)

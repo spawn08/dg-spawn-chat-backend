@@ -1,19 +1,17 @@
-import json
 import os
+import anyio
 import tensorflow as tf
 from aiohttp import ClientSession
-from fastapi import FastAPI, HTTPException, Depends, BackgroundTasks
-from fastapi.security import HTTPBasic, HTTPBasicCredentials
-from starlette.status import HTTP_401_UNAUTHORIZED
+from fastapi import FastAPI, Depends, BackgroundTasks
+from fastapi.security import HTTPBasic
 
 from service import crf_entity
 from service.utils import get_current_username, send_notification
 from service.train_model import LoadModel
-from service.train_model import classifyKeras, train_keras, set_root_dir
+from service.train_model import predict, train_keras, set_root_dir
 from config.config import Config as cfg
-
-app = FastAPI()
-security = HTTPBasic()
+from anyio import CapacityLimiter
+from anyio.lowlevel import RunVar
 
 ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
 set_root_dir(ROOT_DIR)
@@ -26,12 +24,17 @@ client_session = None
 
 # es = Elasticsearch([{'host': 'localhost', 'port': 9200}], scheme='http')
 
-@app.on_event("startup")
-async def load():
+def startup():
     global nlp
+    RunVar("_default_thread_limiter").set(CapacityLimiter(1000))
+    limiter = anyio.to_thread.current_default_thread_limiter()
+    print(limiter.total_tokens)
     print(tf.version)
     print("Loading model..")
     load_model = LoadModel()
+    
+app = FastAPI(on_startup=[startup])
+security = HTTPBasic()    
 
 
 @app.get('/')
@@ -62,7 +65,6 @@ async def classify(q: str, model: str, lang: str,
 
 @app.get('/api/train', tags=['Bot Service'])
 async def train(model_name: str, lang: str,
-                task: BackgroundTasks,
                 reg_id: str = None, username: str = None,
                 dependencies=Depends(get_current_username)
                 ):
@@ -77,8 +79,7 @@ async def train(model_name: str, lang: str,
         if lang is None:
             lang = 'en'
         model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
-
-        task.add_task(train_keras, model_name, "", "")
+        await train_keras(model_name, "", "", "", "")
     except Exception as e:
         print(e)
         return ({'message': 'Error processing request.',
@@ -90,7 +91,6 @@ async def train(model_name: str, lang: str,
 
 @app.get('/api/train_bot', tags=['Bot Service'])
 async def train_bot(model_name: str, lang: str,
-                task: BackgroundTasks,
                 reg_id: str = None, username: str = None,
                 train_type: str = "local",
                 dependencies=Depends(get_current_username)
@@ -107,8 +107,8 @@ async def train_bot(model_name: str, lang: str,
             lang = 'en'
         model_name = '{model_name}_{lang}'.format(model_name=model_name, lang=lang)
         training_data = model_name + "_data"
-        task.add_task(train_keras, model_name, training_data, train_type, reg_id, username)
-    
+        await train_keras(model_name=model_name, training_data=training_data, training_type=train_type, reg_id=reg_id, username=username)
+        
     except Exception as e:
         print(e)
         return ({'message': 'Error processing request.',
@@ -216,7 +216,7 @@ async def entity_extract(q: str, model: str, lang: str,
 
         model_name = '{model_name}_{lang}'.format(model_name=model, lang=lang)
         print(model_name)
-        ml_response = await classifyKeras(q, model_name)
+        ml_response = await predict(q, model_name)
         print(ml_response)
         if q is not None:
             if lang == 'en':

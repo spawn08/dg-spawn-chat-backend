@@ -1,0 +1,12 @@
+tensorflow
+fastapi
+scikit-learn
+sklearn_crfsuite
+nltk
+spacy
+keras
+sklearn_crfsuite
+elasticsearch
+uvicorn
+aiohttp
+aiofiles
