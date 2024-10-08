@@ -2,27 +2,25 @@ import json
 import os
 import pickle
 import random
-from multiprocessing.pool import ThreadPool
-from pathlib import Path
+import asyncio
+import aiofiles
 
 import nltk
 import numpy as np
 import spacy
 import tensorflow as tf
-from elasticsearch import Elasticsearch
+from pathlib import Path
+from elasticsearch import AsyncElasticsearch
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import Sequential
 from nltk.stem.porter import PorterStemmer
+from service import crf_entity, utils
 
-import crf_entity
+ROOT_DIR = ''
+es = AsyncElasticsearch(['localhost'], scheme='http', port=9200, http_auth=('spawnai_elastic', 'Spawn@#543'))
 
-# import spacy
-es = Elasticsearch(['api2.spawnai.com'], scheme='https', port=443, http_auth=('spawnai_elastic', 'Spawn@#543'))
-
-pool = ThreadPool(processes=20)
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_BASE_PATH = os.path.join(ROOT_DIR, 'opt/models/')  # '/opt/models/'
-DATA_BASE_PATH = os.path.join(ROOT_DIR, 'opt/data/')  # '/opt/data/'
+MODEL_BASE_PATH = ''
+DATA_BASE_PATH = ''
 # nlp = spacy.load("en_core_web_md")
 
 graph = tf.compat.v1.get_default_graph()
@@ -49,8 +47,17 @@ class LoadModel():
     def get_nlp(self):
         return self.nlp
 
+def set_root_dir(root_dir):
+    global ROOT_DIR
+    global MODEL_BASE_PATH
+    global DATA_BASE_PATH
 
-def load_keras_model(model_name):
+    ROOT_DIR = root_dir
+    MODEL_BASE_PATH = os.path.join(ROOT_DIR, 'opt/models/')  # '/opt/models/'
+    DATA_BASE_PATH = os.path.join(ROOT_DIR, 'opt/data/')  # '/opt/data/'
+    pass
+
+def load_keras_model(model_name: str):
     global words
     global classes
     global documents
@@ -70,12 +77,10 @@ def load_keras_model(model_name):
         train_x_dict[model_name] = data['train_x_{model}'.format(model=model_name)]
         train_y_dict[model_name] = data['train_y_{model}'.format(model=model_name)]
         print("Loaded model from disk")
-
-
 pass
 
 
-def get_model_keras(model_name, file_path):
+def get_model_keras(model_name: str, file_path: str):
     train_x = train_x_dict[model_name]
     train_y = train_y_dict[model_name]
     model_nn = Sequential()
@@ -86,7 +91,7 @@ def get_model_keras(model_name, file_path):
     return model_nn
 
 
-def train_keras(model_name, training_data, training_type):
+async def train_keras(model_name: str, training_data: dict, training_type: str, reg_id: str, username: str):
     global ignore_words
     output_data = []
     words_list = []
@@ -95,12 +100,19 @@ def train_keras(model_name, training_data, training_type):
     train_xinput = []
     train_youtput = []
 
+    my_file = os.path.isdir(
+        MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
+    if my_file == False:
+        os.mkdir(MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
+        
     if training_type == 'elastic':
         data = es.get('spawnai_file', doc_type='file', id=training_data)
         data = data['_source']
+        print("Loaded ES Data")
     else:
-        with open(DATA_BASE_PATH + '/{model}_data.json'.format(model=model_name), encoding="utf-8") as f:
-            data = json.load(f)
+        async with aiofiles.open(DATA_BASE_PATH + f'/{model_name}_data.json', 'r', encoding='utf-8') as f:
+            content = await f.read()
+            data = json.loads(content)
 
     output_data = list(data.get('intents'))
     print(output_data)
@@ -142,7 +154,7 @@ def train_keras(model_name, training_data, training_type):
         training.append([bag, output_row])
 
     random.shuffle(training)
-    training = np.array(training)
+    training = np.array(training, dtype="object")
     train_xinput = list(training[:, 0])
     train_youtput = list(training[:, 1])
     model_nn = Sequential()
@@ -150,32 +162,25 @@ def train_keras(model_name, training_data, training_type):
     model_nn.add(Dense(16, activation='relu'))
     model_nn.add(Dense(len(train_youtput[0]), activation='softmax'))
 
-    model_nn.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-    model_nn.fit(np.array(train_xinput), np.array(train_youtput), epochs=95, batch_size=8)
+    await asyncio.to_thread(model_nn.compile, loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    await asyncio.to_thread(model_nn.fit, np.array(train_xinput), np.array(train_youtput), epochs=95, batch_size=8)
 
     model_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
         model_dir=model_name,
         model_name=model_name)
-    model_nn.save(model_path)
+    await asyncio.to_thread(model_nn.save, model_path)
 
-    pickle.dump(
-        {'words_{model}'.format(model=model_name): words_list, 'classes_{model}'.format(model=model_name): inputclasses,
-         'train_x_{model}'.format(model=model_name): train_xinput,
-         'train_y_{model}'.format(model=model_name): train_youtput},
-        open(MODEL_BASE_PATH + "{model_name}/{name}".format(
-            model_name=model_name, name=model_name), "wb"))
-
-    load_keras_model(model_name)
+    metadata_path = MODEL_BASE_PATH + "{model_name}/{name}".format(model_name=model_name, name=model_name)
+    async with aiofiles.open(metadata_path, 'wb') as f:
+        await asyncio.to_thread(
+            pickle.dump,
+            {'words_{model}'.format(model=model_name): words_list, 
+             'classes_{model}'.format(model=model_name): inputclasses,
+             'train_x_{model}'.format(model=model_name): train_xinput,
+             'train_y_{model}'.format(model=model_name): train_youtput}, f)
+    await asyncio.to_thread(load_keras_model, model_name)
+    await utils.send_notification(reg_id, username)
     return {'message': 'success', 'model_name': model_name}
-
-
-def train_parallel(model_name, training_data, training_type):
-    my_file = os.path.isdir(
-        MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
-    if my_file == False:
-        os.mkdir(MODEL_BASE_PATH + "{model_name}".format(model_name=model_name))
-    async_train_result = pool.apply_async(train_keras, (model_name, training_data, training_type,))
-    return async_train_result.get()
 
 
 def clean_up_sentence(sentence):
@@ -197,7 +202,8 @@ def bow(sentence, words, show_details=False):
     return (bag)
 
 
-def classifyKeras(sentence, model_name):
+async def predict(sentence, model_name):
+
     with graph.as_default():
         file_path = MODEL_BASE_PATH + '{model_dir}/{model_name}.h5'.format(
             model_dir=model_name,
@@ -238,8 +244,3 @@ def classifyKeras(sentence, model_name):
             }
 
         return js
-
-
-def classify_parallel(sentence, model_name):
-    async_train_result = pool.apply_async(classifyKeras, (sentence, model_name))
-    return async_train_result.get()
